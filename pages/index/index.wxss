@@ -1,0 +1,102 @@
+/**index.wxss**/
+.page-body {
+  width: 100vw;
+  margin-bottom: 60rpx;
+}
+.banner-botto {
+}
+.swiper-item {
+  background-color: #fff;
+}
+.first {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-bottom: 40rpx;
+}
+.first-item image {
+  width: 52rpx;
+  height: 52rpx;
+}
+.first-item text {
+  font-size: 24rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 34rpx;
+  color: #000000;
+  display: block;
+  margin-top: 8rpx;
+}
+.title {
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  line-height: 90rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  box-sizing: border-box;
+}
+.line {
+  display: inline-block;
+  width: 4px;
+  height: 14px;
+  background: #ff8104;
+  opacity: 1;
+  border-radius: 2px;
+}
+.con {
+  margin-left: 8rpx;
+  font-size: 15px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: bold;
+  line-height: 21px;
+  color: #ff8104;
+  opacity: 1;
+}
+.right {
+  float: right;
+  border: solid #000;
+  border-width: 0 1px 1px 0;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-top: 40rpx;
+}
+.active {
+  box-sizing: border-box;
+  padding: 14rpx 32rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.active-item {
+  width: 48%;
+  background: #ffffff;
+  opacity: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+
+.active-item image {
+  width: 100%;
+  height: 200rpx;
+}
+.active-title {
+  font-size: 14px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 21px;
+  color: #000000;
+  opacity: 0.9;
+  padding: 12rpx 32rpx;
+}
+.active-des {
+  font-size: 14px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000000;
+  opacity: 0.5;
+  padding: 12rpx 32rpx;
+}
