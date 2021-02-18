@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -14,6 +15,24 @@
         {
           "name": "pages/active/active",
           "pathName": "pages/active/active",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/active/details/details",
+          "pathName": "pages/active/details/details",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/active/event/event",
+          "pathName": "pages/active/event/event",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/teacher/list",
+          "pathName": "pages/teacher/list",
           "scene": null
         }
       ]

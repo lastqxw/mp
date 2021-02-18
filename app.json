@@ -1,7 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/active/active" 
+    "pages/active/active",
+    "pages/active/details/details",
+    "pages/active/event/event",
+    "pages/teacher/list"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -9,7 +12,6 @@
     "navigationBarTitleText": "市民文化活动中心",
     "navigationBarTextStyle": "white"
   },
-  "style": "v2",
   "tabBar": {
     "list": [
       {
@@ -32,5 +34,18 @@
       }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-dialog": "@vant/weapp/dialog/index"
+  }
 }

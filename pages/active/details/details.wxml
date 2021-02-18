@@ -1,0 +1,83 @@
+<!-- pages/active/details/details.wxml -->
+<view class="container">
+  <view class="top">
+    <image src="../../../images/bg.png" />
+  </view>
+  <van-tabs active="{{ active }}" class="tap" nav-class='tap-nav' tab-active-class='taps' color='#38C670' title-active-color='#38C670'>
+    <van-tab title="活动信息">
+      <view class="one">
+        <view class="one-top">
+          <view class="one-top-con-title">2021新春民族音乐会</view>
+          <view class="one-top-con-sub">
+            <view class="one-top-con-sub-left">
+              <image src="../../../images/bg.png" />
+              <view class="text">济南江湖艺社</view>
+            </view>
+            <view class="one-top-con-sub-right">
+              济南江湖艺社成立于2013年，曾用名德霖社2017年更名为济南江湖艺社文化传播有限公司赋有曲山艺海之称的泉城济南是全国的三大曲艺码头之--，在过去行走江湖的艺人们有这么一个说法北京学艺、天津练活、济南踢门坎、可想而知在过去老济南的文化底蕴是多么的丰厚。
+            </view>
+          </view>
+        </view>
+        <view class="one-top">
+          <view class="two-title">
+            <image src="../../../images/details1.png" />
+            <text>活动信息</text>
+          </view>
+          <view class="two-con">
+            <text>时间：2020-10-07 星期三 10:00~11:00</text>
+            <text>地点：北京市东城区美术馆后街40号</text>
+            <text>活动场地：B2美好演播厅</text>
+            <text>活动主题：文化主题</text>
+            <text>活动类型：亲子</text>
+            <text>费用：免费</text>
+            <text>名额：10人</text>
+          </view>
+        </view>
+        <view class="one-top">
+          <view class="two-title">
+            <image src="../../../images/details2.png" />
+            <text>活动详情</text>
+          </view>
+          <view class="three-con">
+            购票下单成功后需在指定时间内完成支付，未支付成功的订单，将在下单指定时间后系统自动取消，请大家及时刷新购票页面进行购买。购票下单成功后需在指定时间内完成支付，未支付成功的订单，将在下单指定时间后系统自动取消，请大家及时刷新购票页面进行购买。
+          </view>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="注意事项">
+      <view class="one">
+        <view class="one-top">
+          <view class="two-title">
+            <image src="../../../images/pay.png" />
+            <text>付款时效提醒</text>
+          </view>
+          <view class="three-con four">
+            购票下单成功后需在指定时间内完成支付，未支付成功的订单，将在下单指定时间后系统自动取消，请大家及时刷新购票页面进行购买。
+          </view>
+          <view class="two-title">
+            <image src="../../../images/pay1.png" />
+            <text>发票提醒</text>
+          </view>
+          <view class="three-con four">
+            需要开具发票的购票用户，请您在演出开始5日前，电话联系山东省会大剧院客服(0531-55707333)并提供开票信息，演出结束后将统一由演出主办单位开具。
+          </view>
+          <view class="two-title">
+            <image src="../../../images/pay.png" />
+            <text>付款时效提醒</text>
+          </view>
+          <view class="three-con four">
+            购票下单成功后需在指定时间内完成支付，未支付成功的订单，将在下单指定时间后系统自动取消，请大家及时刷新购票页面进行购买。
+          </view>
+          <view class="two-title">
+            <image src="../../../images/pay1.png" />
+            <text>发票提醒</text>
+          </view>
+          <view class="three-con four">
+            需要开具发票的购票用户，请您在演出开始5日前，电话联系山东省会大剧院客服(0531-55707333)并提供开票信息，演出结束后将统一由演出主办单位开具。
+          </view>
+        </view>
+      </view>
+    </van-tab>
+  </van-tabs>
+  <van-button type="primary" color="#FF8104" block bind:tap="goto">立即报名</van-button>
+</view>

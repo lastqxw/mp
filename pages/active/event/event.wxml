@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="top"></view>
+  <view class="card">
+    <view class="card-body">
+      <view class="card-body-title">2021新春民族音乐会</view>
+      <view class="card-body-sub">时间：2020-10-07 星期三 10:00~11:00</view>
+      <view class="card-body-sub">地点：北京市东城区美术馆后街40号</view>
+      <view class="card-body-from">
+        <van-field model:value="{{ value }}" input-class='input-class' placeholder="请输入姓名" />
+        <van-field model:value="{{ value3 }}" input-class='input-class' />
+        <van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect" />
+        <van-field model:value="{{ value1 }}" input-class='input-class' placeholder="请输入联系方式" />
+        <van-field model:value="{{ value2 }}" input-class='input-class' placeholder="请输入联系方式" />
+        <view class="btn-group">
+          <van-button color="#FF8104" bind:tap="score">积分兑换</van-button>
+          <van-button color="#FF8104" bind:tap="wxpay">微信支付</van-button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="bottom-body">
+      <view class="bottom-title">温馨提示</view>
+      <view class="bottom-con">选择微信支付可获得500积分！</view>
+    </view>
+  </view>
+  <van-dialog id="van-dialog" />
+</view>

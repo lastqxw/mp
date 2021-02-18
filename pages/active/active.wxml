@@ -1,2 +1,36 @@
-<!--pages/active/active.wxml-->
-<text>pages/active/active.wxml</text>
+<!-- pages/active/active.wxml -->
+<view class="container">
+  <view class="top">
+    <view class="dateList">
+      <view class="day" wx:for="{{dateList}}" wx:for-item="item" wx:key="*this">
+        <text class="week {{index==5||index==6?'weekend':''}}">{{weekList[index]}}</text>
+        <text class="date {{item==today?'today':''}}">{{item==today?'今':item}}</text>
+      </view>
+    </view>
+    <view class="line"></view>
+    <view class="typeList">
+      <view class="scroll-view-item_H active">
+        <text class="text">全部</text>
+      </view>
+      <view class="scroll-view-item_H" wx:for="{{typeList}}" wx:key="*this">
+        <text class="text">{{item}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="title">
+    <text class="line"></text>
+    <text class="con">热门活动</text>
+    <text class="right"></text>
+  </view>
+  <view class="bottom">
+    <view class="bottom-item" wx:for="{{10}}" wx:key="*this" bind:tap="goto">
+      <view class="img">
+        <image src="../../images/bg.png" />
+      </view>
+      <view class="te">
+        <view class="te_title">2021新春民族音乐会</view>
+        <view class="te_con">活动介绍活动介绍活动介活动绍活动介绍</view>
+      </view>
+    </view>
+  </view>
+</view>

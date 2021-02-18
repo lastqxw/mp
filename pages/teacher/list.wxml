@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="bottom">
+    <view class="bottom-item" wx:for="{{10}}" wx:key="*this" bind:tap="goto">
+      <view class="img">
+        <image src="../../images/bg.png" />
+      </view>
+      <view class="te">
+        <view class="te_title">
+          <view class="te-title-text">王子涵</view>
+          <view class='te-title-type'>瑜伽</view>
+        </view>
+        <view class="te_con">讲师格言讲师格言讲师格言讲师格言</view>
+      </view>
+    </view>
+  </view>
+</view>
