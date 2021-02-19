@@ -23,7 +23,7 @@
     "compileHotReLoad": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
-    "useApiHostProcess": false,
+    "useApiHostProcess": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -40,8 +40,8 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.0.4",
-  "appid": "wx8f41a35d021844a6",
+  "libVersion": "2.15.0",
+  "appid": "wx3eddd051e75b4dd3",
   "projectname": "mp-test",
   "debugOptions": {
     "hidedInDevtools": []

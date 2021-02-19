@@ -1,7 +1,10 @@
 {
   "pages": [
+    "pages/about/about",
     "pages/index/index",
-    "pages/active/active" 
+    "pages/active/active",
+    "pages/personal/personal"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -21,14 +24,14 @@
       {
         "pagePath": "pages/index/index",
         "text": "我的参与",
-        "iconPath": "./images/home.png",
-        "selectedIconPath": "./images/home.png"
+        "iconPath": "./images/canyu.png",
+        "selectedIconPath": "./images/canyu.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/personal/personal",
         "text": "个人中心",
-        "iconPath": "./images/home.png",
-        "selectedIconPath": "./images/home.png"
+        "iconPath": "./images/mine.png",
+        "selectedIconPath": "./images/mine.png"
       }
     ]
   },

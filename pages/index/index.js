@@ -12,9 +12,9 @@ Page({
     duration: 500,
   },
   onLoad() {},
-  goto(type) {
-    switch (type) {
-      case 1:
+  goto(data) {
+    switch (data.currentTarget.dataset.type) {
+      case "1":
         wx.navigateTo({
           url: "/pages/active/active",
         });
