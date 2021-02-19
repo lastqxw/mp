@@ -1,0 +1,31 @@
+<view class="top_banner">
+  <image src="../../images/order.png" mode="widthFix" />
+</view>
+<view class="order_con">
+  <view class="one-top">
+    <view class="two-title">
+      <image src="../../images/details1.png" />
+      <text>场地介绍</text>
+    </view>
+    <view class="two-con">
+      <view>面积：2000平方米</view>
+      <view>容纳人数：100人</view>
+      <view>设备设施：LED大屏、音响、舞台、电动可折叠座椅</view>
+      <view>适合活动：大型讲座、发布会、分享会、路演、戏剧、演艺等活动</view>
+      <view>服务时间：09:00-20:00</view>
+      <view>客服微信：{{wechat}}<view class="copy" bindtap='copyText'><image src="../../images/copy.png" />复制微信</view></view>
+      <view>联系电话：<text class="tel" bindtap="makeCall">{{phone}}</text></view>
+    </view>
+  </view>
+  <view class="about_info">
+    <view class="about_title">
+      <image src="../../images/address.png" />
+      <text>地址</text>
+    </view>
+    <view class="about_con">
+      <text>北京市东城区美术馆后街40号</text>
+      <image src="../../images/lat.png" />
+    </view>
+  </view>
+  <van-button type="primary" color="#FF8104" block class="yuyue">预约成功</van-button>
+</view>

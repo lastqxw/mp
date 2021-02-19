@@ -45,6 +45,30 @@
         {
           "name": "pages/teacher/active/active",
           "pathName": "pages/teacher/active/active",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages",
+          "pathName": "pages/space/space",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/space/details/details",
+          "pathName": "pages/space/details/details",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/space/reservation/reservation",
+          "pathName": "pages/space/reservation/reservation",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/space/time/time",
+          "pathName": "pages/space/time/time",
           "scene": null
         }
       ]

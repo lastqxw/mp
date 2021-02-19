@@ -8,11 +8,20 @@
     "pages/about/about",
     "pages/active/active",
     "pages/personal/personal",
+    "pages/about/about",
     "pages/active/details/details",
     "pages/active/event/event",
     "pages/teacher/list",
     "pages/teacher/details/details",
-    "pages/teacher/active/active"
+    "pages/teacher/active/active",
+    "pages/space/space",
+    "pages/space/details/details",
+    "pages/space/reservation/reservation",
+    "pages/space/time/time",
+    "pages/partake/partake",
+    "pages/activity/activity",
+    "pages/order/order",
+    "pages/history/history"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -29,7 +38,7 @@
         "selectedIconPath": "./images/home.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/partake/partake",
         "text": "我的参与",
         "iconPath": "./images/canyu.png",
         "selectedIconPath": "./images/canyu.png"
@@ -55,6 +64,7 @@
     "van-action-sheet": "@vant/weapp/action-sheet/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-dialog": "@vant/weapp/dialog/index",
-    "van-checkbox": "@vant/weapp/checkbox/index"
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index"
   }
 }

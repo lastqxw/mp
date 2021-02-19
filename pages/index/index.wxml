@@ -32,7 +32,7 @@
       </view>
     </view>
     <view class="first">
-      <view class="first-item">
+      <view class="first-item" data-type='5' bind:tap="goto">
         <image src="../../images/history.png" />
         <text>历史活动</text>
       </view>

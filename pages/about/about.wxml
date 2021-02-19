@@ -1,4 +1,3 @@
-<!--pages/about.wxml-->
 <view class="top_banner">
   <image src="../../images/bg.png" mode="widthFix" />
 </view>
