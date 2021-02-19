@@ -1,0 +1,22 @@
+<!--pages/personal/personal.wxml-->
+<view class="psl_top">
+  <image src="../../images/avar.jpg" />
+  <view class="psl_con">
+    <view>
+      <text>Hi,张磊</text>
+      <view class="score">
+        <image src="../../images/score.png" />
+        <text>3600</text>
+      </view>
+    </view>
+    <view class="post">技术部产品经理</view>
+  </view>
+</view>
+<view class="psl_bot">
+  <view class="psl_list">
+    <view class="psl_item" wx:for="{{linkList}}" wx:key="index" bindtap="tolink" data-url="{{item.url}}">
+      <text>{{item.title}}</text>
+      <image src="../../images/tolink.png" />
+    </view>
+  </view>
+</view>
