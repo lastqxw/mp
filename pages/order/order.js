@@ -1,4 +1,4 @@
-// pages/about.js
+// pages/order/order.js
 Page({
 
   /**
@@ -6,7 +6,7 @@ Page({
    */
   data: {
     phone: '18800000000', //联系电话
-    wechat: 'AAAAAAAAA' //微信公众号
+    wechat: 'A大型场地出租' //客服微信
   },
 
   /**

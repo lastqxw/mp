@@ -64,8 +64,15 @@ Page({
   },
   // 活动详情
   toDetails(e){
-    wx.navigateTo({
-      url: '../activity/activity?id='+e.currentTarget.dataset.id+'&state='+e.currentTarget.dataset.state
-    });
+    console.log(e.currentTarget.dataset);
+    if(e.currentTarget.dataset.state!='3'){
+      wx.navigateTo({
+        url: '../activity/activity?id='+e.currentTarget.dataset.id+'&state='+e.currentTarget.dataset.state
+      });
+    }else{
+      wx.navigateTo({
+        url: '../order/order?id='+e.currentTarget.dataset.id
+      });
+    }
   }
 })
