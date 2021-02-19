@@ -2,6 +2,18 @@
 # yarn lockfile v1
 
 
+"@types/wechat-miniprogram@^3.0.0":
+  version "3.2.0"
+  resolved "https://registry.npm.taobao.org/@types/wechat-miniprogram/download/@types/wechat-miniprogram-3.2.0.tgz#6b4034155856d31cd9f342efd217dbc27ea80fb9"
+  integrity sha1-a0A0FVhW0xzZ80Lv0hfbwn6oD7k=
+
+"@vant/weapp@^1.5.3":
+  version "1.5.3"
+  resolved "https://registry.npm.taobao.org/@vant/weapp/download/@vant/weapp-1.5.3.tgz#5fa3c23732ffdeb85c939b4f45cfc58b2eb805f4"
+  integrity sha1-X6PCNzL/3rhck5tPRc/Fiy64BfQ=
+  dependencies:
+    "@types/wechat-miniprogram" "^3.0.0"
+
 dayjs@^1.10.4:
   version "1.10.4"
   resolved "https://registry.npm.taobao.org/dayjs/download/dayjs-1.10.4.tgz?cache=0&sync_timestamp=1611309982734&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdayjs%2Fdownload%2Fdayjs-1.10.4.tgz#8e544a9b8683f61783f570980a8a80eaf54ab1e2"
