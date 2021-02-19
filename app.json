@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/signout/record/record",
+    "pages/signout/secretkey/secretkey",
+    "pages/signout/pointsexchange/pointsexchange",
     "pages/index/index",
     "pages/keyExchange/keyExchange",
     "pages/signout/signout",

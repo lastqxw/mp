@@ -17,6 +17,25 @@
   padding: 8rpx 20rpx;
   font-size: 24rpx;
   color: #fff;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.7);
   border-radius: 48rpx;
+}
+.key_title{
+  padding: 24rpx 32rpx;
+  background: blue;
+  color: #fff;
+}
+.key_name{
+  font-size: 32rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 500;
+  line-height: 40rpx;
+}
+.key_des{
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 32rpx;
+  color: rgba(255,255,255,0.9);
 }
