@@ -1,7 +1,11 @@
 {
   "pages": [
-    "pages/about/about",
+    "pages/signout/signout",
+    "pages/volunteer/Audit/Audit",
+    "pages/volunteer/volunteersignup/volunteersignup",
     "pages/index/index",
+    "pages/volunteer/volunteer",
+    "pages/about/about",
     "pages/active/active",
     "pages/personal/personal",
     "pages/active/details/details",
@@ -50,6 +54,7 @@
     "van-picker": "@vant/weapp/picker/index",
     "van-action-sheet": "@vant/weapp/action-sheet/index",
     "van-icon": "@vant/weapp/icon/index",
-    "van-dialog": "@vant/weapp/dialog/index"
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-checkbox": "@vant/weapp/checkbox/index"
   }
 }
