@@ -1,0 +1,20 @@
+<view class="bodystyle">
+<view wx:for="{{array}}" class="main" wx:if="{{!isShow}}" bindtap='goto'>
+    <image src="../../images/bg.png" class="imgstyle" mode="widthFix"></image>
+    <view class="linestyle">
+      <view class="workname">{{item.name}}</view>
+      <view class="integral">{{item.age}}</view> 
+    </view>
+</view>
+<view wx:for="{{arrays}}" class="main" wx:if="{{isShow}}" bindtap='goto'>
+    <image src="../../images/bg.png" class="imgstyle" mode="widthFix"></image>
+    <view class="linestyle">
+      <view class="workname">{{item.name}}</view>
+      <view class="integral">{{item.age}}</view> 
+    </view>
+</view>
+<view class="bottomstyle">
+  <view class="{{!isShow?'active':''}}" bindtap="change" data-type="0">审核成功</view>
+  <view class="{{isShow?'active':''}}" bindtap="change" data-type="1">已完成</view>
+</view>
+</view>

@@ -28,13 +28,13 @@
         <image src="../../images/site.png" />
         <text>场地介绍</text>
       </view>
-      <view class="first-item">
+      <view class="first-item" data-type='4' bind:tap="goto">
         <image src="../../images/volunteer.png" />
         <text>志愿活动</text>
       </view>
     </view>
     <view class="first">
-      <view class="first-item">
+      <view class="first-item" data-type='5' bind:tap="goto">
         <image src="../../images/history.png" />
         <text>历史活动</text>
       </view>

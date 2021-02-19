@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    detals:{
+    details:{
       state:'1'
     },
     active: 0,
@@ -16,6 +16,11 @@ Page({
    */
   onLoad: function (options) {
     console.log(options);
+    this.setData({
+      details:{
+        state:options.state
+      }
+    })
   },
 
   /**
@@ -33,5 +38,18 @@ Page({
   },
   onChange(e){
     console.log(e);
+  },
+  cancalCall(){
+    wx.showModal({
+      title: '温馨提示',
+      content: '如取消报名，将无法获得积分。',
+      success (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
   }
 })

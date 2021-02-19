@@ -1,6 +1,11 @@
 {
   "pages": [
+    "pages/keyExchange/keyExchange",
+    "pages/signout/signout",
+    "pages/volunteer/Audit/Audit",
+    "pages/volunteer/volunteersignup/volunteersignup",
     "pages/index/index",
+    "pages/volunteer/volunteer",
     "pages/active/active",
     "pages/personal/personal",
     "pages/about/about",
@@ -14,7 +19,10 @@
     "pages/space/reservation/reservation",
     "pages/space/time/time",
     "pages/partake/partake",
-    "pages/activity/activity"
+    "pages/activity/activity",
+    "pages/order/order",
+    "pages/history/history",
+    "pages/sign/sign"
   ],
   "window": {
     "backgroundTextStyle": "light",

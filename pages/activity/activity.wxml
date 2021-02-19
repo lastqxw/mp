@@ -1,9 +1,79 @@
 <view class="top_banner">
   <image src="../../images/activity.png" mode="widthFix" />
 </view>
-<van-tabs active="{{ active }}" bind:change="onChange">
-  <van-tab title="活动信息">
-    
-  </van-tab>
-  <van-tab title="注意事项">内容 2</van-tab>
-</van-tabs>
+<view class="container">
+  <van-tabs active="{{ active }}" class="tap" nav-class='tap-nav' tab-active-class='taps' color='#38C670' title-active-color='#38C670'>
+    <van-tab title="活动信息">
+      <view class="one-top">
+        <view class="one-top-con-title">瑜伽讲座</view>
+        <view class="one-top-con-sub">
+          <view class="one-top-con-sub-left">
+            <image src="../../images/active1.png" />
+            <view class="text">王子涵</view>
+          </view>
+          <view class="one-top-con-sub-right">
+            理疗瑜伽（physiastrics yoga）主要把哈达瑜伽中针对性的对于缓解颈椎,肩周,腰部酸痛感的特定体式结合在一起的瑜伽.主要功效 理疗瑜伽最大的功效就是可以通过特定的拉伸、扭转体式辅助治疗肩周炎,和因颈椎不适造成的头晕,另外对于腰肌劳损,腰椎间盘突出也可以得到极大的改善,还可以缓解治疗女性痛经,调节内分泌.--，在过去行走江湖的艺人们有这么一个说法北京学艺、天津练活、济南踢门坎、可想而知在过去老济南的文化底蕴是多么的丰厚。
+          </view>
+        </view>
+      </view>
+      <view class="one-top">
+        <view class="two-title">
+          <image src="../../images/details1.png" />
+          <text>活动信息</text>
+        </view>
+        <view class="two-con">
+          <text>时间：2020-10-07 星期三 10:00~11:00</text>
+          <text>地点：北京市东城区美术馆后街40号</text>
+          <text>活动场地：B2美好演播厅</text>
+          <text>活动主题：文化主题</text>
+          <text>活动类型：亲子</text>
+          <text>费用：免费</text>
+          <text>名额：10人</text>
+        </view>
+      </view>
+      <view class="one-top">
+        <view class="two-title">
+          <image src="../../images/details2.png" />
+          <text>活动详情</text>
+        </view>
+        <view class="three-con">
+          购票下单成功后需在指定时间内完成支付，未支付成功的订单，将在下单指定时间后系统自动取消，请大家及时刷新购票页面进行购买。购票下单成功后需在指定时间内完成支付，未支付成功的订单，将在下单指定时间后系统自动取消，请大家及时刷新购票页面进行购买。
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="注意事项">
+      <view class="one-top">
+        <view class="two-title">
+          <image src="../../../images/pay.png" />
+          <text>付款时效提醒</text>
+        </view>
+        <view class="three-con four">
+          购票下单成功后需在指定时间内完成支付，未支付成功的订单，将在下单指定时间后系统自动取消，请大家及时刷新购票页面进行购买。
+        </view>
+        <view class="two-title">
+          <image src="../../../images/pay1.png" />
+          <text>发票提醒</text>
+        </view>
+        <view class="three-con four">
+          需要开具发票的购票用户，请您在演出开始5日前，电话联系山东省会大剧院客服(0531-55707333)并提供开票信息，演出结束后将统一由演出主办单位开具。
+        </view>
+        <view class="two-title">
+          <image src="../../../images/pay.png" />
+          <text>付款时效提醒</text>
+        </view>
+        <view class="three-con four">
+          购票下单成功后需在指定时间内完成支付，未支付成功的订单，将在下单指定时间后系统自动取消，请大家及时刷新购票页面进行购买。
+        </view>
+        <view class="two-title">
+          <image src="../../../images/pay1.png" />
+          <text>发票提醒</text>
+        </view>
+        <view class="three-con four">
+          需要开具发票的购票用户，请您在演出开始5日前，电话联系山东省会大剧院客服(0531-55707333)并提供开票信息，演出结束后将统一由演出主办单位开具。
+        </view>
+      </view>
+    </van-tab>
+  </van-tabs>
+  <van-button disabled  type="primary" color="#CBCBCB" block wx:if="{{details.state=='1'}}">已结束</van-button>
+  <van-button type="primary" color="#FF8104" block wx:if="{{details.state=='2'}}" bindtap="cancalCall">取消报名</van-button>
+</view>

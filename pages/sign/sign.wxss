@@ -1,0 +1,57 @@
+page{
+  background: #F6F7F9;
+}
+.top_banner{
+  width: 100%;
+}
+.top_banner image{
+  width: 100%;
+}
+.signBox{
+  padding: 0 32rpx 20rpx 32rpx;
+}
+.signCon{
+  position: relative;
+  margin-top: -112rpx;
+  padding: 40rpx 40rpx 20rpx 40rpx;
+  background:#fff;
+  border-radius: 40rpx;
+  z-index: 100;
+}
+.signTitle{
+  font-size: 34rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 500;
+  line-height: 46rpx;
+  color: rgba(0,0,0,0.9);
+}
+.signMes{
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 40rpx;
+  color: rgba(0,0,0,0.9);
+}
+.van-cell{
+  margin-top: 20rpx;
+  background: rgba(0, 0, 0, 0.02);
+  border: 2rpx solid #EAEAEF;
+  border-radius: 12rpx;
+}
+.signtit{
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 40rpx;
+  color: rgba(0,0,0,0.9);
+  text-align: center;
+}
+.signImg{
+  padding: 12rpx 12rpx 0 12rpx;
+  text-align: center;
+}
+.signImg image{
+  width: 100%;
+}
