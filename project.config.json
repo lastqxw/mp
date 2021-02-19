@@ -35,14 +35,14 @@
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
     "userConfirmedBundleSwitch": false,
-    "minifyWXSS": true,
     "packNpmManually": true,
     "packNpmRelationList": [
       {
         "packageJsonPath": "./package.json",
         "miniprogramNpmDistDir": "./"
       }
-    ]
+    ],
+    "minifyWXSS": true
   },
   "compileType": "miniprogram",
   "libVersion": "2.15.0",
