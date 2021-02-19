@@ -1,0 +1,17 @@
+<view class="top_banner">
+  <image src="../../images/bg.png" mode="widthFix" />
+</view>
+<view class="signBox">
+  <view class="signCon">
+    <view class="signTitle">2021新春民族音乐会</view>
+    <view class="signMes">时间：2020-10-07 星期三 10:00~11:00</view>
+    <view class="signMes">地点：北京市东城区美术馆后街40号</view>
+    <van-field model:value="{{ name }}" readonly placeholder="姓名" />
+    <van-field is-link arrow-direction='down' readonly model:value="{{ sex }}" />
+    <van-field model:value="{{ tel }}" readonly placeholder="姓名" />
+    <view class="signtit">签到地点：北京市东城区美术馆后街40号</view>
+    <view class="signImg">
+      <image src="../../images/code.png" mode="widthFix" />
+    </view>
+  </view>
+</view>

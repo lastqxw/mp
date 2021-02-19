@@ -6,7 +6,9 @@
       <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style=" height: 400rpx;">
         <block wx:for="{{background}}" wx:key="*this">
           <swiper-item>
-            <view class="swiper-item {{item}}">{{item}}</view>
+            <view class="swiper-item {{item}}">
+              <image class="swiper-item-img" src="{{item}}"></image>
+            </view>
           </swiper-item>
         </block>
       </swiper>
@@ -36,11 +38,11 @@
         <image src="../../images/history.png" />
         <text>历史活动</text>
       </view>
-      <view class="first-item">
+      <view class="first-item" data-type='6' bind:tap="goto">
         <image src="../../images/checkin.png" />
         <text>活动签到</text>
       </view>
-      <view class="first-item">
+      <view class="first-item" data-type='7' bind:tap="goto">
         <image src="../../images/integral.png" />
         <text>积分兑换</text>
       </view>
@@ -56,7 +58,7 @@
     <text class="right"></text>
   </view>
   <view class="active">
-    <view class="active-item" wx:for="{{10}}" wx:for-item="item" wx:key="*this">
+    <view class="active-item" wx:for="{{10}}" wx:for-item="item" wx:key="*this" bindtap="gotoDetails">
       <image src="../../images/bg.png" />
       <text class="active-title">2021新春民族音乐会</text>
       <view class="active-des">活动介绍活动介绍活动介绍活动介绍</view>
