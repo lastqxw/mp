@@ -4,7 +4,11 @@ const app = getApp();
 
 Page({
   data: {
-    background: ["demo-text-1", "demo-text-2", "demo-text-3"],
+    background: [
+      "../../images/active1.png",
+      "../../images/active2.png",
+      "../../images/bg.png",
+    ],
     indicatorDots: true,
     vertical: false,
     autoplay: true,
@@ -35,8 +39,23 @@ Page({
           url: "/pages/history/history",
         });
         break;
+      case 6:
+        wx.navigateTo({
+          url: "/pages/sign/sign",
+        });
+        break;
+      case 7:
+        wx.navigateTo({
+          url: "/pages/keyExchange/keyExchange",
+        });
+        break;
       default:
         break;
     }
+  },
+  gotoDetails() {
+    wx.navigateTo({
+      url: "/pages/active/details/details",
+    });
   },
 });

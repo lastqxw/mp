@@ -1,0 +1,37 @@
+<view class="main">
+  <view class="change-top">
+    <view class="title">
+      <text class="con">我的积分</text>
+      <text class="content">1345</text>
+      <text class="right"></text>
+    </view>
+    <view class="title" style="margin-top:10rpx;">
+      <text class="con">积分密钥兑换</text>
+      <text class="right"></text>
+    </view>
+  </view>
+  <view class="title">
+    <text class="line"></text>
+    <text class="con">活动兑换</text>
+  </view>
+  <view class="active">
+    <view class="active-item" wx:for="{{4}}" wx:for-item="item" wx:key="*this">
+      <image src="../../../images/bg.png" />
+      <text class="active-title">2021新春民族音乐会</text>
+      <view class="active-des">活动介绍活动介绍活动介绍活动介绍</view>
+      <view class="active-integral">100积分</view>
+    </view>
+  </view>
+  <view class="title">
+    <text class="line"></text>
+    <text class="con">小礼品兑换</text>
+  </view>
+  <view class="active">
+    <view class="active-item" wx:for="{{2}}" wx:for-item="item" wx:key="*this">
+      <image src="../../../images/bg.png" />
+      <text class="active-title">2021新春民族音乐会</text>
+      <view class="active-des">活动介绍活动介绍活动介绍活动介绍</view>
+      <view class="active-integral">100积分</view>
+    </view>
+  </view>
+</view>
