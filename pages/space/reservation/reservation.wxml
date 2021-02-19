@@ -1,0 +1,33 @@
+<!-- pages/space/reservation/reservation.wxml -->
+<view class='container'>
+  <view class="top">
+    <image src="../../../images/place.png" />
+  </view>
+  <view class="btn" bind:tap="goto">时间预约</view>
+  <view class="form">
+    <view class="form-title">基本信息</view>
+    <van-field is-link arrow-direction='down' readonly model:value="{{ value }}" placeholder="社区名称" />
+    <van-field model:value="{{ value }}" placeholder="请输入姓名" />
+    <van-field model:value="{{ value }}" placeholder="请输入单位" />
+    <van-field type='idcard' model:value="{{ value }}" placeholder="请输入身份证号" />
+    <van-field model:value="{{ value }}" placeholder="请输入活动名称" />
+    <van-field is-link arrow-direction='down' readonly model:value="{{ value }}" placeholder="活动主题" />
+    <van-field is-link arrow-direction='down' readonly model:value="{{ value }}" placeholder="活动类型" />
+    <van-field model:value="{{ value }}" placeholder="请输入参与人数" />
+    <van-field model:value="{{ value }}" placeholder="请输入联系方式" />
+  </view>
+  <view class="form">
+    <view class="form-title">服务支持选项</view>
+    <van-checkbox-group value="{{ result }}" bind:change="onChange">
+      <van-checkbox name='1' checked-color="#FF8104">会服支持：300/人</van-checkbox>
+      <van-checkbox name='2' checked-color="#FF8104">设备支持：300/人</van-checkbox>
+      <van-checkbox name='3' checked-color="#FF8104">技术人员支持：300/人</van-checkbox>
+    </van-checkbox-group>
+  </view>
+  <view class="shuoming">定金金额：300/人</view>
+  <van-button color='#FF8104' block>场地预约</van-button>
+  <view class='bottom'>
+    <text>请仔细阅读</text>
+    <text style="color:#0AC956">《免责声明》</text>
+  </view>
+</view>

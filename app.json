@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/about/about",
     "pages/index/index",
     "pages/active/active",
     "pages/personal/personal",
@@ -8,7 +7,11 @@
     "pages/active/event/event",
     "pages/teacher/list",
     "pages/teacher/details/details",
-    "pages/teacher/active/active"
+    "pages/teacher/active/active",
+    "pages/space/space",
+    "pages/space/details/details",
+    "pages/space/reservation/reservation",
+    "pages/space/time/time"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -50,6 +53,8 @@
     "van-picker": "@vant/weapp/picker/index",
     "van-action-sheet": "@vant/weapp/action-sheet/index",
     "van-icon": "@vant/weapp/icon/index",
-    "van-dialog": "@vant/weapp/dialog/index"
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index"
   }
 }
