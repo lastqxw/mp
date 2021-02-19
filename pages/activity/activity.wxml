@@ -1,0 +1,9 @@
+<view class="top_banner">
+  <image src="../../images/activity.png" mode="widthFix" />
+</view>
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="活动信息">
+    
+  </van-tab>
+  <van-tab title="注意事项">内容 2</van-tab>
+</van-tabs>

@@ -46,7 +46,7 @@ page{
 }
 .psl_bot{
   width: 100%;
-  height: calc(100vh - 192rpx);
+  min-height: calc(100vh - 192rpx);
   background: #ffffff;
   border-radius: 40rpx 40rpx 0 0;
 }

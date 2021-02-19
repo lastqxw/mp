@@ -9,7 +9,7 @@ page{
   width: 100%;
 }
 .about_box{
-  padding: 20rpx 32rpx 0 32rpx;
+  padding: 20rpx 32rpx 20rpx 32rpx;
 }
 .about_mes{
   padding: 28rpx 24rpx 50rpx 24rpx;
