@@ -33,6 +33,18 @@
         {
           "name": "pages/teacher/list",
           "pathName": "pages/teacher/list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/teacher/details/details",
+          "pathName": "pages/teacher/details/details",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/teacher/active/active",
+          "pathName": "pages/teacher/active/active",
           "scene": null
         }
       ]

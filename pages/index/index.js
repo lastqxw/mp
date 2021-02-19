@@ -12,14 +12,19 @@ Page({
     duration: 500,
   },
   onLoad() {},
-  goto(type) {
+  goto(e) {
+    let type = +e.currentTarget.dataset.type;
     switch (type) {
       case 1:
         wx.navigateTo({
           url: "/pages/active/active",
         });
         break;
-
+      case 2:
+        wx.navigateTo({
+          url: "/pages/teacher/list",
+        });
+        break;
       default:
         break;
     }

@@ -1,17 +1,18 @@
-// pages/teacher/list.js
 Page({
   /**
    * 页面的初始数据
    */
-  data: {},
+  data: {
+    active: 0,
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {},
-  goto() {
+  goto: function () {
     wx.navigateTo({
-      url: "/pages/teacher/details/details",
+      url: "/pages/active/event/event",
     });
   },
   /**

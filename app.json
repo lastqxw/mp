@@ -4,7 +4,9 @@
     "pages/active/active",
     "pages/active/details/details",
     "pages/active/event/event",
-    "pages/teacher/list"
+    "pages/teacher/list",
+    "pages/teacher/details/details",
+    "pages/teacher/active/active"
   ],
   "window": {
     "backgroundTextStyle": "light",
