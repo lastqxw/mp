@@ -8,23 +8,18 @@
 .dateList {
   padding: 32rpx 52rpx;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .week {
   display: block;
   margin-bottom: 13px;
   font-size: 14px;
   font-family: Alibaba PuHuiTi;
-  font-weight: 400;
-  line-height: 20px;
   color: #000000;
-  opacity: 1;
 }
 .date {
   font-size: 17px;
   font-family: Alibaba PuHuiTi;
-  font-weight: 400;
-  line-height: 23px;
   color: #000000;
   opacity: 1;
 }
@@ -33,15 +28,13 @@
 }
 .today {
   background: linear-gradient(136deg, #6ff1a2 0%, #0ac956 100%);
-  opacity: 1;
   font-family: Alibaba PuHuiTi;
-  font-weight: 500;
-  line-height: 23px;
+  font-weight: bold;
   color: #ffffff;
   border-radius: 4px;
   padding: 6rpx 12rpx;
 }
-.line {
+.line1 {
   width: 100vw;
   height: 1px;
   background-color: #000000;
@@ -50,14 +43,14 @@
 .typeList {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
   padding: 20rpx;
 }
 .scroll-view-item_H {
   display: inline-block;
-  width: 60px;
-  height: 23px;
-  line-height: 17px;
+  width: 124rpx;
+  height: 46rpx;
   background: rgba(0, 0, 0, 0.05);
   border-radius: 16px;
   text-align: center;
@@ -66,7 +59,6 @@
 .text {
   font-size: 12px;
   font-family: Alibaba PuHuiTi;
-  font-weight: 400;
   color: #000;
   opacity: 0.5;
 }

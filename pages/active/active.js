@@ -9,7 +9,10 @@ Page({
     dateList: [],
     weekList: ["一", "二", "三", "四", "五", "六", "日"],
     today: "",
+    active: 0,
+    chooseDate: "",
     typeList: [
+      "全部",
       "亲子",
       "书法",
       "瑜伽",
@@ -68,6 +71,18 @@ Page({
   goto() {
     wx.navigateTo({
       url: "/pages/active/details/details",
+    });
+  },
+  changeType(e) {
+    let type = +e.currentTarget.dataset.id;
+    this.setData({
+      active: type,
+    });
+  },
+  choose(e) {
+    let date = e.currentTarget.dataset.date;
+    this.setData({
+      chooseDate: date,
     });
   },
   /**

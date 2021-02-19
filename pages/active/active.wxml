@@ -4,15 +4,14 @@
     <view class="dateList">
       <view class="day" wx:for="{{dateList}}" wx:for-item="item" wx:key="*this">
         <text class="week {{index==5||index==6?'weekend':''}}">{{weekList[index]}}</text>
-        <text class="date {{item==today?'today':''}}">{{item==today?'今':item}}</text>
+        <text data-date='{{item}}' class="date {{item==today && !chooseDate?'today':''}} {{item == chooseDate ?'today':''}}" bind:tap="choose">
+          <text>{{item==today?'今':item}}</text>
+        </text>
       </view>
     </view>
-    <view class="line"></view>
+    <view class="line1"></view>
     <view class="typeList">
-      <view class="scroll-view-item_H active">
-        <text class="text">全部</text>
-      </view>
-      <view class="scroll-view-item_H" wx:for="{{typeList}}" wx:key="*this">
+      <view wx:for="{{typeList}}" wx:key="*this" class="scroll-view-item_H {{index==active?'active':''}}" data-id='{{index}}' bindtap="changeType">
         <text class="text">{{item}}</text>
       </view>
     </view>
