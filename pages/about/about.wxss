@@ -1,0 +1,74 @@
+/* pages/about.wxss */
+page{
+  background: #F6F7F9;
+}
+.top_banner{
+  width: 100%;
+}
+.top_banner image{
+  width: 100%;
+}
+.about_box{
+  padding: 20rpx 32rpx 20rpx 32rpx;
+}
+.about_mes{
+  padding: 28rpx 24rpx 50rpx 24rpx;
+  font-size: 30rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 48rpx;
+  text-indent: 60rpx;
+  color: #000000;
+  background:#fff;
+}
+.about_info{
+  margin-top: 10rpx;
+  padding: 28rpx 24rpx;
+  font-size: 30rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  background:#fff;
+}
+.about_title{
+  font-size: 30rpx;
+  font-weight: 500;
+  line-height: 42rpx;
+  color: #0AC956;
+}
+.about_title image{
+  margin-right: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+.about_con{
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #000000;
+}
+.about_con image{
+  margin-left: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+.about_con .tel{
+  color: #0AC956;
+}
+.about_con>view{
+  margin-bottom: 20rpx;
+}
+.about_con>view:last-child{
+  margin-bottom: 0;
+}
+.copy{
+  display: inline-block;
+  font-size: 24rpx;
+  color: #EF7E17;
+}
+.copy image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}

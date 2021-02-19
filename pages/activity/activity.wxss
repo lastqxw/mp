@@ -1,0 +1,17 @@
+.top_banner{
+  width: 100%;
+}
+.top_banner image{
+  width: 100%;
+}
+.van-tabs__line{
+  width: 134rpx!important;
+  font-size: 34rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 500;
+  line-height: 46rpx;
+  color: #38C670;
+  opacity: 0.9;
+  background: linear-gradient(180deg, #6FF1A2 0%, #0AC956 100%);
+  border-radius: 30rpx;
+}

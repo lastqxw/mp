@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/active/active",
     "pages/personal/personal",
+    "pages/about/about",
     "pages/active/details/details",
     "pages/active/event/event",
     "pages/teacher/list",
@@ -11,7 +12,9 @@
     "pages/space/space",
     "pages/space/details/details",
     "pages/space/reservation/reservation",
-    "pages/space/time/time"
+    "pages/space/time/time",
+    "pages/partake/partake",
+    "pages/activity/activity"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,7 +31,7 @@
         "selectedIconPath": "./images/home.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/partake/partake",
         "text": "我的参与",
         "iconPath": "./images/canyu.png",
         "selectedIconPath": "./images/canyu.png"
