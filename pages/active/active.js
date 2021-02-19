@@ -1,5 +1,6 @@
 // pages/active/active.js
 const dayjs = require("../../miniprogram_npm/dayjs/index");
+const { apiHost } = getApp().globalData;
 Page({
   /**
    * 页面的初始数据
@@ -19,19 +20,21 @@ Page({
       "分类",
       "分类",
     ],
+    page: 1,
+    rows: 10,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
-    console.log();
     let today = dayjs().date();
     let datas = this.getDatesfunction(dayjs()).map((x) => x.split("-")[2]);
     this.setData({
       today,
       dateList: datas,
     });
+    this.getActiveList();
   },
   getDatesfunction(currentTime) {
     //JS获取当前周从星期一到星期天的日期
@@ -47,6 +50,20 @@ Page({
       );
     }
     return dates;
+  },
+  getActiveList() {
+    let params = {
+      page: this.data.page,
+      rows: this.data.rows,
+    };
+    wx.request({
+      url: apiHost + "prod-api/api/activity/list",
+      data: params,
+      method: "POST",
+      success: function (res) {
+        console.log(res);
+      },
+    });
   },
   goto() {
     wx.navigateTo({

@@ -4,7 +4,7 @@ const app = getApp();
 
 Page({
   data: {
-    background: ["demo-text-1", "demo-text-2", "demo-text-3"],
+    background: ["../../images/active1.png", "../../images/active2.png", "../../images/bg.png"],
     indicatorDots: true,
     vertical: false,
     autoplay: true,

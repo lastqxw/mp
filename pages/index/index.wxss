@@ -6,7 +6,12 @@
 .banner-botto {
 }
 .swiper-item {
+  width:100vw;
   background-color: #fff;
+}
+.swiper-item-img{
+  width:100%;
+  height: 400rpx;
 }
 .first {
   display: flex;

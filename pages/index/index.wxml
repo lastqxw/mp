@@ -6,7 +6,9 @@
       <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style=" height: 400rpx;">
         <block wx:for="{{background}}" wx:key="*this">
           <swiper-item>
-            <view class="swiper-item {{item}}">{{item}}</view>
+            <view class="swiper-item {{item}}">
+              <image class="swiper-item-img" src="{{item}}"></image>
+            </view>
           </swiper-item>
         </block>
       </swiper>
