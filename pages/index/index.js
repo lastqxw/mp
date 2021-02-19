@@ -25,6 +25,11 @@ Page({
           url: "/pages/teacher/list",
         });
         break;
+      case 4:
+        wx.navigateTo({
+          url: "/pages/volunteer/volunteer",
+        });
+        break;
       case 5:
         wx.navigateTo({
           url: "/pages/history/history",

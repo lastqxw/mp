@@ -1,0 +1,29 @@
+<image src="../../../images/volunteer (2).png" />
+<view class="main">
+  <view class="card">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+      <view class="card-body">
+        <view class="card-body-title">场内志愿工作C</view>
+        <view class="card-body-from">
+          <input name='value' placeholder="请输入姓名" />
+          <input name="value1" placeholder="请输入年龄" />
+          <input name="value2" placeholder="请输入电话" />
+          <input name="value3" placeholder="家庭住址" />
+          <input name="value4" placeholder="特长" />
+          <view class="card-body-form-title">报名成功后可获得10积分报名积分。</view>
+        </view>
+      </view>
+      <view class="btn-area">
+        <button type="primary" formType="submit" disabled="{{checked?false:true}}">提交报名</button>
+      </view>
+      <view class="ischeck">
+        <van-checkbox value="{{ checked }}" bind:change="onChange" shape="square">
+          请仔细阅读
+          <view class="statement" bindtap="seestatement">
+            《免责声明》
+          </view>
+        </van-checkbox>
+      </view>
+    </form>
+  </view>
+</view>
