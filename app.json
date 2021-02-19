@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/keyExchange/keyExchange",
     "pages/signout/signout",
     "pages/volunteer/Audit/Audit",
     "pages/volunteer/volunteersignup/volunteersignup",
     "pages/index/index",
     "pages/volunteer/volunteer",
-    "pages/about/about",
     "pages/active/active",
     "pages/personal/personal",
     "pages/about/about",

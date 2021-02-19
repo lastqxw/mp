@@ -1,0 +1,12 @@
+<view class="key_swiper">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        <view class="swiper-item">
+          <image src="{{item}}" mode="widthFix" />
+          <view class="dots">{{index+1}}/{{background.length}}</view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
