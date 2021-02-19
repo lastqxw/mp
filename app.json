@@ -15,7 +15,8 @@
     "pages/space/time/time",
     "pages/partake/partake",
     "pages/activity/activity",
-    "pages/order/order"
+    "pages/order/order",
+    "pages/history/history"
   ],
   "window": {
     "backgroundTextStyle": "light",

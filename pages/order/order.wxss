@@ -88,3 +88,6 @@ page{
   height: 40rpx;
   vertical-align: middle;
 }
+.yuyue button{
+  margin-top: 100rpx;
+}

@@ -62,7 +62,7 @@ Page({
       url: '../active/active'
     });
   },
-  // 活动详情
+  // 跳转活动详情
   toDetails(e){
     console.log(e.currentTarget.dataset);
     if(e.currentTarget.dataset.state!='3'){

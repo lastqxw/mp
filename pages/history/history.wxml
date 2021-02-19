@@ -1,0 +1,9 @@
+<view class="hisList">
+  <view class="hisItem" wx:for="{{historyList}}" wx:for-item="item" wx:key="index"  bindtap="toDetails" data-id="{{item.id}}" data-state='{{item.state}}'>
+    <image src="{{item.img}}" />
+    <view class="hisRight">
+      <view class="hisTitle">{{item.title}}</view>
+      <view class="hisDes">{{item.des}}</view>
+    </view>
+  </view>
+</view>

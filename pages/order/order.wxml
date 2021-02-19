@@ -27,4 +27,5 @@
       <image src="../../images/lat.png" />
     </view>
   </view>
+  <van-button type="primary" color="#FF8104" block class="yuyue">预约成功</van-button>
 </view>
