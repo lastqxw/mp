@@ -10,3 +10,7 @@
     </block>
   </swiper>
 </view>
+<view class="key_title">
+  <view class="key_name">一次性使用口罩20个</view>
+  <view class="key_des">近30天兑换 61万 个</view>
+</view>
