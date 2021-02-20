@@ -58,10 +58,10 @@
     <text class="right"></text>
   </view>
   <view class="active">
-    <view class="active-item" wx:for="{{10}}" wx:for-item="item" wx:key="*this" bindtap="gotoDetails">
-      <image src="../../images/bg.png" />
-      <text class="active-title">2021新春民族音乐会</text>
-      <view class="active-des">活动介绍活动介绍活动介绍活动介绍</view>
+    <view class="active-item" wx:for="{{activeList}}" wx:for-item="item" wx:key="*this" bindtap="gotoDetails" data-activeId='{{item.id}}'>
+      <image src='{{item.banner}}' />
+      <text class="active-title">{{item.title}}</text>
+      <view class="active-des">{{item.content}}</view>
     </view>
   </view>
 </view>

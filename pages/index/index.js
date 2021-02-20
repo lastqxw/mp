@@ -1,7 +1,7 @@
 // index.js
 // 获取应用实例
 const app = getApp();
-
+const { apiHost } = getApp().globalData;
 Page({
   data: {
     background: [
@@ -14,8 +14,13 @@ Page({
     autoplay: true,
     interval: 2000,
     duration: 500,
+    page: "1",
+    rows: "10",
+    activeList: [],
   },
-  onLoad() {},
+  onLoad() {
+    this.getActiveList();
+  },
   goto(e) {
     let type = +e.currentTarget.dataset.type;
     switch (type) {
@@ -53,9 +58,34 @@ Page({
         break;
     }
   },
-  gotoDetails() {
+  gotoDetails(e) {
+    let id = e.currentTarget.dataset.activeid;
     wx.navigateTo({
-      url: "/pages/active/details/details",
+      url: "/pages/active/details/details?id=" + id,
+    });
+  },
+  getActiveList() {
+    let params = {
+      page: this.data.page,
+      rows: this.data.rows,
+    };
+    wx.request({
+      url:
+        apiHost +
+        `prod-api/api/activity/list?page=${params.page}&rows=${params.rows}`,
+      data: params,
+      method: "POST",
+      success: (res) => {
+        console.log(res);
+        if (res.data.code == 200) {
+          res.data.data.forEach((element) => {
+            element.banner = "http://8.141.48.40:81" + element.banner;
+          });
+          this.setData({
+            activeList: res.data.data,
+          });
+        }
+      },
     });
   },
 });

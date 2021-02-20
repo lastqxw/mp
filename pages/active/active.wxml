@@ -22,13 +22,13 @@
     <text class="right"></text>
   </view>
   <view class="bottom">
-    <view class="bottom-item" wx:for="{{10}}" wx:key="*this" bind:tap="goto">
+    <view class="bottom-item" wx:for="{{activeList}}" wx:key="*this" data-activeId='{{item.id}}' bind:tap="goto">
       <view class="img">
-        <image src="../../images/bg.png" />
+        <image src='{{item.banner}}' />
       </view>
       <view class="te">
-        <view class="te_title">2021新春民族音乐会</view>
-        <view class="te_con">活动介绍活动介绍活动介活动绍活动介绍</view>
+        <view class="te_title">{{item.title}}</view>
+        <view class="te_con">{{item.content}}</view>
       </view>
     </view>
   </view>

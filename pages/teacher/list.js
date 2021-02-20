@@ -1,17 +1,47 @@
 // pages/teacher/list.js
+const { apiHost } = getApp().globalData;
 Page({
   /**
    * 页面的初始数据
    */
-  data: {},
+  data: {
+    page: 1,
+    rows: 10,
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {},
+  onLoad: function (options) {
+    this.getTeacherList();
+  },
   goto() {
     wx.navigateTo({
       url: "/pages/teacher/details/details",
+    });
+  },
+  getTeacherList() {
+    let params = {
+      page: this.data.page,
+      rows: this.data.rows,
+    };
+    wx.request({
+      url:
+        apiHost +
+        `/prod-api/api/lecturer/list?page=${params.page}&rows=${params.rows}`,
+      data: params,
+      method: "POST",
+      success: (res) => {
+        console.log(res);
+        if (res.data.code == 200) {
+          res.data.data.forEach((element) => {
+            element.picture = "http://8.141.48.40:81" + element.picture;
+          });
+          this.setData({
+            teacherList: res.data.data,
+          });
+        }
+      },
     });
   },
   /**

@@ -25,6 +25,7 @@ Page({
     ],
     page: 1,
     rows: 10,
+    activeList: [],
   },
 
   /**
@@ -60,17 +61,29 @@ Page({
       rows: this.data.rows,
     };
     wx.request({
-      url: apiHost + "prod-api/api/activity/list",
+      url:
+        apiHost +
+        `prod-api/api/activity/list?page=${params.page}&rows=${params.rows}`,
       data: params,
       method: "POST",
-      success: function (res) {
+      success: (res) => {
         console.log(res);
+        if (res.data.code == 200) {
+          res.data.data.forEach((element) => {
+            element.banner = "http://8.141.48.40:81" + element.banner;
+          });
+          this.setData({
+            activeList: res.data.data,
+          });
+        }
       },
     });
   },
-  goto() {
+  goto(e) {
+    console.log(e.currentTarget.dataset);
+    let id = e.currentTarget.dataset.activeid;
     wx.navigateTo({
-      url: "/pages/active/details/details",
+      url: "/pages/active/details/details?id=" + id,
     });
   },
   changeType(e) {

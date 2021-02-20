@@ -1,15 +1,15 @@
 <view class="container">
   <view class="bottom">
-    <view class="bottom-item" wx:for="{{10}}" wx:key="*this" bind:tap="goto">
+    <view class="bottom-item" wx:for="{{teacherList}}" wx:key="*this" bind:tap="goto" data-id="{{item.id}}">
       <view class="img">
-        <image src="../../images/bg.png" />
+        <image src="{{item.picture}}" />
       </view>
       <view class="te">
         <view class="te_title">
-          <view class="te-title-text">王子涵</view>
-          <view class='te-title-type'>瑜伽</view>
+          <view class="te-title-text">{{item.name}}</view>
+          <view class='te-title-type'>{{item.expertise}}</view>
         </view>
-        <view class="te_con">讲师格言讲师格言讲师格言讲师格言</view>
+        <view class="te_con">{{item.motto}}</view>
       </view>
     </view>
   </view>

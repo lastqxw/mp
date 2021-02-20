@@ -116,7 +116,6 @@
   opacity: 1;
   border-radius: 4px;
   display: flex;
-  justify-content: space-around;
 }
 .img image {
   width: 264rpx;

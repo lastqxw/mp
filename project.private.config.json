@@ -21,7 +21,7 @@
         {
           "name": "pages/active/details/details",
           "pathName": "pages/active/details/details",
-          "query": "",
+          "query": "id=1",
           "scene": null
         },
         {
@@ -69,6 +69,7 @@
         {
           "name": "pages/space/time/time",
           "pathName": "pages/space/time/time",
+          "query": "",
           "scene": null
         }
       ]

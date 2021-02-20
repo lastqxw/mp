@@ -39,7 +39,7 @@
 }
 .one-top-con-sub {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 .one-top-con-sub-left image {
   width: 93px;
@@ -53,6 +53,7 @@
   line-height: 20px;
   color: #000000;
   opacity: 1;
+  text-align: center;
 }
 .one-top-con-sub-right {
   font-size: 14px;
@@ -81,8 +82,16 @@
   color: #0ac956;
   opacity: 0.9;
 }
-.two-con text {
-  display: block;
+.two-con-text-left {
+  min-width: 100rpx;
+}
+.two-con-text-right text {
+  margin-right: 10rpx;
+}
+.two-con-text {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
   font-size: 14px;
   font-family: Alibaba PuHuiTi;
   font-weight: 400;
