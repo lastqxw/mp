@@ -23,7 +23,7 @@
     </view>
   </view>
   <view class="btn-area">
-    <button type="primary">积分兑换</button>
+    <button type="primary" bindtap="exchange">积分兑换</button>
     <button style="background:#fff!important;">完成</button>
   </view>
 </view>

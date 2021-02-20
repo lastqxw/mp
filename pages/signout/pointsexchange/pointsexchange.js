@@ -7,7 +7,16 @@ Page({
   data: {
 
   },
-
+  gotointegral(){
+    wx.navigateTo({
+      url: "/pages/signout/record/record",
+    });
+  },
+  gotoexchange(){
+    wx.navigateTo({
+      url: "/pages/signout/secretkey/secretkey",
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */

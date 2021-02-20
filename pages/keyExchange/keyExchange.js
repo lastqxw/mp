@@ -9,7 +9,8 @@ Page({
     vertical: false,
     autoplay: false,
     interval: 2000,
-    duration: 500
+    duration: 500,
+    checked:false
   },
 
   /**
@@ -31,5 +32,13 @@ Page({
    */
   onShow: function () {
 
+  },
+  onChange(event) {
+    this.setData({
+      checked: event.detail,
+    });
+  },
+  seestatement(){
+    console.log('兑换须知')
   }
 })
