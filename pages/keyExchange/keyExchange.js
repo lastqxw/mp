@@ -1,35 +1,31 @@
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    background: ['../../images/active1.png', '../../images/active2.png'],
+    background: [
+      "https://s3.ax1x.com/2021/02/20/y4Hxp9.png",
+      "https://s3.ax1x.com/2021/02/20/y4LPiD.png",
+    ],
     indicatorDots: false,
     vertical: false,
     autoplay: false,
     interval: 2000,
-    duration: 500
+    duration: 500,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
-  },
+  onLoad: function (options) {},
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-
-  },
+  onReady: function () {},
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
-  }
-})
+  onShow: function () {},
+});

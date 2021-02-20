@@ -1,7 +1,7 @@
 <!-- pages/active/details/details.wxml -->
 <view class="container">
   <view class="top">
-    <image src="../../../images/active2.png" />
+    <image src="https://s3.ax1x.com/2021/02/20/y4LPiD.png" />
   </view>
   <van-tabs active="{{ active }}" class="tap" nav-class='tap-nav' tab-active-class='taps' color='#38C670' title-active-color='#38C670'>
     <van-tab title="活动信息">
@@ -10,7 +10,7 @@
           <view class="one-top-con-title">瑜伽讲座</view>
           <view class="one-top-con-sub">
             <view class="one-top-con-sub-left">
-              <image src="../../../images/active1.png" />
+              <image src="https://s3.ax1x.com/2021/02/20/y4Hxp9.png" />
               <view class="text">王子涵</view>
             </view>
             <view class="one-top-con-sub-right">

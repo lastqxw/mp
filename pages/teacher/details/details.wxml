@@ -29,7 +29,7 @@
         <text>主讲活动</text>
       </view>
       <view class="two-con" bind:tap="goto">
-        <image src="../../../images/active1.png" />
+        <image src="https://s3.ax1x.com/2021/02/20/y4Hxp9.png" />
         <view class="two-con-sub">本栏目精心筛选整理高清国内外各位名师,流派的瑜伽视频资源,让你轻松、方便的学习瑜伽,在线观看高质量的瑜伽视频。</view>
       </view>
     </view>
@@ -39,11 +39,11 @@
         <text>历史活动</text>
       </view>
       <view class="two-con">
-        <image src="../../../images/active2.png" />
+        <image src="https://s3.ax1x.com/2021/02/20/y4LPiD.png" />
         <view class="two-con-sub">本栏目精心筛选整理高清国内外各位名师,流派的瑜伽视频资源,让你轻松、方便的学习瑜伽,在线观看高质量的瑜伽视频。</view>
       </view>
       <view class="two-con" style="margin-top:40rpx">
-        <image src="../../../images/active2.png" />
+        <image src="https://s3.ax1x.com/2021/02/20/y4LPiD.png" />
         <view class="two-con-sub">本栏目精心筛选整理高清国内外各位名师,流派的瑜伽视频资源,让你轻松、方便的学习瑜伽,在线观看高质量的瑜伽视频。</view>
       </view>
     </view>
