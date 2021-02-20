@@ -12,10 +12,7 @@ Page({
     autoplay: false,
     interval: 2000,
     duration: 500,
-<<<<<<< HEAD
     checked:false
-=======
->>>>>>> 7417421c70e0024bad1710c7c20d9b7a45d577f8
   },
 
   /**
@@ -31,7 +28,6 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-<<<<<<< HEAD
   onShow: function () {
 
   },
@@ -44,7 +40,3 @@ Page({
     console.log('兑换须知')
   }
 })
-=======
-  onShow: function () {},
-});
->>>>>>> 7417421c70e0024bad1710c7c20d9b7a45d577f8
