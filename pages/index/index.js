@@ -51,7 +51,7 @@ Page({
         break;
       case 7:
         wx.navigateTo({
-          url: "/pages/keyExchange/keyExchange",
+          url: "/pages/signout/pointsexchange/pointsexchange",
         });
         break;
       default:

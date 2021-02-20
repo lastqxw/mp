@@ -15,7 +15,7 @@
     <text class="con">活动兑换</text>
   </view>
   <view class="active">
-    <view class="active-item" wx:for="{{4}}" wx:for-item="item" wx:key="*this">
+    <view class="active-item" wx:for="{{4}}" wx:for-item="item" wx:key="*this" bindtap="goto">
       <image src="../../../images/bg.png" />
       <text class="active-title">2021新春民族音乐会</text>
       <view class="active-des">活动介绍活动介绍活动介绍活动介绍</view>
@@ -27,7 +27,7 @@
     <text class="con">小礼品兑换</text>
   </view>
   <view class="active">
-    <view class="active-item" wx:for="{{2}}" wx:for-item="item" wx:key="*this">
+    <view class="active-item" wx:for="{{2}}" wx:for-item="item" wx:key="*this" bindtap="goto">
       <image src="../../../images/bg.png" />
       <text class="active-title">2021新春民族音乐会</text>
       <view class="active-des">活动介绍活动介绍活动介绍活动介绍</view>
