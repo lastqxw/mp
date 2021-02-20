@@ -5,8 +5,8 @@ const app = getApp();
 Page({
   data: {
     background: [
-      "../../images/active1.png",
-      "../../images/active2.png",
+      "https://s3.ax1x.com/2021/02/20/y4Hxp9.png",
+      "https://s3.ax1x.com/2021/02/20/y4LPiD.png",
       "../../images/bg.png",
     ],
     indicatorDots: true,

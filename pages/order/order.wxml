@@ -1,5 +1,5 @@
 <view class="top_banner">
-  <image src="../../images/order.png" mode="widthFix" />
+  <image src="../../images/place.png" mode="widthFix" />
 </view>
 <view class="order_con">
   <view class="one-top">
@@ -13,8 +13,17 @@
       <view>设备设施：LED大屏、音响、舞台、电动可折叠座椅</view>
       <view>适合活动：大型讲座、发布会、分享会、路演、戏剧、演艺等活动</view>
       <view>服务时间：09:00-20:00</view>
-      <view>客服微信：{{wechat}}<view class="copy" bindtap='copyText'><image src="../../images/copy.png" />复制微信</view></view>
-      <view>联系电话：<text class="tel" bindtap="makeCall">{{phone}}</text></view>
+      <view>
+        客服微信：{{wechat}}
+        <view class="copy" bindtap='copyText'>
+          <image src="../../images/copy.png" />
+          复制微信
+        </view>
+      </view>
+      <view>
+        联系电话：
+        <text class="tel" bindtap="makeCall">{{phone}}</text>
+      </view>
     </view>
   </view>
   <view class="about_info">

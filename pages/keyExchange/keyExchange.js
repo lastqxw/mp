@@ -1,35 +1,37 @@
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    background: ['../../images/active1.png', '../../images/active2.png'],
+    background: [
+      "https://s3.ax1x.com/2021/02/20/y4Hxp9.png",
+      "https://s3.ax1x.com/2021/02/20/y4LPiD.png",
+    ],
     indicatorDots: false,
     vertical: false,
     autoplay: false,
     interval: 2000,
     duration: 500,
+<<<<<<< HEAD
     checked:false
+=======
+>>>>>>> 7417421c70e0024bad1710c7c20d9b7a45d577f8
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
-  },
+  onLoad: function (options) {},
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-
-  },
+  onReady: function () {},
 
   /**
    * 生命周期函数--监听页面显示
    */
+<<<<<<< HEAD
   onShow: function () {
 
   },
@@ -42,3 +44,7 @@ Page({
     console.log('兑换须知')
   }
 })
+=======
+  onShow: function () {},
+});
+>>>>>>> 7417421c70e0024bad1710c7c20d9b7a45d577f8
