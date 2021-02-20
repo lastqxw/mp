@@ -1,5 +1,5 @@
 <view class="top_banner">
-  <image src="../../images/activity.png" mode="widthFix" />
+  <image src="../../images/active2.png" mode="widthFix" />
 </view>
 <view class="container">
   <van-tabs active="{{ active }}" class="tap" nav-class='tap-nav' tab-active-class='taps' color='#38C670' title-active-color='#38C670'>
@@ -74,6 +74,10 @@
       </view>
     </van-tab>
   </van-tabs>
-  <van-button disabled  type="primary" color="#CBCBCB" block wx:if="{{details.state=='1'}}">已结束</van-button>
-  <van-button type="primary" color="#FF8104" block wx:if="{{details.state=='2'}}" bindtap="cancalCall">取消报名</van-button>
+  <van-button disabled type="primary" color="#CBCBCB" block wx:if="{{details.state=='1'}}">
+    已结束
+  </van-button>
+  <van-button type="primary" color="#FF8104" block wx:if="{{details.state=='2'}}" bindtap="cancalCall">
+    取消报名
+  </van-button>
 </view>
