@@ -12,6 +12,7 @@ Page({
     autoplay: false,
     interval: 2000,
     duration: 500,
+    checked:false
   },
 
   /**
@@ -27,5 +28,15 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
-});
+  onShow: function () {
+
+  },
+  onChange(event) {
+    this.setData({
+      checked: event.detail,
+    });
+  },
+  seestatement(){
+    console.log('兑换须知')
+  }
+})

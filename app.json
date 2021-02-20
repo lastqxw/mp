@@ -1,11 +1,11 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/signout/signout",
+    "pages/keyExchange/keyExchange",
     "pages/signout/record/record",
     "pages/signout/secretkey/secretkey",
     "pages/signout/pointsexchange/pointsexchange",
-    "pages/keyExchange/keyExchange",
-    "pages/signout/signout",
     "pages/volunteer/Audit/Audit",
     "pages/volunteer/volunteersignup/volunteersignup",
     "pages/volunteer/volunteer",
