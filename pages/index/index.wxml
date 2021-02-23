@@ -24,7 +24,7 @@
         <image src="../../images/lecturer.png" />
         <text>讲师介绍</text>
       </view>
-      <view class="first-item">
+      <view class="first-item" data-type='3' bind:tap="goto">
         <image src="../../images/site.png" />
         <text>场地介绍</text>
       </view>

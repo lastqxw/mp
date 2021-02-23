@@ -1,18 +1,18 @@
 <!-- pages/space/space.wxml -->
 <view class='container'>
-  <view class="item" wx:for="{{10}}" wx:key="*this" bind:tap="goto">
-    <image src='../../images/seit.png' />
+  <view class="item" wx:for="{{spaceList}}" wx:key="*this" bind:tap="goto" data-spacedate="{{item}}">
+    <image src='{{item.banner}}' />
     <view class="item-des">
       <view class="item-des-top">
         <view class="item-des-top-left">
           <text class="level">B2</text>
-          <text class="name">中等会议室</text>
+          <text class="name">{{item.name}}</text>
         </view>
         <view class="item-des-top-right">
-          <text>100人</text>
+          <text>{{item.capacity}}</text>
         </view>
       </view>
-      <view class="item-des-bottom">适合拓展培训，举行会议，颁发典礼等活动。</view>
+      <view class="item-des-bottom">{{item.fitActivity}}</view>
     </view>
   </view>
 </view>

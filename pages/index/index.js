@@ -34,6 +34,11 @@ Page({
           url: "/pages/teacher/list",
         });
         break;
+        case 3:
+          wx.navigateTo({
+            url: "/pages/space/space",
+          });
+          break;
       case 4:
         wx.navigateTo({
           url: "/pages/volunteer/volunteer",
@@ -76,7 +81,6 @@ Page({
       data: params,
       method: "POST",
       success: (res) => {
-        console.log(res);
         if (res.data.code == 200) {
           res.data.data.forEach((element) => {
             element.banner = "http://8.141.48.40:81" + element.banner;
