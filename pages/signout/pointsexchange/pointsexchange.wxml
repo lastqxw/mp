@@ -12,17 +12,17 @@
   </view>
   <view class="title">
     <text class="line"></text>
-    <text class="con">活动兑换</text>
+    <text class="con">兑换列表</text>
   </view>
   <view class="active">
-    <view class="active-item" wx:for="{{4}}" wx:for-item="item" wx:key="*this" bindtap="goto">
-      <image src="../../../images/bg.png" />
-      <text class="active-title">2021新春民族音乐会</text>
-      <view class="active-des">活动介绍活动介绍活动介绍活动介绍</view>
-      <view class="active-integral">100积分</view>
+    <view class="active-item" wx:for="{{list}}" wx:for-item="item" wx:key="*this" bindtap="goto" data-id='{{item.id}}'>
+      <image src="{{item.photo}}" />
+      <text class="active-title">{{item.title}}</text>
+      <view class="active-des">{{item.description}}</view>
+      <view class="active-integral">{{item.exchange_integral	}}积分</view>
     </view>
   </view>
-  <view class="title">
+  <!-- <view class="title">
     <text class="line"></text>
     <text class="con">小礼品兑换</text>
   </view>
@@ -33,5 +33,5 @@
       <view class="active-des">活动介绍活动介绍活动介绍活动介绍</view>
       <view class="active-integral">100积分</view>
     </view>
-  </view>
+  </view> -->
 </view>

@@ -135,7 +135,7 @@ Page({
           data.lecturerPicture = "http://8.141.48.40:81" + data.lecturerPicture;
           let value2 = `费用：${data.cost}元 / ${data.exchangeIntegral}积分`;
           this.setData({
-            item: res.data.data,
+            item: data,
             value2,
           });
         }

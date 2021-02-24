@@ -20,19 +20,15 @@
       <text>产品参数</text>
       <image src="../../images/tolink.png" />
     </view>
-    <view class="key_parameter_bot">
-      页面信息及服务由淘宝或天猫交易平台提供，请确保你的绑定淘宝（天猫）账号处于正常状态。
-    </view>
-    <view class="key_parameter_bot">
-      实物权益无质量问题不支持退换货
-    </view>
+    <view class="key_parameter_bot">页面信息及服务由淘宝或天猫交易平台提供，请确保你的绑定淘宝（天猫）账号处于正常状态。</view>
+    <view class="key_parameter_bot">实物权益无质量问题不支持退换货</view>
   </view>
   <view class="key_bot">
     本商品由天猫虾选旗舰店提供。基础价指本权益在天猫虾选旗舰店非活动时的在售价。
     <image src="../../images/spxq.png" mode="widthFix"></image>
   </view>
 </view>
-<view class="key_exchange">
+<!-- <view class="key_exchange">
   <view class="btn-area">
         <button type="primary" formType="submit" disabled="{{checked?false:true}}">兑换</button>
       </view>
@@ -44,4 +40,4 @@
           </view>
         </van-checkbox>
       </view>
-</view>
+</view> -->

@@ -1,12 +1,12 @@
-<!--pages/personal/personal.wxml-->
+<!-- pages/personal/personal.wxml -->
 <view class="psl_top">
-  <image src="../../images/avar.jpg" />
+  <image src="{{userInfo.avatarUrl}}" />
   <view class="psl_con">
     <view>
-      <text>Hi,张磊</text>
+      <text>Hi,{{userInfo.nickname}}</text>
       <view class="score">
         <image src="../../images/score.png" />
-        <text>3600</text>
+        <text>{{userInfo.integral}}</text>
       </view>
     </view>
     <view class="post">技术部产品经理</view>

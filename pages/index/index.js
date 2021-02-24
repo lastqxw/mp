@@ -1,7 +1,7 @@
 // index.js
 // 获取应用实例
 const app = getApp();
-const { apiHost } = getApp().globalData;
+const { apiHost, userInfo } = getApp().globalData;
 Page({
   data: {
     background: [
@@ -34,11 +34,11 @@ Page({
           url: "/pages/teacher/list",
         });
         break;
-        case 3:
-          wx.navigateTo({
-            url: "/pages/space/space",
-          });
-          break;
+      case 3:
+        wx.navigateTo({
+          url: "/pages/space/space",
+        });
+        break;
       case 4:
         wx.navigateTo({
           url: "/pages/volunteer/volunteer",

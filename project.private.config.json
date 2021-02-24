@@ -77,6 +77,24 @@
           "pathName": "pages/active/success/success",
           "query": "id=10",
           "scene": null
+        },
+        {
+          "name": "pages/signout/pointsexchange/pointsexchange",
+          "pathName": "pages/signout/pointsexchange/pointsexchange",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/keyExchange/keyExchange",
+          "pathName": "pages/keyExchange/keyExchange",
+          "query": "id=1",
+          "scene": null
+        },
+        {
+          "name": "pages/personal/personal",
+          "pathName": "pages/personal/personal",
+          "query": "id=1",
+          "scene": null
         }
       ]
     }
