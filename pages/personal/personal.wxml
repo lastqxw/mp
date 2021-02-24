@@ -9,7 +9,7 @@
         <text>{{userInfo.integral}}</text>
       </view>
     </view>
-    <view class="post">技术部产品经理</view>
+    <!-- <view class="post">技术部产品经理</view> -->
   </view>
 </view>
 <view class="psl_bot">
