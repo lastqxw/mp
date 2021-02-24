@@ -27,7 +27,7 @@
         {
           "name": "pages/active/event/event",
           "pathName": "pages/active/event/event",
-          "query": "",
+          "query": "id=10",
           "scene": null
         },
         {
@@ -70,6 +70,12 @@
           "name": "pages/space/time/time",
           "pathName": "pages/space/time/time",
           "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/active/success/success",
+          "pathName": "pages/active/success/success",
+          "query": "id=10",
           "scene": null
         }
       ]

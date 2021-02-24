@@ -1,0 +1,13 @@
+<!-- pages/active/success/success.wxml -->
+<view class="container">
+  <view class="top">
+    <view class="title">报名成功</view>
+    <view class="qcode">
+      <image src="../../../images/qcode.png" />
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="b-title">温馨提示</view>
+    <view class="b-sec">获得500积分！积分将在15个工作日内到账，若取消报名，将无法获得积分。</view>
+  </view>
+</view>

@@ -26,7 +26,7 @@ Page({
   },
   goto: function () {
     wx.navigateTo({
-      url: "/pages/active/event/event",
+      url: "/pages/active/event/event?id=" + this.data.activeId,
     });
   },
   getDetails() {

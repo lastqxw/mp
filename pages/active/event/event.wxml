@@ -2,15 +2,19 @@
   <view class="top"></view>
   <view class="card">
     <view class="card-body">
-      <view class="card-body-title">2021新春民族音乐会</view>
-      <view class="card-body-sub">时间：2020-10-07 星期三 10:00~11:00</view>
-      <view class="card-body-sub">地点：北京市东城区美术馆后街40号</view>
+      <view class="card-body-title">{{item.title}}</view>
+      <view class="card-body-sub">
+        时间：
+        <text>{{item.date}}</text>
+        <text>{{item.timeStr}}</text>
+      </view>
+      <view class="card-body-sub">地址：{{item.address}}</view>
       <view class="card-body-from">
-        <van-field model:value="{{ value }}" input-class='input-class' placeholder="请输入姓名" />
-        <van-field model:value="{{ value3 }}" input-class='input-class' />
+        <van-field model:value="{{ name }}" error-message="{{error[0]}}" input-class='input-class' placeholder="请输入姓名" />
+        <van-field model:value="{{ sex }}" bind:tap="showAction" clickable readonly input-class='input-class' />
         <van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect" />
-        <van-field model:value="{{ value1 }}" input-class='input-class' placeholder="请输入联系方式" />
-        <van-field model:value="{{ value2 }}" input-class='input-class' placeholder="请输入联系方式" />
+        <van-field model:value="{{ phone }}" placeholder="请输入联系方式" error-message="{{error[1]}}" border="{{ false }}" />
+        <van-field model:value="{{ value2 }}" readonly input-class='input-class' placeholder="请输入联系方式" />
         <view class="btn-group">
           <van-button color="#FF8104" bind:tap="score">积分兑换</van-button>
           <van-button color="#FF8104" bind:tap="wxpay">微信支付</van-button>

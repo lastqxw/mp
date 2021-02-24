@@ -82,6 +82,9 @@
   overflow: hidden;
   margin-bottom: 20rpx;
 }
+.active-item:nth-child(odd) {
+  margin-right: 20rpx;
+}
 .active-item image {
   width: 100%;
   height: 200rpx;
