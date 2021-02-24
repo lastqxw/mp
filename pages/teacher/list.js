@@ -15,9 +15,10 @@ Page({
   onLoad: function (options) {
     this.getTeacherList();
   },
-  goto() {
+  goto(e) {
+    let id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: "/pages/teacher/details/details",
+      url: "/pages/teacher/details/details?teacherid="+id,
     });
   },
   getTeacherList() {
@@ -32,7 +33,6 @@ Page({
       data: params,
       method: "POST",
       success: (res) => {
-        console.log(res);
         if (res.data.code == 200) {
           res.data.data.forEach((element) => {
             element.picture = "http://8.141.48.40:81" + element.picture;

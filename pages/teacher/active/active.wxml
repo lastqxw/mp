@@ -1,21 +1,20 @@
 <!-- pages/active/details/details.wxml -->
 <view class="container">
   <view class="top">
-    <image src="https://s3.ax1x.com/2021/02/20/y4LPiD.png" />
+    <image src="{{item.banner}}" />
   </view>
   <van-tabs active="{{ active }}" class="tap" nav-class='tap-nav' tab-active-class='taps' color='#38C670' title-active-color='#38C670'>
     <van-tab title="活动信息">
       <view class="one">
         <view class="one-top">
-          <view class="one-top-con-title">瑜伽讲座</view>
+          <view class="one-top-con-title">{{item.title}}</view>
           <view class="one-top-con-sub">
             <view class="one-top-con-sub-left">
-              <image src="https://s3.ax1x.com/2021/02/20/y4Hxp9.png" />
-              <view class="text">王子涵</view>
+              <image src="{{item.lecturerPicture}}" />
+              <view class="text">{{item.lecturerName}}</view>
             </view>
             <view class="one-top-con-sub-right">
-              理疗瑜伽（physiastrics yoga）主要把哈达瑜伽中针对性的对于缓解颈椎,肩周,腰部酸痛感的特定体式结合在一起的瑜伽.
-主要功效 理疗瑜伽最大的功效就是可以通过特定的拉伸、扭转体式辅助治疗肩周炎,和因颈椎不适造成的头晕,另外对于腰肌劳损,腰椎间盘突出也可以得到极大的改善,还可以缓解治疗女性痛经,调节内分泌.--，在过去行走江湖的艺人们有这么一个说法北京学艺、天津练活、济南踢门坎、可想而知在过去老济南的文化底蕴是多么的丰厚。
+              {{item.content}}
             </view>
           </view>
         </view>
@@ -25,13 +24,13 @@
             <text>活动信息</text>
           </view>
           <view class="two-con">
-            <text>时间：2020-10-07 星期三 10:00~11:00</text>
-            <text>地点：北京市东城区美术馆后街40号</text>
+            <text>时间：{{item.date}}</text>
+            <text>地点：{{item.address}}</text>
             <text>活动场地：B2美好演播厅</text>
-            <text>活动主题：文化主题</text>
-            <text>活动类型：亲子</text>
-            <text>费用：免费</text>
-            <text>名额：10人</text>
+            <text>活动主题：{{item.tipicName}}</text>
+            <text>活动类型：{{item.activeName}}</text>
+            <text>费用：{{item.cost}}</text>
+            <text>名额：{{item.quota}}</text>
           </view>
         </view>
         <view class="one-top">
@@ -80,5 +79,5 @@
       </view>
     </van-tab>
   </van-tabs>
-  <van-button type="primary" color="#FF8104" block bind:tap="goto">立即报名</van-button>
+  <van-button type="primary" color="#FF8104" block bind:tap="goto" >立即报名</van-button>
 </view>

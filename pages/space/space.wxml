@@ -1,6 +1,6 @@
 <!-- pages/space/space.wxml -->
 <view class='container'>
-  <view class="item" wx:for="{{spaceList}}" wx:key="*this" bind:tap="goto" data-spacedate="{{item}}">
+  <view class="item" wx:for="{{spaceList}}" wx:key="*this" bind:tap="goto" data-id="{{item.id}}">
     <image src='{{item.banner}}' />
     <view class="item-des">
       <view class="item-des-top">

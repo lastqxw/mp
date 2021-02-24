@@ -17,10 +17,9 @@ Page({
     this.getSpaceList()
   },
   goto(e) {
-    console.log(e,'e')
-   let spacedate= e.currentTarget.dataset.spacedate
+   let id= e.currentTarget.dataset.id
     wx.navigateTo({
-      url: `/pages/space/details/details`,
+      url: `/pages/space/details/details?spaceid=`+id,
     });
   },
   getSpaceList() {
@@ -35,7 +34,6 @@ Page({
       data: params,
       method: "POST",
       success: (res) => {
-        console.log(res,'res');
         if (res.data.code == 200) {
           res.data.data.forEach((element) => {
             element.banner = "http://8.141.48.40:81" + element.banner;

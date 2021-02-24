@@ -1,10 +1,10 @@
 <view class="container">
   <view class="top">
-    <view class="top_con">
-      <view class="teacher_name">王子涵</view>
+    <image src="{{item.picture}}"></image>
+    <view class="top_con"> 
+      <view class="teacher_name">{{item.name}}</view>
       <view class="teacher_tag">
-        <text>瑜伽</text>
-        <text>禅道</text>
+        <text>{{item.expertise}}</text>
       </view>
     </view>
   </view>
@@ -15,8 +15,8 @@
         <text>大咖简介</text>
       </view>
       <view class="two-con">
-        <text>擅长领域：瑜伽</text>
-        <text>讲师格言：失败乃成功之母</text>
+        <text>擅长领域：{{item.expertise}}</text>
+        <text>讲师格言：{{item.motto}}</text>
         <text>活动类型：亲子</text>
         <view class="two-con-des">
           理疗瑜伽（physiastrics yoga）主要把哈达瑜伽中针对性的对于缓解颈椎,肩周,腰部酸痛感的特定体式结合在一起的瑜伽。
@@ -28,9 +28,9 @@
         <image src="../../../images/zj.png" />
         <text>主讲活动</text>
       </view>
-      <view class="two-con" bind:tap="goto">
-        <image src="https://s3.ax1x.com/2021/02/20/y4Hxp9.png" />
-        <view class="two-con-sub">本栏目精心筛选整理高清国内外各位名师,流派的瑜伽视频资源,让你轻松、方便的学习瑜伽,在线观看高质量的瑜伽视频。</view>
+      <view class="two-con" bind:tap="goto" data-id="{{item.id}}">
+        <image src="{{item.activityList[0].banner}}" />
+        <view class="two-con-sub">{{item.activityList[0].content}}</view>
       </view>
     </view>
     <view class="one-top">
