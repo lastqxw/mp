@@ -1,3 +1,4 @@
+const { apiHost } = getApp().globalData;
 Page({
   /**
    * 页面的初始数据
@@ -12,14 +13,43 @@ Page({
     autoplay: false,
     interval: 2000,
     duration: 500,
-    checked:false
+    checked: false,
+    item: null,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {},
-
+  onLoad: function (options) {
+    this.getItem(options.id);
+  },
+  getItem(id) {
+    let params = {
+      page: 1,
+      rows: 10,
+    };
+    wx.request({
+      url:
+        apiHost +
+        `prod-api/api/gift/list?page=${params.page}&rows=${params.rows}`,
+      data: params,
+      method: "POST",
+      success: (res) => {
+        console.log(res);
+        if (res.data.code == 200) {
+          res.data.data.forEach((element) => {
+            element.photo = element.photo
+              ? "http://8.141.48.40:81" + element.photo
+              : "../../../images/bg.png";
+          });
+          let item = res.data.data.filter((x) => x.id == id)[0];
+          this.setData({
+            item,
+          });
+        }
+      },
+    });
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -28,15 +58,13 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
-  },
+  onShow: function () {},
   onChange(event) {
     this.setData({
       checked: event.detail,
     });
   },
-  seestatement(){
-    console.log('兑换须知')
-  }
-})
+  seestatement() {
+    console.log("兑换须知");
+  },
+});
