@@ -1,12 +1,12 @@
 <view class="bodystyle">
-<view wx:for="{{array}}" class="main" wx:if="{{!isShow}}" bindtap='goto'>
-    <image src="../../images/bg.png" class="imgstyle" mode="widthFix"></image>
+<view wx:for="{{success}}" wx:key="*this" class="main" wx:if="{{!isShow}}" bindtap='goto'>
+    <image src="{{item.banner}}" class="imgstyle" mode="widthFix"></image>
     <view class="linestyle">
-      <view class="workname">{{item.name}}</view>
-      <view class="integral">{{item.age}}</view> 
+      <view class="workname">{{item.title}}</view>
+      <view class="integral">可获得{{item.getIntegral}}积分</view> 
     </view>
 </view>
-<view wx:for="{{arrays}}" class="main" wx:if="{{isShow}}" bindtap='goto'>
+<view wx:for="{{arrays}}" wx:key="*this" class="main" wx:if="{{isShow}}" bindtap='goto'>
     <image src="../../images/bg.png" class="imgstyle" mode="widthFix"></image>
     <view class="linestyle">
       <view class="workname">{{item.name}}</view>

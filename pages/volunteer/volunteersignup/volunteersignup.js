@@ -5,15 +5,41 @@ Page({
    * 页面的初始数据
    */
   data: {
-    value: "",
-    value1: "",
-    value2: "",
-    value3: "",
-    value4:"",
+    name: "",
+    age: "",
+    phone: "",
+    address: "",
+    Specialty:"",
     checked: false,
+    error: ["", ""]
   },
-  formSubmit(e) {
-    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+   // 判断表单是否填写
+   vform() {
+    if (this.data.name == "" && this.data.phone == "") {
+      this.setData({
+        error: ["请输入姓名", "请输入联系方式"],
+      });
+      return false;
+    } else if (this.data.name == "") {
+      this.setData({
+        error: ["请输入姓名", ""],
+      });
+      return false;
+    } else if (this.data.phone == "") {
+      this.setData({
+        error: ["", "请输入联系方式"],
+      });
+      return false;
+    } else {
+      return true;
+    }
+  },
+  submit() {
+    if (this.vform()) {
+      wx.showToast({
+        title: '报名成功'
+      })
+    }
   },
   onChange(event) {
     this.setData({

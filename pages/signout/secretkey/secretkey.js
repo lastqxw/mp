@@ -5,9 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+   error:"",
+   value:""
   },
-
+  vform(){
+    if(this.data.value==""){
+      this.setData({
+        error: "请输入家庭住址",
+      });
+      return false;
+    } else {
+      return true;
+    }
+  },
+  submit() {
+    if (this.vform()) {
+      wx.showToast({
+        title: '报名成功'
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */

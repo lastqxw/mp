@@ -1,7 +1,9 @@
 /* pages/volunteer/volunteer.wxss */
+page{
+  background: #F6F7F9;
+}
 .bodystyle{
   padding:0 32rpx 124rpx 32rpx;
-  background: #F6F7F9;
 }
 .main{
   margin-top:20rpx; 
@@ -13,6 +15,7 @@
 .main .imgstyle{
   width:100%;
   border-radius: 8rpx 8rpx 0 0;
+  height: 260rpx;
 }
 .main .linestyle{
   padding:32rpx 20rpx 28rpx 20rpx;
