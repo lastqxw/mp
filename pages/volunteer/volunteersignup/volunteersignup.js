@@ -11,34 +11,67 @@ Page({
     address: "",
     Specialty:"",
     checked: false,
-    error: ["", ""]
+    nameError:'',
+    ageError:'',
+    phoneError:'',
+    addressError:'',
+    specialtyError:'',
+    show:false
   },
    // 判断表单是否填写
    vform() {
-    if (this.data.name == "" && this.data.phone == "") {
+     this.setData({
+      nameError:'',
+      ageError:'',
+      phoneError:'',
+      addressError:'',
+      specialtyError:'',
+     })
+     if (this.data.name == "") {
       this.setData({
-        error: ["请输入姓名", "请输入联系方式"],
+        nameError:'请输入姓名',
       });
-      return false;
-    } else if (this.data.name == "") {
-      this.setData({
-        error: ["请输入姓名", ""],
-      });
-      return false;
-    } else if (this.data.phone == "") {
-      this.setData({
-        error: ["", "请输入联系方式"],
-      });
-      return false;
-    } else {
-      return true;
+      return false
     }
+    if (this.data.age == "") {
+      this.setData({
+        ageError:"请输入年龄"
+      });
+      return false
+    }
+    if (this.data.phone == "") {
+      this.setData({
+        phoneError: '请输入联系方式',
+      });
+      return false
+    }
+    if (this.data.Specialty == "") {
+      this.setData({
+        specialtyError: '请输入特长',
+      });
+      return false
+    }
+    if (this.data.address == "") {
+      this.setData({
+        addressError: '请输入联系地址',
+      });
+      return false
+    }
+    return true
   },
   submit() {
     if (this.vform()) {
       wx.showToast({
-        title: '报名成功'
+        title: '报名成功',
+        success:function(res){
+         setTimeout(()=>{
+          wx.navigateBack({
+            delta: 1,
+          })
+         },2000)
+        }
       })
+     
     }
   },
   onChange(event) {
@@ -48,5 +81,13 @@ Page({
   },
   seestatement(){
     console.log('免责声明')
+    this.setData({
+      show:!this.data.show
+    })
+  },
+  onClose(){
+    this.setData({
+      show:!this.data.show
+    })
   }
 })

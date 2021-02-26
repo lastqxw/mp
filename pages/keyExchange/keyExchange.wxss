@@ -122,3 +122,24 @@ van-icon{
   display: inline-block;
   color:#0AC956;
 }
+.title{
+  font-size: 14px;
+  text-align: center;
+  margin-top: 40rpx;
+  margin-bottom: 20rpx;
+  color: #000000;
+}
+.sub{
+  font-size: 12px;
+  margin-bottom: 20rpx;
+  color: #000000;
+  opacity: 0.9;
+  padding:0px 32rpx
+}
+.con{
+  font-size: 12px;
+  margin-bottom: 20rpx;
+  color: #000000;
+  opacity: 0.9;
+  padding:0px 32rpx
+}

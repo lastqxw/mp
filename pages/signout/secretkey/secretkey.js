@@ -11,17 +11,20 @@ Page({
   vform(){
     if(this.data.value==""){
       this.setData({
-        error: "请输入家庭住址",
+        error: "请输入秘钥",
       });
       return false;
     } else {
+      this.setData({
+        error: "",
+      });
       return true;
     }
   },
   submit() {
     if (this.vform()) {
       wx.showToast({
-        title: '报名成功'
+        title: '兑换成功'
       })
     }
   },

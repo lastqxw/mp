@@ -15,6 +15,7 @@ Page({
     duration: 500,
     checked: false,
     item: null,
+    show:false
   },
 
   /**
@@ -66,5 +67,25 @@ Page({
   },
   seestatement() {
     console.log("兑换须知");
+    this.setData({
+      show:true
+    })
+  },
+  onClose(){
+    this.setData({
+      show:false
+    })
+  },
+  submit() {
+    wx.showToast({
+      title: '兑换成功',
+      success:function(res){
+       setTimeout(()=>{
+        wx.navigateBack({
+          delta: 1,
+        })
+       },2000)
+      }
+    })
   },
 });

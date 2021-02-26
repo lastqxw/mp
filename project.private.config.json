@@ -95,6 +95,12 @@
           "pathName": "pages/personal/personal",
           "query": "id=1",
           "scene": null
+        },
+        {
+          "name": "pages/volunteer/volunteersignup/volunteersignup",
+          "pathName": "pages/volunteer/volunteersignup/volunteersignup",
+          "query": "id=10",
+          "scene": null
         }
       ]
     }

@@ -1,9 +1,9 @@
 <view class="hisList">
-  <view class="hisItem" wx:for="{{historyList}}" wx:for-item="item" wx:key="index"  bindtap="toDetails" data-id="{{item.id}}" data-state='{{item.state}}'>
-    <image src="{{item.img}}" />
+  <view class="hisItem" wx:for="{{activeList}}" wx:for-item="item" wx:key="index"  bindtap="goto" data-id="{{item.id}}" data-state='{{item.state}}'>
+    <image src="{{item.banner}}" />
     <view class="hisRight">
       <view class="hisTitle">{{item.title}}</view>
-      <view class="hisDes">{{item.des}}</view>
+      <view class="hisDes">{{item.content}}</view>
     </view>
   </view>
 </view>
