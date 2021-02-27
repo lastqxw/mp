@@ -49,6 +49,6 @@ App({
   globalData: {
     code: "",
     userInfo: null,
-    apiHost: "http://8.141.48.40:81/",
+    apiHost: "https://www.bjshusiyuan.com/",
   },
 });
