@@ -38,7 +38,7 @@
         </view>
         <view class="two-con-li">
           <view class="two-con-li-left">联系电话：</view>
-          <view class="two-con-li-right phone">{{item.phone}}</view>
+          <view class="two-con-li-right phone" bindtap="callphone">{{item.phone}}</view>
         </view>
       </view>
     </view>
@@ -62,8 +62,8 @@
     </view>
   </view>
   <view class="btn-group">
-    <van-button color='#FF8104'>整包预约</van-button>
+    <van-button color='#FF8104' bindtap="callphone">整包预约</van-button>
     <van-button color='#FF8104' bind:tap="shequ">社区预约</van-button>
-    <van-button color='#FF8104'>时段预约</van-button>
+    <van-button color='#FF8104' bind:tap="timeinterval">时段预约</van-button>
   </view>
 </view>

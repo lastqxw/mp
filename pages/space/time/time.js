@@ -57,6 +57,18 @@ Page({
       url: "/pages/active/details/details",
     });
   },
+  goback(){
+    wx.showToast({
+      title: '场地预约成功',
+      success:function(res){
+       setTimeout(()=>{
+        wx.navigateBack({
+          delta: 1,
+        })
+       },2000)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

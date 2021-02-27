@@ -11,19 +11,19 @@
 }
 .week {
   display: block;
-  margin-bottom: 13px;
-  font-size: 14px;
+  margin-bottom: 26rpx;
+  font-size: 28rpx;
   font-family: Alibaba PuHuiTi;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 40rpx;
   color: #000000;
   opacity: 1;
 }
 .date {
-  font-size: 17px;
+  font-size: 34rpx;
   font-family: Alibaba PuHuiTi;
   font-weight: 400;
-  line-height: 23px;
+  line-height: 46rpx;
   color: #000000;
   opacity: 1;
 }
@@ -35,9 +35,9 @@
   opacity: 1;
   font-family: Alibaba PuHuiTi;
   font-weight: 500;
-  line-height: 23px;
+  line-height: 46rpx;
   color: #ffffff;
-  border-radius: 4px;
+  border-radius: 8rpx;
   padding: 6rpx 12rpx;
 }
 .title {
@@ -50,18 +50,18 @@
 }
 .line {
   display: inline-block;
-  width: 4px;
-  height: 14px;
+  width: 8rpx;
+  height: 28rpx;
   background: #ff8104;
   opacity: 1;
-  border-radius: 2px;
+  border-radius: 4rpx;
   margin-right: 10rpx;
 }
 .text {
-  font-size: 15px;
+  font-size: 30rpx;
   font-family: Alibaba PuHuiTi;
   font-weight: bold;
-  line-height: 21px;
+  line-height: 42rpx;
   color: #ff8104;
   opacity: 1;
 }
@@ -74,11 +74,11 @@
 .li {
   padding: 6rpx 36rpx;
   background: rgba(0, 0, 0, 0.05);
-  border-radius: 16px;
-  font-size: 12px;
+  border-radius: 32rpx;
+  font-size: 24rpx;
   font-family: Alibaba PuHuiTi;
   font-weight: 400;
-  line-height: 17px;
+  line-height: 34rpx;
   color: #000000;
   opacity: 0.9;
   margin-right: 20rpx;
@@ -87,18 +87,18 @@
 .active {
   border: 1px solid #0ac956;
   background-color: #fff;
-  font-size: 12px;
+  font-size: 24rpx;
   font-family: Alibaba PuHuiTi;
   font-weight: 400;
-  line-height: 17px;
+  line-height: 34rpx;
   color: #0ac956;
   opacity: 1;
 }
 .disable {
-  font-size: 12px;
+  font-size: 24rpx;
   font-family: Alibaba PuHuiTi;
   font-weight: 400;
-  line-height: 17px;
+  line-height: 34rpx;
   color: #000000;
   opacity: 0.5;
 }

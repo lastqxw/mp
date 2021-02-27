@@ -49,6 +49,6 @@
       <text class="li active">10:00</text>
       <text class="li active">12:00</text>
     </view>
-    <van-button color='#FF8104' block>场地预约</van-button>
+    <van-button color='#FF8104' block bind:tap="goback">场地预约</van-button>
   </view>
 </view>

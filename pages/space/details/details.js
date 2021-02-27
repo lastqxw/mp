@@ -26,6 +26,11 @@ Page({
       url: "/pages/space/reservation/reservation",
     });
   },
+  timeinterval(){
+    wx.navigateTo({
+      url: "/pages/space/time/time",
+    });
+  },
   getSpaceList() {
     let params = {
       page: this.data.page,
@@ -75,6 +80,11 @@ Page({
             })
         }
     })
+},
+callphone: function(){
+  wx.makePhoneCall({
+    phoneNumber: this.data.item.phone,
+  })
 },
   /**
    * 生命周期函数--监听页面初次渲染完成
