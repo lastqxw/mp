@@ -11,8 +11,8 @@
     </view>
     <view class="line1"></view>
     <view class="typeList">
-      <view wx:for="{{typeList}}" wx:key="*this" class="scroll-view-item_H {{index==active?'active':''}}" data-id='{{index}}' bindtap="changeType">
-        <text class="text">{{item}}</text>
+      <view wx:for="{{typeList}}" wx:key="*this" class="scroll-view-item_H {{index==active?'active':''}}" data-active="{{index}}" data-value='{{item.dictValue}}' bindtap="changeType">
+        <text class="text">{{item.dictLabel}}</text>
       </view>
     </view>
   </view>

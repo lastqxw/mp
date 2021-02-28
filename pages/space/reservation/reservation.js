@@ -26,6 +26,7 @@ Page({
     activityTypeError: "",
     joinNumberError: "",
     phoneError: "",
+    cost:'',
     actions1: [],
     actions2: [],
     actions: [],
@@ -34,7 +35,8 @@ Page({
     show2: false,
     shows: false,
     appointmentDate:'',
-    appointmentTime:[],
+    yuyueTime:[],
+    appointmentTime:'',
     appointmentType:'2',
     isLivery: 0,
     isEquipment: 0,
@@ -244,9 +246,6 @@ Page({
     setTimeout(function(){
       that.getDict();
     },1000);
-  },
-  getDateTime(){
-    
   },
   onChange(event) {
     this.setData({

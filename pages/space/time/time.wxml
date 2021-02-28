@@ -3,7 +3,7 @@
     <view class="dateList">
       <view class="day" wx:for="{{dateList}}" wx:for-item="item" wx:key="*this">
         <text class="week {{index==5||index==6?'weekend':''}}">{{weekList[index]}}</text>
-        <text class="date {{item==today?'today':''}}">{{item==today?'今日':item}}</text>
+        <text class="date {{item.time==chooseDay?'today':''}}" bindtap="chooseDate" data-item="{{item}}">{{item.time}}</text>
       </view>
     </view>
   </view>
@@ -54,7 +54,7 @@
   <view class="choose">
     <view class="choose-top">
       <text>已选择:</text>
-      <text>{{today}}</text>
+      <text>{{chooseDay}}</text>
     </view>
     <view class="dateRange">
       <text class="li active" wx:for="{{activeRange}}" wx:key="index">{{item}}</text>

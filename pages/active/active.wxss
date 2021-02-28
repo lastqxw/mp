@@ -42,12 +42,13 @@
 }
 .typeList {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-items: center;
   flex-wrap: wrap;
   padding: 20rpx;
 }
 .scroll-view-item_H {
+  margin: 0 8rpx;
   display: inline-block;
   width: 124rpx;
   height: 46rpx;

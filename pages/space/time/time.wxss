@@ -5,7 +5,7 @@
   text-align: center;
 }
 .dateList {
-  padding: 32rpx 36rpx;
+  padding: 32rpx 28rpx;
   display: flex;
   justify-content: space-around;
 }
