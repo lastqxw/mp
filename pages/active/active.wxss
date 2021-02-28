@@ -48,7 +48,6 @@
   padding: 20rpx;
 }
 .scroll-view-item_H {
-  margin: 0 8rpx;
   display: inline-block;
   width: 124rpx;
   height: 46rpx;
@@ -58,6 +57,7 @@
   margin-bottom: 10px;
 }
 .text {
+  margin: 0 8rpx;
   font-size: 12px;
   font-family: Alibaba PuHuiTi;
   color: #000;
@@ -117,6 +117,7 @@
   opacity: 1;
   border-radius: 4px;
   display: flex;
+  justify-content: space-around;
 }
 .img image {
   width: 264rpx;

@@ -1,6 +1,6 @@
 <view class="key_swiper">
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{background}}" wx:key="*this">
+    <block wx:for="{{item.photos}}" wx:key="*this">
       <swiper-item>
         <view class="swiper-item">
           <image src="{{item}}" mode="widthFix" />
@@ -11,8 +11,8 @@
   </swiper>
 </view>
 <view class="key_title">
-  <view class="key_name">一次性使用口罩20个</view>
-  <view class="key_des">近30天兑换 61万 个</view>
+  <view class="key_name">{{item.title}}</view>
+  <!-- <view class="key_des">{{item.description}}</view> -->
 </view>
 <view class="key_con">
   <view class="key_parameter">
@@ -20,13 +20,14 @@
       <text>产品参数</text>
       <image src="../../images/tolink.png" />
     </view>
-    <view class="key_parameter_bot">页面信息及服务由淘宝或天猫交易平台提供，请确保你的绑定淘宝（天猫）账号处于正常状态。</view>
-    <view class="key_parameter_bot">实物权益无质量问题不支持退换货</view>
+    <!-- <view class="key_parameter_bot">页面信息及服务由淘宝或天猫交易平台提供，请确保你的绑定淘宝（天猫）账号处于正常状态。</view>
+    <view class="key_parameter_bot">实物权益无质量问题不支持退换货</view> -->
+    <view class="key_parameter_bot">{{item.description}}</view>
   </view>
-  <view class="key_bot">
+  <!-- <view class="key_bot">
     本商品由天猫虾选旗舰店提供。基础价指本权益在天猫虾选旗舰店非活动时的在售价。
     <image src="../../images/spxq.png" mode="widthFix"></image>
-  </view>
+  </view> -->
 </view>
 <view class="key_exchange">
   <view class="btn-area">

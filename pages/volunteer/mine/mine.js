@@ -39,7 +39,7 @@ Page({
         if (res.data.code == 200) {
           res.data.data.forEach((element) => {
             element.activity.banner =
-              "http://8.141.48.40:81" + element.activity.banner;
+              "http://8.141.48.40:81" + element.activity.banner.split(",")[0];
           });
           this.setData({
             list: res.data.data,

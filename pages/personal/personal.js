@@ -11,8 +11,8 @@ Page({
         url: "../about/about",
       },
       {
-        title:'志愿者工作报名',
-        url:'/pages/volunteer/volunteer'
+        title: "志愿者工作报名",
+        url: "/pages/volunteer/volunteer",
       },
       {
         title: "联系电话",
@@ -44,16 +44,15 @@ Page({
   //跳转页面
   tolink(data) {
     if (data.currentTarget.dataset.url) {
-      if(data.currentTarget.dataset.url == 'phone'){
+      if (data.currentTarget.dataset.url == "phone") {
         wx.makePhoneCall({
-          phoneNumber: '1340000' //仅为示例，并非真实的电话号码
-        })
-      }else{
+          phoneNumber: "1340000", //仅为示例，并非真实的电话号码
+        });
+      } else {
         wx.navigateTo({
           url: data.currentTarget.dataset.url,
         });
       }
-      
     }
   },
 });

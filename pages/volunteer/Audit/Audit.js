@@ -1,4 +1,5 @@
 // pages/volunteer/Audit/Audit.js
+const { apiHost } = getApp().globalData;
 Page({
   /**
    * 页面的初始数据
@@ -22,50 +23,22 @@ Page({
     });
   },
   signIn() {
-    let openId = wx.getStorageSync("userInfo").openid;
-    wx.scanCode({
-      onlyFromCamera: true,
-      success: (res) => {
-        console.log(res);
-        if (res) {
-          wx.request({
-            url:
-              apiHost +
-              `/prod-api/api/volunteerActivityEnroll/volunteerSignIn?openId=${openId}&volunteerEnrollId=${res.result}`,
-            success: (r) => {
-              if (r.data.code == 200) {
-                wx.showToast({
-                  title: "签到成功",
-                });
-              }
-            },
-          });
-        }
-      },
-    });
+    let item={
+      qrcode:this.data.item.activityEnrollQR,
+      signType:'签到'
+    }
+    wx.navigateTo({
+      url: '/pages/volunteer/sign/sign?item='+JSON.stringify(item),
+    })
   },
   signOut() {
-    let openId = wx.getStorageSync("userInfo").openid;
-    wx.scanCode({
-      onlyFromCamera: true,
-      success: (res) => {
-        console.log(res);
-        if (res) {
-          wx.request({
-            url:
-              apiHost +
-              `/prod-api/api/volunteerActivityEnroll/volunteerSignOut?openId=${openId}&volunteerEnrollId=${res.result}`,
-            success: (r) => {
-              if (r.data.code == 200) {
-                wx.showToast({
-                  title: "签到成功",
-                });
-              }
-            },
-          });
-        }
-      },
-    });
+    let item={
+      qrcode:this.data.item.activityEnrollQR,
+      signType:'签退'
+    }
+    wx.navigateTo({
+      url: '/pages/volunteer/sign/sign?item='+JSON.stringify(item),
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

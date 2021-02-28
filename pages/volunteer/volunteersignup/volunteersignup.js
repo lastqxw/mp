@@ -73,7 +73,7 @@ Page({
       wx.request({
         url:
           apiHost +
-          `/dev-api/api/volunteerActivityEnroll/volunteerIntegralEnroll?activityId=${item.id}&address=${address}&age=${age}&phone=${phone}&name=${name}&openId=${openId}`,
+          `/prod-api/api/volunteerActivityEnroll/volunteerIntegralEnroll?activityId=${item.id}&address=${address}&age=${age}&phone=${phone}&name=${name}&openId=${openId}&getIntegral=${item.getIntegral}`,
         method: "POST",
         success: (res) => {
           console.log(res.data);

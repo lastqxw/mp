@@ -98,7 +98,7 @@ Page({
     let activeIndex = e.currentTarget.dataset.index;
     this.setData({
       active: activeIndex,
-      activeValue: activeValue,
+      activeValue: activeValue
     });
   },
   choose(e) {

@@ -1,4 +1,6 @@
-const { apiHost } = getApp().globalData;
+const {
+  apiHost
+} = getApp().globalData;
 Page({
   /**
    * 页面的初始数据
@@ -15,7 +17,7 @@ Page({
     duration: 500,
     checked: false,
     item: null,
-    show:false
+    show: false
   },
 
   /**
@@ -27,21 +29,21 @@ Page({
   getItem(id) {
     let params = {
       page: 1,
-      rows: 10,
+      rows: 100,
     };
     wx.request({
-      url:
-        apiHost +
+      url: apiHost +
         `prod-api/api/gift/list?page=${params.page}&rows=${params.rows}`,
       data: params,
       method: "POST",
       success: (res) => {
-        console.log(res);
         if (res.data.code == 200) {
           res.data.data.forEach((element) => {
-            element.photo = element.photo
-              ? "http://8.141.48.40:81" + element.photo
-              : "../../../images/bg.png";
+            element.photos = element.photo.split(',').map(x => {
+             return x ?
+                 "http://8.141.48.40:81" + x :
+                 "../../../images/bg.png";
+             })
           });
           let item = res.data.data.filter((x) => x.id == id)[0];
           this.setData({
@@ -68,23 +70,23 @@ Page({
   seestatement() {
     console.log("兑换须知");
     this.setData({
-      show:true
+      show: true
     })
   },
-  onClose(){
+  onClose() {
     this.setData({
-      show:false
+      show: false
     })
   },
   submit() {
     wx.showToast({
       title: '兑换成功',
-      success:function(res){
-       setTimeout(()=>{
-        wx.navigateBack({
-          delta: 1,
-        })
-       },2000)
+      success: function (res) {
+        setTimeout(() => {
+          wx.navigateBack({
+            delta: 1,
+          })
+        }, 2000)
       }
     })
   },

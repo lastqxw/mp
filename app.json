@@ -28,7 +28,8 @@
     "pages/sign/sign",
     "pages/active/success/success",
     "pages/volunteer/success/success",
-    "pages/volunteer/mine/mine"
+    "pages/volunteer/mine/mine",
+    "pages/volunteer/sign/sign"
   ],
   "window": {
     "backgroundTextStyle": "light",

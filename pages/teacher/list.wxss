@@ -40,6 +40,11 @@
   font-weight: 400;
   color: #38c670;
   opacity: 1;
+  max-width: 200rpx;
+  word-break: keep-all; /* 不换行 */
+  white-space: nowrap; /* 不换行 */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .te_con {
   font-size: 14px;

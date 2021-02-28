@@ -44,28 +44,14 @@
     <van-tab title="注意事项">
       <view class="one-top">
         <view class="two-title">
-          <image src="../../../images/pay.png" />
+          <image src="../../images/pay.png" />
           <text>付款时效提醒</text>
         </view>
         <view class="three-con four">
           购票下单成功后需在指定时间内完成支付，未支付成功的订单，将在下单指定时间后系统自动取消，请大家及时刷新购票页面进行购买。
         </view>
         <view class="two-title">
-          <image src="../../../images/pay1.png" />
-          <text>发票提醒</text>
-        </view>
-        <view class="three-con four">
-          需要开具发票的购票用户，请您在演出开始5日前，电话联系山东省会大剧院客服(0531-55707333)并提供开票信息，演出结束后将统一由演出主办单位开具。
-        </view>
-        <view class="two-title">
-          <image src="../../../images/pay.png" />
-          <text>付款时效提醒</text>
-        </view>
-        <view class="three-con four">
-          购票下单成功后需在指定时间内完成支付，未支付成功的订单，将在下单指定时间后系统自动取消，请大家及时刷新购票页面进行购买。
-        </view>
-        <view class="two-title">
-          <image src="../../../images/pay1.png" />
+          <image src="../../images/pay1.png" />
           <text>发票提醒</text>
         </view>
         <view class="three-con four">

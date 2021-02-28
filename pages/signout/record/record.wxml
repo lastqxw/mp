@@ -9,12 +9,12 @@
         <text>300积分</text>
         <text>本月使用-96积分</text>
       </view>
-      <view class="main-list" wx:for="{{10}}">
+      <view class="main-list" wx:for="{{recordList}}" wx:key="*this">
         <view class="main-list-left">
-          <view>活动参加</view>
-          <view>2021.01.02 09:09:23</view>
+          <view>{{item.description}}</view>
+          <view>{{item.createTime}}</view>
         </view>
-        <view class="main-list-right">+100</view>
+        <view class="main-list-right">{{item.sign}}{{item.surplusIntegral}}</view>
       </view>
     </view>
   </view>
