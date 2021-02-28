@@ -8,7 +8,9 @@ Page({
     page: 1,
     rows: 10,
     active: 0,
-    teacherid:null,
+    teacherlist:null,
+    item:{
+    }
   },
 
   /**
@@ -16,9 +18,31 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      teacherid:options.teacherid
+      teacherlist:JSON.parse(options.datalist)
     })
-    this.getTeacherList()
+    this.setData({
+      item:this.data.teacherlist
+    })
+    this. gethistory()
+  },
+  gethistory() {
+    let params = {
+      page: this.data.page,
+      rows: this.data.rows,
+      topicType:""
+    };
+    wx.request({
+      url:
+        apiHost +
+        `dev-api/api/activity/activityHisList?page=${params.page}&rows=${params.rows}&topicType=${params.topicType}`,
+      data: params,
+      method: "POST",
+      success: (res) => {
+        if (res.data.code == 200) {
+            console.log(res,'res')
+          }
+      },
+    });
   },
   goto(e) {
     let id = e.currentTarget.dataset.id;
@@ -26,66 +50,4 @@ Page({
       url: "/pages/teacher/active/active?activeid="+id,
     });
   },
-  getTeacherList() {
-    let params = {
-      page: this.data.page,
-      rows: this.data.rows,
-    };
-    wx.request({
-      url:
-        apiHost +
-        `/prod-api/api/lecturer/list?page=${params.page}&rows=${params.rows}`,
-      data: params,
-      method: "POST",
-      success: (res) => {
-        if (res.data.code == 200) {
-          let data= res.data.data.filter(x=>{
-              return x.id==this.data.teacherid
-            }) 
-            data[0].picture="http://8.141.48.40:81" + data[0].picture;
-            data[0].activityList.forEach(x=>{
-              x.banner="http://8.141.48.40:81" + x.banner
-            })
-            
-            this.setData({
-              item: data[0],
-            });
-          }
-      },
-    });
-  },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {},
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {},
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {},
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {},
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {},
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {},
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {},
 });

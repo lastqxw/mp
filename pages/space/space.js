@@ -17,9 +17,9 @@ Page({
     this.getSpaceList()
   },
   goto(e) {
-   let id= e.currentTarget.dataset.id
+   let spacedata= JSON.stringify(e.currentTarget.dataset.spacedata)
     wx.navigateTo({
-      url: `/pages/space/details/details?spaceid=`+id,
+      url: `/pages/space/details/details?spacedata=`+spacedata,
     });
   },
   getSpaceList() {

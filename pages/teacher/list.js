@@ -16,9 +16,9 @@ Page({
     this.getTeacherList();
   },
   goto(e) {
-    let id = e.currentTarget.dataset.id;
+    let datalist = JSON.stringify(e.currentTarget.dataset.datalist);
     wx.navigateTo({
-      url: "/pages/teacher/details/details?teacherid="+id,
+      url: "/pages/teacher/details/details?datalist="+datalist,
     });
   },
   getTeacherList() {
@@ -33,6 +33,7 @@ Page({
       data: params,
       method: "POST",
       success: (res) => {
+        console.log(res,'res')
         if (res.data.code == 200) {
           res.data.data.forEach((element) => {
             element.picture = "http://8.141.48.40:81" + element.picture;
