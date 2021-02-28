@@ -1,144 +1,113 @@
-/* pages/active/active.wxss */
-.top {
-  background: #ffffff;
-  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
-  opacity: 1;
-  text-align: center;
+.top image {
+  width: 100vw;
+  height: 400rpx;
 }
-.dateList {
-  padding: 32rpx 52rpx;
-  display: flex;
-  justify-content: space-between;
-}
-.week {
-  display: block;
-  margin-bottom: 13px;
-  font-size: 14px;
-  font-family: Alibaba PuHuiTi;
-  color: #000000;
-}
-.date {
+.taps {
   font-size: 17px;
   font-family: Alibaba PuHuiTi;
-  color: #000000;
+  font-weight: 500;
+  line-height: 23px;
+  color: #38c670;
+  opacity: 0.9;
+}
+.tap .van-tabs__scroll {
+  background-color: transparent;
+}
+.tap .van-tabs__line {
+  width: 134rpx !important;
+  height: 4px;
+  background: linear-gradient(180deg, #6ff1a2 0%, #0ac956 100%);
   opacity: 1;
+  border-radius: 15px;
 }
-.weekend {
-  color: #ff0101;
+.one {
+  padding: 32rpx;
 }
-.today {
-  background: linear-gradient(136deg, #6ff1a2 0%, #0ac956 100%);
-  font-family: Alibaba PuHuiTi;
-  font-weight: bold;
-  color: #ffffff;
-  border-radius: 4px;
-  padding: 6rpx 12rpx;
-}
-.line1 {
-  width: 100vw;
-  height: 1px;
-  background-color: #000000;
-  opacity: 0.05;
-}
-.typeList {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 20rpx;
-}
-.scroll-view-item_H {
-  display: inline-block;
-  width: 124rpx;
-  height: 46rpx;
-  background: rgba(0, 0, 0, 0.05);
-  border-radius: 16px;
-  text-align: center;
-  margin-bottom: 10px;
-}
-.text {
-  font-size: 12px;
-  font-family: Alibaba PuHuiTi;
-  color: #000;
-  opacity: 0.5;
-}
-.active {
-  background: #ffffff;
-  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid #0ac956;
-}
-.active .text {
-  color: #0ac956;
-}
-.title {
-  width: 100%;
-  height: 90rpx;
+.one-top {
   background-color: #fff;
-  line-height: 90rpx;
-  padding-left: 32rpx;
-  padding-right: 32rpx;
-  box-sizing: border-box;
-  margin-top: 20rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
 }
-.line {
-  display: inline-block;
-  width: 4px;
-  height: 14px;
-  background: #ff8104;
-  opacity: 1;
-  border-radius: 2px;
-}
-.con {
-  margin-left: 8rpx;
-  font-size: 15px;
+.one-top-con-title {
+  font-size: 17px;
   font-family: Alibaba PuHuiTi;
   font-weight: bold;
-  line-height: 21px;
-  color: #ff8104;
-  opacity: 1;
-}
-.right {
-  float: right;
-  border: solid #000;
-  border-width: 0 1px 1px 0;
-  padding: 3px;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  margin-top: 40rpx;
-}
-.bottom {
-  padding: 20rpx;
-  background-color: #f6f7f9;
-}
-.bottom-item {
-  margin-bottom: 20rpx;
-  background: #ffffff;
-  opacity: 1;
-  border-radius: 4px;
-  display: flex;
-}
-.img image {
-  width: 264rpx;
-  height: 174rpx;
-  border-radius: 4px;
-  margin-right: 20rpx;
-}
-.te_title {
-  font-size: 15px;
-  font-family: Alibaba PuHuiTi;
-  font-weight: 400;
-  line-height: 21px;
+  line-height: 23px;
   color: #000000;
   opacity: 0.9;
-  padding: 20rpx;
-  padding-left: 0px;
+  margin-bottom: 40rpx;
 }
-.te_con {
+.one-top-con-sub {
+  display: flex;
+  justify-content: flex-start;
+}
+.one-top-con-sub-left image {
+  width: 93px;
+  height: 93px;
+  border-radius: 50%;
+}
+.text {
   font-size: 14px;
   font-family: Alibaba PuHuiTi;
   font-weight: 400;
   line-height: 20px;
   color: #000000;
-  opacity: 0.5;
-  padding-right: 20rpx;
+  opacity: 1;
+  text-align: center;
+}
+.one-top-con-sub-right {
+  font-size: 14px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000000;
+  opacity: 0.7;
+  margin-left: 40rpx;
+}
+.two-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.two-title image {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 10rpx;
+}
+.two-title text {
+  font-size: 15px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: bold;
+  line-height: 21px;
+  color: #0ac956;
+  opacity: 0.9;
+}
+.two-con-text-left {
+  min-width: 100rpx;
+}
+.two-con-text-right text {
+  margin-right: 10rpx;
+}
+.two-con-text {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  font-size: 14px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000000;
+  opacity: 0.9;
+  margin-bottom: 20rpx;
+}
+.three-con {
+  font-size: 14px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000000;
+  opacity: 0.9;
+}
+.four {
+  margin-bottom: 40rpx;
 }

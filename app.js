@@ -23,21 +23,22 @@ App({
         if (e.data.code == 200) {
           that.globalData.userInfo = e.data.data;
           console.log(that.globalData.userInfo);
-          wx.setStorageSync("userInfo", e.data.data);
-          that.getInfo();
+          that.getInfo(e.data.data);
         }
       },
     });
   },
-  getInfo() {
+  getInfo(item) {
     let that = this;
     wx.getUserInfo({
       success: (res) => {
         console.log(res);
         // 可以将 res 发送给后台解码出 unionId
         that.globalData.userInfo.nickname = res.userInfo.nickName;
-        that.globalData.userInfo.avatarUrl = res.userInfo.avatarUrl;
-
+        that.globalData.userInfo.nickname = res.userInfo.nickName;
+        item.avatarUrl = res.userInfo.avatarUrl;
+        item.avatarUrl = res.userInfo.avatarUrl;
+        wx.setStorageSync("userInfo", item);
         // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
         // 所以此处加入 callback 以防止这种情况
         if (this.userInfoReadyCallback) {
