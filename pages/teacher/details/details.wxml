@@ -33,19 +33,15 @@
         <view class="two-con-sub">{{items.content}}</view>
       </view>
     </view>
-    <!-- <view class="one-top">
+    <view class="one-top">
       <view class="two-title">
         <image src="../../../images/zjactive.png" />
         <text>历史活动</text>
       </view>
-      <view class="two-con">
-        <image src="https://s3.ax1x.com/2021/02/20/y4LPiD.png" />
-        <view class="two-con-sub">本栏目精心筛选整理高清国内外各位名师,流派的瑜伽视频资源,让你轻松、方便的学习瑜伽,在线观看高质量的瑜伽视频。</view>
+      <view class="two-con" wx:for="{{history}}" wx:for-item="items" wx:key="*this" bind:tap="gotohistory" data-id="{{items.id}}">
+        <image src="{{items.banner}}" />
+        <view class="two-con-sub">{{items.content}}</view>
       </view>
-      <view class="two-con" style="margin-top:40rpx">
-        <image src="https://s3.ax1x.com/2021/02/20/y4LPiD.png" />
-        <view class="two-con-sub">本栏目精心筛选整理高清国内外各位名师,流派的瑜伽视频资源,让你轻松、方便的学习瑜伽,在线观看高质量的瑜伽视频。</view>
-      </view>
-    </view> -->
+    </view>
   </view>
 </view>

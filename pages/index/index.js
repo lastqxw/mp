@@ -15,7 +15,7 @@ Page({
     interval: 2000,
     duration: 500,
     page: "1",
-    rows: "10",
+   rows: "100",
     activeList: [],
   },
   onLoad() {
