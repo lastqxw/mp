@@ -1,9 +1,13 @@
 // pages/space/reservation/reservation.js
+const { apiHost } = getApp().globalData;
+import { dictMain } from "../../../utils/dict";
 Page({
   /**
    * 页面的初始数据
    */
   data: {
+    openId:'123456',
+    fieldId: null,
     result: [],
     communityName: "",
     name: "",
@@ -22,31 +26,46 @@ Page({
     activityTypeError: "",
     joinNumberError: "",
     phoneError: "",
-    actions1: [{
-        name: "活动主题1",
-      },
-      {
-        name: "活动主题2",
-      },
-    ],
-    actions2: [{
-        name: "活动类型1",
-      },
-      {
-        name: "活动类型2",
-      },
-    ],
-    actions: [{
-        name: "社区1",
-      },
-      {
-        name: "社区2",
-      },
-    ],
+    actions1: [],
+    actions2: [],
+    actions: [],
     show: false,
     show1: false,
     show2: false,
-    shows: false
+    shows: false,
+    appointmentDate:'',
+    appointmentTime:'',
+    appointmentType:'1',
+    isLivery: 0,
+    isEquipment: 0,
+    isTechnician: 0
+  },
+  //获取字典数据
+  getDict(){
+    let community = wx.getStorageSync("DICT_COMMUNITY_NAME");
+    let activeType = wx.getStorageSync("DICT_ACTIVITY_TYPE");
+    let tipicType = wx.getStorageSync("DICT_TOPIC_TYPE");
+    let arr = [], arr1=[], arr2=[];
+    community.forEach(x=>{
+      arr.push({
+        name: x.dictLabel
+      });
+    });
+    tipicType.forEach(x=>{
+      arr1.push({
+        name: x.dictLabel
+      });
+    });
+    activeType.forEach(x=>{
+      arr2.push({
+        name: x.dictLabel
+      });
+    });
+    this.setData({
+      actions: arr,
+      actions1: arr1,
+      actions2: arr2
+    });
   },
   // 判断表单是否填写
   vform() {
@@ -158,17 +177,50 @@ Page({
   gotos() {
     if (this.vform()) {
       if (this.data.result.length > 0) {
-        wx.showToast({
-          title: '场地预约成功',
-          success: function (res) {
-            setTimeout(() => {
-              wx.navigateTo({
-                url: "/pages/active/success/success",
-              });
-            }, 2000)
+        let self = this;
+        console.log(self.data.result);
+        self.setData({
+          isLivery: 0,
+          isEquipment: 0,
+          isTechnician: 0
+        })
+        self.data.result.forEach(x=>{
+          if(x=='1'){
+            self.setData({
+              isLivery: 1
+            })
+          }else if(x=='2'){
+            self.setData({
+              isEquipment: 1
+            })
+          }else if(x=='3'){
+            self.setData({
+              isTechnician: 1
+            })
           }
         })
-
+        wx.request({
+          url:
+            apiHost +
+            `prod-api/api/field/fieldAppointmentSave?activityName=${self.data.activityName}&activityTopic=${self.data.activityTopic}&activityType=${self.data.activityType}&appointmentDate=${self.data.appointmentDate}&appointmentTime=${self.data.appointmentTime}&communityName=${self.data.communityName}&cost=${self.data.cost}&fieldId=${self.data.fieldId}&idcard=${self.data.idcard}&isEquipment=${self.data.isEquipment}&isLivery=${self.data.isLivery}&isTechnician=${self.data.isTechnician}&joinNumber=${self.data.joinNumber}&name=${self.data.name}&openId=${self.data.openId}&phone=${self.data.phone}`,
+          method: "POST",
+          success: (res) => {
+            console.log(res);
+            if (res.data.code == 200) {
+              wx.showToast({
+                title: '场地预约成功',
+                success: function (res) {
+                  setTimeout(() => {
+                    wx.navigateTo({
+                      url: "/pages/active/success/success",
+                    });
+                  }, 2000)
+                }
+              })
+            }
+          },
+        });
+        
       }else {
         wx.showToast({
           title: '请至少选择一项服务支持！！',
@@ -179,7 +231,23 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {},
+  onLoad: function (options) {
+    let that = this;
+    let userInfo = wx.getStorageSync("userInfo");
+    that.setData({
+      fieldId: options.fieldId,
+      // openId: userInfo.openId
+    })
+    dictMain("community_name");
+    dictMain("activity_type");
+    dictMain("topic_type");
+    setTimeout(function(){
+      that.getDict();
+    },1000);
+  },
+  getDateTime(){
+    
+  },
   onChange(event) {
     this.setData({
       result: event.detail,

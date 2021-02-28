@@ -20,7 +20,7 @@
     <view class="three-con">您的报名已审核成功，获得报名积分10分，将于15个工作日内到账。您完成任务后还会获得任务完成奖励100积分，祝您生活愉快！</view>
   </view>
   <view class="btn-area">
-    <button type="primary" bind:tap="signIn">签到</button>
-    <button type="primary">签退</button>
+    <button type="primary" bindtap="goto" class="button" style="margin-bottom:40rpx">积分兑换</button>
+    <button type="default" bindtap="back">完成</button>
   </view>
 </view>

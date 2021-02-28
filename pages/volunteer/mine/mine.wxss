@@ -1,0 +1,96 @@
+/* pages/volunteer/mine/mine.wxss */
+.bodystyle {
+  padding: 0 32rpx 124rpx 32rpx;
+}
+.title {
+  display: flex;
+  align-items: center;
+  padding: 32rpx 0px;
+  padding-bottom: 0px;
+}
+.line {
+  display: inline-block;
+  width: 4px;
+  height: 14px;
+  background: #ff8104;
+  opacity: 1;
+  border-radius: 2px;
+  margin-right: 10rpx;
+}
+.line-color {
+  background: #0ac956;
+}
+
+.title-text {
+  font-size: 15px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: bold;
+  line-height: 21px;
+  color: #ff8104;
+  opacity: 1;
+}
+.color {
+  color: #0ac956;
+}
+.main {
+  margin-top: 20rpx;
+  background: #ffffff;
+  border: 2rpx solid #eaeaef;
+  opacity: 1;
+  border-radius: 8rpx;
+}
+.main .imgstyle {
+  width: 100%;
+  border-radius: 8rpx 8rpx 0 0;
+  height: 260rpx !important;
+}
+.main .linestyle {
+  padding: 32rpx 20rpx 28rpx 20rpx;
+}
+.main .linestyle .workname {
+  font-size: 30rpx;
+  font-weight: 500;
+  line-height: 42rpx;
+  color: #000000;
+  opacity: 0.9;
+}
+.main .linestyle .integral {
+  font-size: 28rpx;
+  font-weight: 400;
+  line-height: 40rpx;
+  color: #000000;
+  opacity: 0.5;
+  padding-top: 8rpx;
+}
+.bottomstyle {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 124rpx;
+  background: #f6f7f9;
+  padding: 30rpx 32rpx 0 32rpx;
+  box-sizing: border-box;
+}
+.bottomstyle view {
+  width: 46% !important;
+  float: left;
+  font-size: 34rpx;
+  font-weight: 500;
+  line-height: 46rpx;
+  color: #000000;
+  background: #ffffff;
+  border: 2rpx solid rgba(0, 0, 0, 0.10196078431372549);
+  opacity: 1;
+  border-radius: 8rpx;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.bottomstyle view:nth-of-type(1) {
+  margin-right: 6%;
+}
+.bottomstyle .active {
+  color: #ffffff;
+  background: #ff8104;
+}
