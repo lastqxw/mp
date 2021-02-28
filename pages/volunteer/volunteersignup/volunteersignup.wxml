@@ -1,4 +1,4 @@
-<image src="../../../images/volunteer (2).png" />
+<image src="../../../images/volunteer (2).png"  mode="widthFix" class="top_image"/>
 <view class="main">
   <view class="card">
     <view class="card-body">

@@ -1,4 +1,7 @@
 /* pages/volunteersignup/volunteersignup.wxss */
+.top_image{
+  width: 100%;
+}
 .main{
   padding:20rpx 32rpx 0 32rpx; 
   background: #F6F7F9;
