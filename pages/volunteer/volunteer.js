@@ -1,34 +1,35 @@
 // pages/volunteer/volunteer.js
 const { apiHost } = getApp().globalData;
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-      page: "1",
-      rows: "10",
-      success:[],
-      arrays:[
-        {
-          name:"dd",
-          age:4
-        },{
-          name:"ee",
-          age:5
-        },{
-          name:"ff",
-          age:6
-        }
-      ],
-      isShow:false
+    page: "1",
+    rows: "100",
+    success: [],
+    arrays: [
+      {
+        name: "dd",
+        age: 4,
+      },
+      {
+        name: "ee",
+        age: 5,
+      },
+      {
+        name: "ff",
+        age: 6,
+      },
+    ],
+    isShow: false,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getList()
+    this.getList();
   },
   getList() {
     let params = {
@@ -42,7 +43,7 @@ Page({
       data: params,
       method: "POST",
       success: (res) => {
-        console.log(res,'res')
+        console.log(res, "res");
         if (res.data.code == 200) {
           res.data.data.forEach((element) => {
             element.banner = "http://8.141.48.40:81" + element.banner;
@@ -54,27 +55,24 @@ Page({
       },
     });
   },
-  change(data){
-    let type = +data.currentTarget.dataset.type
-    switch (type) {
-      case 0:
-        this.setData({
-          isShow:false
-        });
-        break;
-      case 1:
-        this.setData({
-          isShow:true
-        });
-        break;
-
-      default:
-        break;
-    }
-  },
-  goto(){
+  change(data) {
+    let type = +data.currentTarget.dataset.type;
     wx.navigateTo({
-      url: "/pages/volunteer/volunteersignup/volunteersignup",
+      url: "/pages/volunteer/mine/mine?type=" + type,
     });
-  }
-})
+  },
+  goto(e) {
+    let item = e.currentTarget.dataset.item;
+    let params = {
+      banner: item.banner,
+      title: item.title,
+      getIntegral: item.getIntegral,
+      id: item.id,
+    };
+    wx.navigateTo({
+      url:
+        "/pages/volunteer/volunteersignup/volunteersignup?item=" +
+        JSON.stringify(params),
+    });
+  },
+});

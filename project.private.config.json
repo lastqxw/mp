@@ -101,6 +101,12 @@
           "pathName": "pages/volunteer/volunteersignup/volunteersignup",
           "query": "id=10",
           "scene": null
+        },
+        {
+          "name": "pages/volunteer/mine/mine",
+          "pathName": "pages/volunteer/mine/mine",
+          "query": "type=3",
+          "scene": null
         }
       ]
     }

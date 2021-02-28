@@ -8,7 +8,7 @@ Page({
     active: 0,
     detailid:null,
     page: "1",
-    rows: "10",
+   rows: "100",
     item:{}
   },
 
