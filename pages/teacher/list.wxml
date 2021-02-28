@@ -1,6 +1,6 @@
 <view class="container">
   <view class="bottom">
-    <view class="bottom-item" wx:for="{{teacherList}}" wx:key="*this" bind:tap="goto" data-id="{{item.id}}">
+    <view class="bottom-item" wx:for="{{teacherList}}" wx:key="*this" bind:tap="goto" data-datalist="{{item}}">
       <view class="img">
         <image src="{{item.picture}}" />
       </view>
