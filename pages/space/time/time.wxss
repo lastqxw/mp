@@ -72,7 +72,7 @@
   flex-wrap: wrap;
 }
 .li {
-  padding: 6rpx 36rpx;
+  padding: 6rpx 34rpx;
   background: rgba(0, 0, 0, 0.05);
   border-radius: 32rpx;
   font-size: 24rpx;
@@ -83,6 +83,7 @@
   opacity: 0.9;
   margin-right: 20rpx;
   margin-bottom: 20rpx;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 .active {
   border: 1px solid #0ac956;
@@ -110,9 +111,6 @@
   width: 100%;
   box-sizing: border-box;
 }
-.choose-top {
-  margin-bottom: 40rpx;
-}
-.choose-top text {
-  margin-right: 20rpx;
+.choose .dateRange{
+  padding: 20rpx 0;
 }

@@ -34,8 +34,8 @@ Page({
     show2: false,
     shows: false,
     appointmentDate:'',
-    appointmentTime:'',
-    appointmentType:'1',
+    appointmentTime:[],
+    appointmentType:'2',
     isLivery: 0,
     isEquipment: 0,
     isTechnician: 0
@@ -233,7 +233,7 @@ Page({
    */
   onLoad: function (options) {
     let that = this;
-    let userInfo = wx.getStorageSync("userInfo");
+    // let userInfo = wx.getStorageSync("userInfo");
     that.setData({
       fieldId: options.fieldId,
       // openId: userInfo.openId
@@ -267,5 +267,10 @@ Page({
     this.setData({
       shows: !this.data.shows
     })
+  },
+  timeinterval() {
+    wx.navigateTo({
+      url: "/pages/space/time/time?fieldId="+this.data.fieldId
+    });
   }
 });

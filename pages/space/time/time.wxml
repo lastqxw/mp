@@ -7,7 +7,7 @@
       </view>
     </view>
   </view>
-  <view class="monning">
+  <!-- <view class="monning">
     <view class="title">
       <text class="line"></text>
       <text class="text">上午预约</text>
@@ -41,13 +41,23 @@
       <text class="li">19:00</text>
       <text class="li">20:00</text>
     </view>
+  </view> -->
+  <view class="monning">
+    <view class="title">
+      <text class="line"></text>
+      <text class="text">预约时间段</text>
+    </view>
+    <view class="dateRange">
+      <text class="li {{item.isActive=='1'?'active':''}}" wx:for="{{timeRange}}" wx:key="index" bindtap='chooseTime' data-label="{{item.dictLabel}}">{{item.dictLabel}}</text>
+    </view>
   </view>
   <view class="choose">
     <view class="choose-top">
       <text>已选择:</text>
       <text>{{today}}</text>
-      <text class="li active">10:00</text>
-      <text class="li active">12:00</text>
+    </view>
+    <view class="dateRange">
+      <text class="li active" wx:for="{{activeRange}}" wx:key="index">{{item}}</text>
     </view>
     <van-button color='#FF8104' block bind:tap="goback">场地预约</van-button>
   </view>

@@ -64,6 +64,6 @@
   <view class="btn-group">
     <van-button color='#FF8104' bindtap="callphone">整包预约</van-button>
     <van-button color='#FF8104' bind:tap="shequ">社区预约</van-button>
-    <van-button color='#FF8104' bind:tap="timeinterval">时段预约</van-button>
+    <!-- <van-button color='#FF8104' bind:tap="timeinterval">时段预约</van-button> -->
   </view>
 </view>
