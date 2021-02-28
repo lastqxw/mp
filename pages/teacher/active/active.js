@@ -31,12 +31,23 @@ Page({
     wx.request({
       url:
         apiHost +
-        `dev-api/api/lecturer/getLecturerById?lecturerId=${this.data.activeid}`,
+        `prod-api/api/lecturer/getLecturerById?lecturerId=${this.data.activeid}`,
       method: "POST",
       success: (res) => {
         if (res.data.code == 200) {
-         console.log(res,'res')
+          let activeType = wx.getStorageSync("DICT_ACTIVITY_TYPE");
+          let tipicType = wx.getStorageSync("DICT_TOPIC_TYPE");
+          res.data.data.activityList[0].activeTypeName = activeType.filter(
+            (x) => x.dictValue == res.data.data.activityList[0].activityType
+          )[0].dictLabel;
+          res.data.data.activityList[0].tipicTypeName = tipicType.filter(
+            (x) => x.dictValue == res.data.data.activityList[0].topicType
+          )[0].dictLabel;
           }
+          res.data.data.activityList[0].picture = "http://8.141.48.40:81" + res.data.data.activityList[0].picture;
+          this.setData({
+            item:res.data.data.activityList[0]
+          })
       },
     });
   },

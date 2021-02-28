@@ -27,8 +27,8 @@
             <text>时间：{{item.date}}</text>
             <text>地点：{{item.address}}</text>
             <text>活动场地：B2美好演播厅</text>
-            <text>活动主题：{{item.tipicName}}</text>
-            <text>活动类型：{{item.activeName}}</text>
+            <text>活动主题：{{item.tipicTypeName}}</text>
+            <text>活动类型：{{item.activeTypeName}}</text>
             <text>费用：{{item.cost}}</text>
             <text>名额：{{item.quota}}</text>
           </view>

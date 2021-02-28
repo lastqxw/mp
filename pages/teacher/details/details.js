@@ -1,5 +1,7 @@
 // pages/teacher/details/details.js
-const { apiHost } = getApp().globalData;
+const {
+  apiHost
+} = getApp().globalData;
 Page({
   /**
    * 页面的初始数据
@@ -8,9 +10,9 @@ Page({
     page: 1,
     rows: 10,
     active: 0,
-    teacherlist:null,
-    item:{
-    }
+    teacherlist: null,
+    item: {},
+    history: {}
   },
 
   /**
@@ -18,36 +20,46 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      teacherlist:JSON.parse(options.datalist)
+      teacherlist: JSON.parse(options.datalist)
     })
     this.setData({
-      item:this.data.teacherlist
+      item: this.data.teacherlist
     })
-    this. gethistory()
+    this.gethistory()
   },
   gethistory() {
     let params = {
       page: this.data.page,
       rows: this.data.rows,
-      topicType:""
     };
     wx.request({
-      url:
-        apiHost +
-        `dev-api/api/activity/activityHisList?page=${params.page}&rows=${params.rows}&topicType=${params.topicType}`,
+      url: apiHost +
+        `prod-api/api/activity/activityHisList?page=${params.page}&rows=${params.rows}`,
       data: params,
       method: "POST",
       success: (res) => {
         if (res.data.code == 200) {
-            console.log(res,'res')
-          }
+          res.data.data.forEach((element) => {
+            element.banner = "http://8.141.48.40:81" + element.banner;
+          });
+          this.setData({
+            history: res.data.data
+          })
+          console.log(this.data.history,'istory')
+        }
       },
     });
   },
   goto(e) {
     let id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: "/pages/teacher/active/active?activeid="+id,
+      url: "/pages/teacher/active/active?activeid=" + id,
     });
   },
+  gotohistory(e){
+    let id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: "/pages/active/details/details?id=" + id,
+    });
+  }
 });
