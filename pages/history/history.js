@@ -63,7 +63,7 @@ Page({
     wx.request({
       url:
         apiHost +
-        `prod-api/api/activity/list?page=${params.page}&rows=${params.rows}`,
+        `prod-api/api/activity/activityHisList?page=${params.page}&rows=${params.rows}`,
       data: params,
       method: "POST",
       success: (res) => {

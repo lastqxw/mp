@@ -161,9 +161,40 @@
   margin-left: 20rpx;
 }
 .btn-group {
-  width: 100vw;
+  /* width: 100vw; */
   display: flex;
   justify-content: space-around;
   margin-top: -10rpx;
   margin-bottom: 20rpx;
+  padding: 30rpx;
+}
+.buttonstyle,button{
+  width: 100%!important;
+}
+.bottom {
+  margin-top: -30rpx;
+  padding: 32rpx;
+}
+.bottom-body {
+  background: #ffffff;
+  opacity: 1;
+  border-radius: 40rpx;
+  padding: 40rpx;
+}
+.bottom-title {
+  font-size: 34rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: blod;
+  line-height: 46rpx;
+  color: #000000;
+  opacity: 1;
+  margin-bottom: 40rpx;
+}
+.bottom-con {
+  font-size: 28rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 40rpx;
+  color: #000000;
+  opacity: 0.9;
 }

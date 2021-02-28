@@ -16,7 +16,7 @@
   </view>
   <view class="active">
     <view class="active-item" wx:for="{{list}}" wx:for-item="item" wx:key="*this" bindtap="goto" data-id='{{item.id}}'>
-      <image src="{{item.photo}}" />
+      <image src="{{item.photos[0]}}" />
       <text class="active-title">{{item.title}}</text>
       <view class="active-des">{{item.description}}</view>
       <view class="active-integral">{{item.exchange_integral	}}积分</view>

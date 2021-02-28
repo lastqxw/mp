@@ -6,7 +6,7 @@ Page({
    */
   data: {
     page: "1",
-   rows: "100",
+   rows: "10",
     spaceList: [],
   },
 
