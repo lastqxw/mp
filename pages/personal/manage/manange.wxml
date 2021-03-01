@@ -1,0 +1,8 @@
+<view class="container">
+  <van-cell-group style="margin-top:20rpx">
+    <van-cell title="活动扫码校验" is-link />
+    <van-cell title="志愿者签到校验" is-link bind:click="signIn" />
+    <van-cell title="志愿者签退校验" is-link bind:click="signOut" />
+    <van-cell title="积分兑换核销校验" is-link bind:click="showRight" />
+  </van-cell-group>
+</view>

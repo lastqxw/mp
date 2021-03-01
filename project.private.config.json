@@ -113,6 +113,11 @@
           "pathName": "pages/partake/partake",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/personal/personal",
+          "pathName": "pages/personal/personal",
+          "scene": null
         }
       ]
     }
