@@ -4,7 +4,7 @@
     <view>
       <text>Hi,{{userInfo.nickname}}</text>
     </view>
-    <!-- <view class="post">无</view> -->
+    <view class="post">{{userInfo.isAdmin=="N"?'普通成员':'管理员'}}</view>
   </view>
 </view>
 <view class="psl_bot">
