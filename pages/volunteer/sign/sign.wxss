@@ -1,0 +1,26 @@
+/* pages/volunteer/sign/sign.wxss */
+.body{
+  margin:32rpx;
+  margin-top: 140rpx;
+background: #FFFFFF;
+box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+opacity: 1;
+border-radius: 20px;
+text-align: center;
+}
+.body image{
+  width: 540rpx;
+  height: 540rpx;
+  background: rgba(0, 0, 0, 0);
+  opacity: 1;
+  margin-top: 92rpx;
+}
+.text{
+font-size: 16px;
+font-family: Alibaba PuHuiTi;
+font-weight: 400;
+color: #000000;
+opacity: 1;
+margin-top:40rpx;
+padding-bottom:40rpx;
+}

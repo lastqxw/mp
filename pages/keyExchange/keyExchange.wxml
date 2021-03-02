@@ -1,0 +1,64 @@
+<view class="key_swiper">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{item.photos}}" wx:key="*this">
+      <swiper-item>
+        <view class="swiper-item">
+          <image src="{{item}}" mode="widthFix" />
+          <view class="dots">{{index+1}}/{{background.length}}</view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="key_title">
+  <view class="key_name">{{item.title}}</view>
+  <!-- <view class="key_des">{{item.description}}</view> -->
+</view>
+<view class="key_con">
+  <view class="key_parameter">
+    <view class="key_parameter_top">
+      <text>产品参数</text>
+      <image src="../../images/tolink.png" />
+    </view>
+    <!-- <view class="key_parameter_bot">页面信息及服务由淘宝或天猫交易平台提供，请确保你的绑定淘宝（天猫）账号处于正常状态。</view>
+    <view class="key_parameter_bot">实物权益无质量问题不支持退换货</view> -->
+    <view class="key_parameter_bot">{{item.description}}</view>
+  </view>
+  <!-- <view class="key_bot">
+    本商品由天猫虾选旗舰店提供。基础价指本权益在天猫虾选旗舰店非活动时的在售价。
+    <image src="../../images/spxq.png" mode="widthFix"></image>
+  </view> -->
+</view>
+<view class="key_exchange">
+  <view class="btn-area">
+        <button type="primary" formType="submit" disabled="{{checked?false:true}}"  bindtap="submit">兑换</button>
+      </view>
+      <view class="ischeck">
+        <van-checkbox value="{{ checked }}" bind:change="onChange" shape="square">
+          请仔细阅读
+          <view class="statement" catchtap="seestatement">
+            《兑换须知》
+          </view>
+        </van-checkbox>
+      </view>
+      <van-popup show="{{ show }}" closeable close-icon="close" position="bottom" custom-style="height: 80%"
+      bind:close="onClose">
+      <view>
+        <view class="title">兑换须知</view>
+        <view class="sub">为了进一步规范爱心志愿者出行公益活动，丰富业余生活，使每一个出行参与者的权利、义务、责任得到明确，特制定以下免责条款：</view>
+        <view class="con">
+          <view>
+            1 以顾客填写的手机号作为会员号
+          </view>
+          <view>
+            2、 10元积1分会员积分:结账前必须告知收银员手机号及姓名,会员积分以小票金额计算,每消费10元积1分,金额不足10元不作计算,特价商品消费金额不参与积分计算
+          </view>
+          <view>3、10个积分抵1元使用:商品可通过积分抵现购买或积分抵现加现金购买,每10个积分可抵现金1元使用</view>
+          <view>a 不同会员号积分不可在同一笔消费内抵扣使用</view>
+          <view>b 积分不具有现金价值,无论您用何种方式获得积分,您都不能使用积分兑换任何现金或金钱 </view>
+          <view> c 积分抵扣最小金额以元为单位 例如:消费10.1元需用110个积分抵扣</view>
+        </view>
+
+      </view>
+    </van-popup>
+</view>

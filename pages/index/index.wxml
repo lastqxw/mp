@@ -6,7 +6,9 @@
       <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style=" height: 400rpx;">
         <block wx:for="{{background}}" wx:key="*this">
           <swiper-item>
-            <view class="swiper-item {{item}}">{{item}}</view>
+            <view class="swiper-item {{item}}">
+              <image class="swiper-item-img" src="{{item}}"></image>
+            </view>
           </swiper-item>
         </block>
       </swiper>
@@ -14,33 +16,33 @@
   </view>
   <view class="banner-bottom">
     <view class="first">
-      <view class="first-item" bind:tap="goto(1)">
+      <view class="first-item" data-type='1' bind:tap="goto">
         <image src="../../images/active.png" />
         <text>活动报名</text>
       </view>
-      <view class="first-item">
+      <view class="first-item" data-type='2' bind:tap="goto">
         <image src="../../images/lecturer.png" />
         <text>讲师介绍</text>
       </view>
-      <view class="first-item">
+      <view class="first-item" data-type='3' bind:tap="goto">
         <image src="../../images/site.png" />
         <text>场地介绍</text>
       </view>
-      <view class="first-item">
+      <view class="first-item" data-type='4' bind:tap="goto">
         <image src="../../images/volunteer.png" />
         <text>志愿活动</text>
       </view>
     </view>
     <view class="first">
-      <view class="first-item">
+      <view class="first-item" data-type='5' bind:tap="goto">
         <image src="../../images/history.png" />
         <text>历史活动</text>
       </view>
-      <view class="first-item">
+      <view class="first-item" data-type='6' bind:tap="goto">
         <image src="../../images/checkin.png" />
         <text>活动签到</text>
       </view>
-      <view class="first-item">
+      <view class="first-item" data-type='7' bind:tap="goto">
         <image src="../../images/integral.png" />
         <text>积分兑换</text>
       </view>
@@ -56,10 +58,10 @@
     <text class="right"></text>
   </view>
   <view class="active">
-    <view class="active-item" wx:for="{{10}}" wx:for-item="item">
-      <image src="../../images/bg.png" />
-      <text class="active-title">2021新春民族音乐会</text>
-      <view class="active-des">活动介绍活动介绍活动介绍活动介绍</view>
+    <view class="active-item" wx:for="{{activeList}}" wx:for-item="item" wx:key="*this" bindtap="gotoDetails" data-activeId='{{item.id}}'>
+      <image src='{{item.banner}}' />
+      <text class="active-title">{{item.title}}</text>
+      <view class="active-des">{{item.content}}</view>
     </view>
   </view>
 </view>

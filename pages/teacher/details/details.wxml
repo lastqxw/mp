@@ -1,0 +1,47 @@
+<view class="container">
+  <view class="top">
+    <image src="{{item.picture}}"></image>
+    <view class="top_con"> 
+      <view class="teacher_name">{{item.name}}</view>
+      <view class="teacher_tag">
+        <text>{{item.expertise}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="one">
+    <view class="one-top">
+      <view class="two-title">
+        <image src="../../../images/daka.png" />
+        <text>大咖简介</text>
+      </view>
+      <view class="two-con">
+        <text>擅长领域：{{item.expertise}}</text>
+        <text>讲师格言：{{item.motto}}</text>
+        <text>活动类型：{{item.activityList[0].lecturerExpertise}}</text>
+        <view class="two-con-des">
+          {{item.activityList[0].content}}
+        </view>
+      </view>
+    </view>
+    <view class="one-top">
+      <view class="two-title">
+        <image src="../../../images/zj.png" />
+        <text>主讲活动</text>
+      </view>
+      <view class="two-con" bind:tap="goto" data-id="{{item.id}}" wx:for="{{item.activityList}}" wx:for-item="items" wx:key="this">
+        <image src="{{items.banner}}" />
+        <view class="two-con-sub">{{items.content}}</view>
+      </view>
+    </view>
+    <view class="one-top">
+      <view class="two-title">
+        <image src="../../../images/zjactive.png" />
+        <text>历史活动</text>
+      </view>
+      <view class="two-con" wx:for="{{history}}" wx:for-item="items" wx:key="*this" bind:tap="gotohistory" data-id="{{items.id}}">
+        <image src="{{items.banner}}" />
+        <view class="two-con-sub">{{items.content}}</view>
+      </view>
+    </view>
+  </view>
+</view>

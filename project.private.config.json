@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -14,6 +15,108 @@
         {
           "name": "pages/active/active",
           "pathName": "pages/active/active",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/active/details/details",
+          "pathName": "pages/active/details/details",
+          "query": "id=1",
+          "scene": null
+        },
+        {
+          "name": "pages/active/event/event",
+          "pathName": "pages/active/event/event",
+          "query": "id=10",
+          "scene": null
+        },
+        {
+          "name": "pages/teacher/list",
+          "pathName": "pages/teacher/list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/teacher/details/details",
+          "pathName": "pages/teacher/details/details",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/teacher/active/active",
+          "pathName": "pages/teacher/active/active",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages",
+          "pathName": "pages/space/space",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/space/details/details",
+          "pathName": "pages/space/details/details",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/space/reservation/reservation",
+          "pathName": "pages/space/reservation/reservation",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/space/time/time",
+          "pathName": "pages/space/time/time",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/active/success/success",
+          "pathName": "pages/active/success/success",
+          "query": "id=10",
+          "scene": null
+        },
+        {
+          "name": "pages/signout/pointsexchange/pointsexchange",
+          "pathName": "pages/signout/pointsexchange/pointsexchange",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/keyExchange/keyExchange",
+          "pathName": "pages/keyExchange/keyExchange",
+          "query": "id=1",
+          "scene": null
+        },
+        {
+          "name": "pages/personal/personal",
+          "pathName": "pages/personal/personal",
+          "query": "id=1",
+          "scene": null
+        },
+        {
+          "name": "pages/volunteer/volunteersignup/volunteersignup",
+          "pathName": "pages/volunteer/volunteersignup/volunteersignup",
+          "query": "id=10",
+          "scene": null
+        },
+        {
+          "name": "pages/volunteer/mine/mine",
+          "pathName": "pages/volunteer/mine/mine",
+          "query": "type=3",
+          "scene": null
+        },
+        {
+          "name": "pages/partake/partake",
+          "pathName": "pages/partake/partake",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/personal/personal",
+          "pathName": "pages/personal/personal",
           "scene": null
         }
       ]

@@ -1,2 +1,35 @@
-<!--pages/active/active.wxml-->
-<text>pages/active/active.wxml</text>
+<!-- pages/active/active.wxml -->
+<view class="container">
+  <view class="top">
+    <view class="dateList">
+      <view class="day" wx:for="{{dateList}}" wx:for-item="item" wx:key="*this">
+        <text class="week {{index==5||index==6?'weekend':''}}">{{weekList[index]}}</text>
+        <text data-date='{{item}}' class="date {{item==today && !chooseDate?'today':''}} {{item == chooseDate ?'today':''}}" bind:tap="choose">
+          <text>{{item==today?'今':item}}</text>
+        </text>
+      </view>
+    </view>
+    <view class="line1"></view>
+    <view class="typeList">
+      <view wx:for="{{typeList}}" wx:key="*this" class="scroll-view-item_H {{index==active?'active':''}}" data-active="{{index}}" data-value='{{item.dictValue}}' bindtap="changeType">
+        <text class="text">{{item.dictLabel}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="title">
+    <text class="line"></text>
+    <text class="con">热门活动</text>
+    <text class="right"></text>
+  </view>
+  <view class="bottom">
+    <view class="bottom-item" wx:for="{{activeList}}" wx:key="*this" data-activeId='{{item.id}}' bind:tap="goto">
+      <view class="img">
+        <image src='{{item.banner}}' />
+      </view>
+      <view class="te">
+        <view class="te_title">{{item.title}}</view>
+        <view class="te_con">{{item.content}}</view>
+      </view>
+    </view>
+  </view>
+</view>

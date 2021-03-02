@@ -1,0 +1,29 @@
+<!-- pages/volunteer/mine/mine.wxml -->
+<view class="contailer">
+  <view wx:if="{{type ==3}}" class="bodystyle">
+    <view class="title">
+      <text class="line"></text>
+      <text class="title-text">审核通过</text>
+    </view>
+    <view wx:for="{{list}}" wx:key="*this" class="main" data-id='{{item}}' bindtap='goto'>
+      <image src="{{item.activity.banner}}" class="imgstyle" mode="center"></image>
+      <view class="linestyle">
+        <view class="workname">{{item.activity.title}}</view>
+        <view class="integral">可获得{{item.activity.getIntegral}}积分</view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{type == 9}}" class="bodystyle">
+    <view class="title ">
+      <text class="line line-color"></text>
+      <text class="title-text color">已完成</text>
+    </view>
+    <view wx:for="{{list}}" wx:key="*this" class="main" data-id='{{item}}' bindtap='goto1'>
+      <image src="{{item.activity.banner}}" class="imgstyle" mode="center"></image>
+      <view class="linestyle">
+        <view class="workname">{{item.activity.title}}</view>
+        <view class="integral">可获得{{item.activity.getIntegral}}积分</view>
+      </view>
+    </view>
+  </view>
+</view>

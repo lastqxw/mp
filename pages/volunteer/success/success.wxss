@@ -1,0 +1,94 @@
+/* pages/volunteer/Audit/Audit.wxss */
+page {
+  background: #f6f7f9;
+}
+.one {
+  padding: 18rpx 32rpx 0 32rpx;
+}
+.one-top {
+  background-color: #fff;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+.one-top-con-title {
+  font-size: 17px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: bold;
+  line-height: 23px;
+  color: #000000;
+  opacity: 0.9;
+  margin-bottom: 40rpx;
+}
+.one-top-con-sub {
+  display: flex;
+  justify-content: space-around;
+}
+.one-top-con-sub-left image {
+  width: 93px;
+  height: 93px;
+  border-radius: 50%;
+}
+.text {
+  text-align: center;
+  font-size: 14px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000000;
+  opacity: 1;
+}
+.one-top-con-sub-right {
+  font-size: 14px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000000;
+  opacity: 0.7;
+  margin-left: 40rpx;
+}
+.two-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.two-title image {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 10rpx;
+}
+.two-title text {
+  font-size: 30rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: bold;
+  line-height: 40rpx;
+  color: #0ac956;
+  opacity: 0.9;
+}
+.two-con text,
+.two-con view {
+  display: block;
+  font-size: 28rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 40rpx;
+  color: #000000;
+  opacity: 0.9;
+  margin-bottom: 20rpx;
+}
+.three-con {
+  font-size: 28rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 40rpx;
+  color: #000000;
+  opacity: 0.9;
+}
+.button {
+  margin-top: 40rpx;
+  background-color: #ff8104 !important;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 34rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 500;
+}

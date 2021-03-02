@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="bottom">
+    <view class="bottom-item" wx:for="{{teacherList}}" wx:key="*this" bind:tap="goto" data-datalist="{{item}}">
+      <view class="img">
+        <image src="{{item.picture}}" />
+      </view>
+      <view class="te">
+        <view class="te_title">
+          <view class="te-title-text">{{item.name}}</view>
+          <view class='te-title-type'>{{item.expertise}}</view>
+        </view>
+        <view class="te_con">{{item.motto}}</view>
+      </view>
+    </view>
+  </view>
+</view>

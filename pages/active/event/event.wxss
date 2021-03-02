@@ -1,0 +1,77 @@
+.top {
+  background: url(https://s3.ax1x.com/2021/02/20/y4Hxp9.png) no-repeat center
+    center;
+  width: 100vw;
+  height: 400rpx;
+}
+.card {
+  padding: 32rpx;
+  margin-top: -170rpx;
+  z-index: 9999;
+}
+.card-body {
+  background: #ffffff;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  border-radius: 20px;
+  padding: 40rpx;
+}
+.card-body-title {
+  font-size: 17px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: bold;
+  line-height: 23px;
+  color: #000000;
+  opacity: 0.9;
+}
+.card-body-sub {
+  margin-top: 20rpx;
+  font-size: 14px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000000;
+  opacity: 0.9;
+}
+.van-cell {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid #eaeaef;
+  opacity: 1;
+  border-radius: 6px;
+  margin-top: 20rpx;
+}
+.input-class {
+  color: #ff8104;
+}
+.btn-group {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30rpx;
+}
+.bottom {
+  margin-top: -30rpx;
+  padding: 32rpx;
+}
+.bottom-body {
+  background: #ffffff;
+  opacity: 1;
+  border-radius: 20px;
+  padding: 40rpx;
+}
+.bottom-title {
+  font-size: 17px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: blod;
+  line-height: 23px;
+  color: #000000;
+  opacity: 1;
+  margin-bottom: 40rpx;
+}
+.bottom-con {
+  font-size: 14px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000000;
+  opacity: 0.9;
+}

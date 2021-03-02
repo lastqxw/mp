@@ -1,0 +1,22 @@
+<!-- pages/personal/personal.wxml -->
+<view class="psl_top">
+  <image src="{{userInfo.avatarUrl}}" />
+  <view class="psl_con">
+    <view>
+      <text>Hi,{{userInfo.nickname}}</text>
+      <view class="score">
+        <image src="../../images/score.png" />
+        <text>{{userInfo.integral}}</text>
+      </view>
+    </view>
+    <view class="post">{{userInfo.isAdmin=="N"?'普通成员':'管理员'}}</view>
+  </view>
+</view>
+<view class="psl_bot">
+  <view class="psl_list">
+    <view class="psl_item" wx:for="{{linkList}}" wx:if="{{item.isShow}}" wx:key="index" bindtap="tolink" data-url="{{item.url}}">
+      <text>{{item.title}}</text>
+      <image src="../../images/tolink.png" />
+    </view>
+  </view>
+</view>

@@ -1,0 +1,72 @@
+/* pages/personal/personal.wxss */
+page{
+  background: #38C670;
+}
+.psl_top{
+  padding: 46rpx 32rpx 36rpx 32rpx;
+  display: flex;
+  color: #ffffff;
+  background: #38C670;
+}
+.psl_top image{
+  margin-top: 7rpx;
+  margin-right: 8rpx;
+  width: 46rpx;
+  height: 46rpx;
+  border-radius: 50%;
+}
+.psl_con{
+  position: relative;
+  flex: 1;
+  font-size: 44rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 60rpx;
+  color: #FFFFFF;
+}
+.psl_con .score{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.psl_con .score image{
+  margin-top: 0;
+  width: 41rpx;
+  height: 41rpx;
+  vertical-align: middle;
+}
+.psl_con .post{
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 42rpx;
+  color: #FFFFFF;
+  opacity: 0.7;
+}
+.psl_bot{
+  width: 100%;
+  min-height: calc(100vh - 192rpx);
+  background: #ffffff;
+  border-radius: 40rpx 40rpx 0 0;
+}
+.psl_list{
+  padding: 30rpx 64rpx;
+}
+.psl_item{
+  position: relative;
+  padding: 30rpx 0;
+  font-size: 30rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 42rpx;
+  color: #000000;
+  opacity: 0.9;
+}
+.psl_item image{
+  position: absolute;
+  top: 38rpx;
+  right: 0;
+  width: 26rpx;
+  height: 26rpx;
+}

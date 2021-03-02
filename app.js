@@ -1,39 +1,55 @@
 // app.js
 App({
   onLaunch() {
+    let that = this;
     // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
+    const logs = wx.getStorageSync("logs") || [];
     wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            }
-          })
+      success: function (res) {
+        console.log(that, "1111111111111");
+        that.globalData.code = res.code;
+        that.getOpenId();
+      },
+    });
+  },
+  getOpenId() {
+    let that = this;
+    let { apiHost, code } = that.globalData;
+    wx.request({
+      url: apiHost + `/prod-api/api/weChat/login?code=${code}`,
+      method: "POST",
+      success: (e) => {
+        console.log(e);
+        if (e.data.code == 200) {
+          that.globalData.userInfo = e.data.data;
+          console.log(that.globalData.userInfo);
+          that.getInfo(e.data.data);
         }
-      }
-    })
+      },
+    });
+  },
+  getInfo(item) {
+    let that = this;
+    wx.getUserInfo({
+      success: (res) => {
+        console.log(res);
+        // 可以将 res 发送给后台解码出 unionId
+        that.globalData.userInfo.nickname = res.userInfo.nickName;
+        that.globalData.userInfo.nickname = res.userInfo.nickName;
+        item.avatarUrl = res.userInfo.avatarUrl;
+        item.avatarUrl = res.userInfo.avatarUrl;
+        wx.setStorageSync("userInfo", item);
+        // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+        // 所以此处加入 callback 以防止这种情况
+        if (this.userInfoReadyCallback) {
+          this.userInfoReadyCallback(res);
+        }
+      },
+    });
   },
   globalData: {
-    userInfo: null
-  }
-})
+    code: "",
+    userInfo: null,
+    apiHost: "https://www.bjshusiyuan.com/",
+  },
+});

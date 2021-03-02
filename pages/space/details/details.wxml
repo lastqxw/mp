@@ -1,0 +1,75 @@
+<view class="container">
+  <view class="top">
+    <image src="{{item.banner}}" />
+  </view>
+  <view class="one">
+    <view class="one-top">
+      <view class="two-title">
+        <image src="../../../images/details1.png" />
+        <text>场地介绍</text>
+      </view>
+      <view class="two-con">
+        <view class="two-con-li">
+          <view class="two-con-li-left">面积：</view>
+          <view class="two-con-li-right">{{item.area}}</view>
+        </view>
+        <view class="two-con-li">
+          <view class="two-con-li-left">容纳人数：</view>
+          <view class="two-con-li-right">{{item.capacity}}</view>
+        </view>
+        <view class="two-con-li">
+          <view class="two-con-li-left">设备设施：</view>
+          <view class="two-con-li-right">{{item.equipment}}</view>
+        </view>
+        <view class="two-con-li">
+          <view class="two-con-li-left">适合活动：</view>
+          <view class="two-con-li-right">{{item.fitActivity}}</view>
+        </view>
+        <view class="two-con-li">
+          <view class="two-con-li-left">服务时间：</view>
+          <view class="two-con-li-right">{{item.timeStr}}</view>
+        </view>
+        <view class="two-con-li">
+          <view class="two-con-li-left">客服微信：</view>
+          <view class="two-con-li-right">
+            {{item.wechat}}
+            <view class="copy" bindtap="copy">复制微信</view>
+          </view>
+        </view>
+        <view class="two-con-li">
+          <view class="two-con-li-left">联系电话：</view>
+          <view class="two-con-li-right phone" bindtap="callphone">{{item.phone}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="one-top">
+      <view class="two-title">
+        <image src="../../../images/address.png" />
+        <text>地址</text>
+      </view>
+      <view class="two-con" bind:tap="goto">
+        <view class="two-con-sub">
+          <text>{{item.coordinate}}</text>
+          <image src="../../../images/lat.png" />
+        </view>
+      </view>
+    </view>
+    <view class="one-top">
+      <view class="two-title">
+        <image src="../../../images/imgList.png" />
+        <text>照片集</text>
+      </view>
+    </view>
+  </view>
+  <view class="btn-group">
+    <!-- <van-button color='#FF8104' bindtap="callphone">整包预约</van-button> -->
+    <van-button color='#FF8104' bind:tap="shequ" class="buttonstyle">社区预约</van-button>
+    <!-- <van-button color='#FF8104' bind:tap="timeinterval">时段预约</van-button> -->
+  </view>
+  <view class="bottom">
+    <view class="bottom-body">
+      <view class="bottom-title">温馨提示</view>
+      <view class="bottom-con">如需团体整体预约请联系客服：18519330200</view>
+    </view>
+  </view>
+</view>

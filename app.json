@@ -1,7 +1,36 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/active/active" 
+    "pages/signout/signout",
+    "pages/keyExchange/keyExchange",
+    "pages/signout/record/record",
+    "pages/signout/secretkey/secretkey",
+    "pages/signout/pointsexchange/pointsexchange",
+    "pages/volunteer/Audit/Audit",
+    "pages/volunteer/volunteersignup/volunteersignup",
+    "pages/volunteer/volunteer",
+    "pages/active/active",
+    "pages/personal/personal",
+    "pages/about/about",
+    "pages/active/details/details",
+    "pages/active/event/event",
+    "pages/teacher/list",
+    "pages/teacher/details/details",
+    "pages/teacher/active/active",
+    "pages/space/space",
+    "pages/space/details/details",
+    "pages/space/reservation/reservation",
+    "pages/space/time/time",
+    "pages/partake/partake",
+    "pages/activity/activity",
+    "pages/order/order",
+    "pages/history/history",
+    "pages/sign/sign",
+    "pages/active/success/success",
+    "pages/volunteer/success/success",
+    "pages/volunteer/mine/mine",
+    "pages/volunteer/sign/sign",
+    "pages/personal/manage/manange"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -9,7 +38,6 @@
     "navigationBarTitleText": "市民文化活动中心",
     "navigationBarTextStyle": "white"
   },
-  "style": "v2",
   "tabBar": {
     "list": [
       {
@@ -19,18 +47,36 @@
         "selectedIconPath": "./images/home.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/partake/partake",
         "text": "我的参与",
-        "iconPath": "./images/home.png",
-        "selectedIconPath": "./images/home.png"
+        "iconPath": "./images/canyu.png",
+        "selectedIconPath": "./images/canyu.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/personal/personal",
         "text": "个人中心",
-        "iconPath": "./images/home.png",
-        "selectedIconPath": "./images/home.png"
+        "iconPath": "./images/mine.png",
+        "selectedIconPath": "./images/mine.png"
       }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index"
+  }
 }
