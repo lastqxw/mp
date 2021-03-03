@@ -13,6 +13,8 @@ Page({
     chooseDate: "",
     typeList: [
       "全部",
+      "东场地",
+      "西场地",
       "亲子",
       "书法",
       "瑜伽",
@@ -20,12 +22,11 @@ Page({
       "分类",
       "分类",
       "分类",
-      "分类",
-      "分类",
     ],
     page: 1,
     rows: 10,
     activeList: [],
+    days:""
   },
 
   /**
@@ -39,6 +40,17 @@ Page({
       dateList: datas,
     });
     this.getActiveList();
+    //获取当前时间
+    var timestamp = Date.parse(new Date());
+    var date = new Date(timestamp);
+    //获取年  
+    var Y = date.getFullYear();
+    //获取月  
+    var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
+    this.setData({
+      days:Y+'.'+M
+    });
+     
   },
   getDatesfunction(currentTime) {
     //JS获取当前周从星期一到星期天的日期

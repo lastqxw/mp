@@ -23,7 +23,7 @@
         </view>
       </view>
     </view>
-    <view class="one-top">
+    <!-- <view class="one-top">
       <view class="two-title">
         <image src="../../../images/zj.png" />
         <text>主讲活动</text>
@@ -32,7 +32,7 @@
         <image src="{{items.banner}}" />
         <view class="two-con-sub">{{items.content}}</view>
       </view>
-    </view>
+    </view> -->
     <view class="one-top">
       <view class="two-title">
         <image src="../../../images/zjactive.png" />

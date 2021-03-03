@@ -10,11 +10,24 @@
       </view>
       <view class="card-body-sub">地址：{{item.address}}</view>
       <view class="card-body-from">
-        <van-field model:value="{{ name }}" error-message="{{error[0]}}" input-class='input-class' placeholder="请输入姓名" />
-        <van-field model:value="{{ sex }}" bind:tap="showAction" clickable readonly input-class='input-class' />
-        <van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect" />
+        <van-field model:value="{{ name }}" error-message="{{error[0]}}" input-class='input-class'
+          placeholder="请输入姓名" />
+        <!-- <van-field model:value="{{ sex }}" bind:tap="showAction" clickable readonly input-class='input-class' />
+        <van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect" /> -->
         <van-field model:value="{{ phone }}" placeholder="请输入联系方式" error-message="{{error[1]}}" border="{{ false }}" />
+        <view class="person">
+          <text>参与人数：</text>
+          <view class="one">
+            <van-field model:value="{{ personnum}}" error-message="{{error[0]}}" input-class='input-class' />
+            <text>成人</text>
+          </view>
+          <view class="two">
+            <van-field model:value="{{ childrennum }}" error-message="{{error[0]}}" input-class='input-class' />
+            <text>儿童</text>
+          </view>
+        </view>
         <van-field model:value="{{ value2 }}" readonly input-class='input-class' placeholder="请输入联系方式" />
+
         <view class="btn-group">
           <van-button color="#FF8104" bind:tap="score">积分兑换</van-button>
           <van-button color="#FF8104" bind:tap="wxpay">微信支付</van-button>

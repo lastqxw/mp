@@ -17,38 +17,30 @@
   <view class="banner-bottom">
     <view class="first">
       <view class="first-item" data-type='1' bind:tap="goto">
-        <image src="../../images/active.png" />
-        <text>活动报名</text>
+        <image src="../../images/icon1.png" />
       </view>
       <view class="first-item" data-type='2' bind:tap="goto">
-        <image src="../../images/lecturer.png" />
-        <text>讲师介绍</text>
+        <image src="../../images/icon5.png" />
       </view>
       <view class="first-item" data-type='3' bind:tap="goto">
-        <image src="../../images/site.png" />
-        <text>场地介绍</text>
+        <image src="../../images/icon2.png" />
       </view>
       <view class="first-item" data-type='4' bind:tap="goto">
-        <image src="../../images/volunteer.png" />
-        <text>志愿活动</text>
+        <image src="../../images/icon3.png" />
       </view>
     </view>
     <view class="first">
       <view class="first-item" data-type='5' bind:tap="goto">
-        <image src="../../images/history.png" />
-        <text>历史活动</text>
+        <image src="../../images/icon6.png" />
       </view>
       <view class="first-item" data-type='6' bind:tap="goto">
-        <image src="../../images/checkin.png" />
-        <text>活动签到</text>
+        <image src="../../images/icon4.png" />
       </view>
       <view class="first-item" data-type='7' bind:tap="goto">
-        <image src="../../images/integral.png" />
-        <text>积分兑换</text>
+        <image src="../../images/icon7.png" />
       </view>
       <view class="first-item">
-        <image src="../../images/signin.png" />
-        <text>每日签到</text>
+        <image src="../../images/icon8.png" />
       </view>
     </view>
   </view>
@@ -59,9 +51,11 @@
   </view>
   <view class="active">
     <view class="active-item" wx:for="{{activeList}}" wx:for-item="item" wx:key="*this" bindtap="gotoDetails" data-activeId='{{item.id}}'>
+      <text class="active-intro">富豪</text>
       <image src='{{item.banner}}' />
       <text class="active-title">{{item.title}}</text>
       <view class="active-des">{{item.content}}</view>
+      <view class="active-signup">立即报名</view>
     </view>
   </view>
 </view>

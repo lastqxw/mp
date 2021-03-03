@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    active: 0,
     page: "1",
    rows: "10",
     spaceList: [],
@@ -36,7 +37,11 @@ Page({
       success: (res) => {
         if (res.data.code == 200) {
           res.data.data.forEach((element) => {
-            element.banner = "http://8.141.48.40:81" + element.banner;
+            element.banners = element.banner.split(',').map(x => {
+             return x ?
+                 "http://8.141.48.40:81" + x :
+                 "../../../images/bg.png";
+             })
           });
           this.setData({
             spaceList: res.data.data,

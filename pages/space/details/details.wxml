@@ -1,6 +1,6 @@
 <view class="container">
   <view class="top">
-    <image src="{{item.banner}}" />
+    <image src="{{item.banners[0]}}" />
   </view>
   <view class="one">
     <view class="one-top">

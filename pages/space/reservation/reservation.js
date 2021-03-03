@@ -1,14 +1,20 @@
 // pages/space/reservation/reservation.js
-const { apiHost } = getApp().globalData;
-import { dictMain } from "../../../utils/dict";
+const {
+  apiHost
+} = getApp().globalData;
+import {
+  dictMain
+} from "../../../utils/dict";
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    openId:'123456',
+    openId: '123456',
     fieldId: null,
+    name: "",
     result: [],
+    appointmentTypes:"",
     communityName: "",
     name: "",
     company: "",
@@ -32,31 +38,39 @@ Page({
     show: false,
     show1: false,
     show2: false,
+    show3: false,
     shows: false,
-    appointmentDate:'',
-    appointmentTime:[],
-    appointmentType:'2',
+    appointmentDate: '',
+    appointmentTime: [],
+    appointmentType: '2',
     isLivery: 0,
     isEquipment: 0,
-    isTechnician: 0
+    isTechnician: 0,
+    actions3: [{
+      name: "常规预约"
+    }, {
+      name: "社区预约"
+    }]
   },
   //获取字典数据
-  getDict(){
+  getDict() {
     let community = wx.getStorageSync("DICT_COMMUNITY_NAME");
     let activeType = wx.getStorageSync("DICT_ACTIVITY_TYPE");
     let tipicType = wx.getStorageSync("DICT_TOPIC_TYPE");
-    let arr = [], arr1=[], arr2=[];
-    community.forEach(x=>{
+    let arr = [],
+      arr1 = [],
+      arr2 = [];
+    community.forEach(x => {
       arr.push({
         name: x.dictLabel
       });
     });
-    tipicType.forEach(x=>{
+    tipicType.forEach(x => {
       arr1.push({
         name: x.dictLabel
       });
     });
-    activeType.forEach(x=>{
+    activeType.forEach(x => {
       arr2.push({
         name: x.dictLabel
       });
@@ -70,6 +84,7 @@ Page({
   // 判断表单是否填写
   vform() {
     this.setData({
+      appointmentTypesError: "",
       communityNameError: "",
       nameError: "",
       companyError: "",
@@ -79,6 +94,12 @@ Page({
       joinNumberError: "",
       phoneError: "",
     })
+    if (this.data.appointmentTypes == "") {
+      this.setData({
+        appointmentTypesError: '请选择社区类型',
+      });
+      return false
+    }
     if (this.data.communityName == "") {
       this.setData({
         communityNameError: '请选择社区名称',
@@ -130,7 +151,11 @@ Page({
     return true
   },
   onClose(e) {
-    if (e.currentTarget.dataset.select == 0) {
+    if (e.currentTarget.dataset.select == 3) {
+      this.setData({
+        show3: false
+      });
+    } else if (e.currentTarget.dataset.select == 0) {
       this.setData({
         show: false
       });
@@ -145,7 +170,11 @@ Page({
     }
   },
   showAction(e) {
-    if (e.currentTarget.dataset.select == 0) {
+    if (e.currentTarget.dataset.select == 3) {
+      this.setData({
+        show3: !this.data.show3,
+      });
+    }else if (e.currentTarget.dataset.select == 0) {
       this.setData({
         show: !this.data.show,
       });
@@ -160,7 +189,11 @@ Page({
     }
   },
   onSelect(e) {
-    if (e.currentTarget.dataset.select == 0) {
+    if (e.currentTarget.dataset.select == 3) {
+      this.setData({
+        appointmentTypes: e.detail.name,
+      });
+    } else if (e.currentTarget.dataset.select == 0) {
       this.setData({
         communityName: e.detail.name,
       });
@@ -184,24 +217,23 @@ Page({
           isEquipment: 0,
           isTechnician: 0
         })
-        self.data.result.forEach(x=>{
-          if(x=='1'){
+        self.data.result.forEach(x => {
+          if (x == '1') {
             self.setData({
               isLivery: 1
             })
-          }else if(x=='2'){
+          } else if (x == '2') {
             self.setData({
               isEquipment: 1
             })
-          }else if(x=='3'){
+          } else if (x == '3') {
             self.setData({
               isTechnician: 1
             })
           }
         })
         wx.request({
-          url:
-            apiHost +
+          url: apiHost +
             `prod-api/api/field/fieldAppointmentSave?activityName=${self.data.activityName}&activityTopic=${self.data.activityTopic}&activityType=${self.data.activityType}&appointmentDate=${self.data.appointmentDate}&appointmentTime=${self.data.appointmentTime}&communityName=${self.data.communityName}&cost=${self.data.cost}&fieldId=${self.data.fieldId}&idcard=${self.data.idcard}&isEquipment=${self.data.isEquipment}&isLivery=${self.data.isLivery}&isTechnician=${self.data.isTechnician}&joinNumber=${self.data.joinNumber}&name=${self.data.name}&openId=${self.data.openId}&phone=${self.data.phone}`,
           method: "POST",
           success: (res) => {
@@ -220,13 +252,13 @@ Page({
             }
           },
         });
-        
-      }else {
+
+      } else {
         wx.showToast({
           title: '请至少选择一项服务支持！！',
         })
       }
-    } 
+    }
   },
   /**
    * 生命周期函数--监听页面加载
@@ -236,17 +268,18 @@ Page({
     // let userInfo = wx.getStorageSync("userInfo");
     that.setData({
       fieldId: options.fieldId,
+      name: options.name
       // openId: userInfo.openId
     })
     dictMain("community_name");
     dictMain("activity_type");
     dictMain("topic_type");
-    setTimeout(function(){
+    setTimeout(function () {
       that.getDict();
-    },1000);
+    }, 1000);
   },
-  getDateTime(){
-    
+  getDateTime() {
+
   },
   onChange(event) {
     this.setData({
@@ -258,7 +291,7 @@ Page({
       url: "/pages/space/time/time",
     });
   },
-  showstate(){
+  showstate() {
     this.setData({
       shows: true
     })
@@ -270,7 +303,7 @@ Page({
   },
   timeinterval() {
     wx.navigateTo({
-      url: "/pages/space/time/time?fieldId="+this.data.fieldId
+      url: "/pages/space/time/time?fieldId=" + this.data.fieldId
     });
   }
 });

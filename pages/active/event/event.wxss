@@ -75,3 +75,37 @@
   color: #000000;
   opacity: 0.9;
 }
+.person text{
+  font-size: 14px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  color: #000000;
+  opacity: 1;
+
+ width:30%;
+}
+.person .van-cell{
+  display: inline-block;
+  width: 100%;
+}
+.person .one{
+  margin-right: 2%;
+}
+.person .one, .person .two {
+  display: inline-block;
+  position: relative;
+  width: 34%;
+}
+.person .one text, .person .two text{
+  position: absolute;
+  width: 36px;
+  height: 46px;
+  top:20rpx;
+  right:0rpx;
+  text-align: center;
+  line-height: 46px; 
+  background: #ccc;
+  opacity: 0.02;
+  color: #000;
+  opacity: 0.5;
+}

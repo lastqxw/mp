@@ -2,16 +2,21 @@
 <view class="container">
   <view class="top">
     <view class="dateList">
+      <view class="titles"> {{days}} </view>
+      <view class="lines"></view>
       <view class="day" wx:for="{{dateList}}" wx:for-item="item" wx:key="*this">
         <text class="week {{index==5||index==6?'weekend':''}}">{{weekList[index]}}</text>
-        <text data-date='{{item}}' class="date {{item==today && !chooseDate?'today':''}} {{item == chooseDate ?'today':''}}" bind:tap="choose">
-          <text>{{item==today?'今':item}}</text>
+        <text data-date='{{item}}'
+          class="date {{item==today && !chooseDate?'today':''}} {{item == chooseDate ?'today':''}}" bind:tap="choose">
+          <!-- <text>{{item==today?'今':item}}</text> -->
+          <text>{{item}}</text> 
         </text>
       </view>
     </view>
     <view class="line1"></view>
     <view class="typeList">
-      <view wx:for="{{typeList}}" wx:key="*this" class="scroll-view-item_H {{index==active?'active':''}}" data-id='{{index}}' bindtap="changeType">
+      <view wx:for="{{typeList}}" wx:key="*this" class="scroll-view-item_H {{index==active?'active':''}}"
+        data-id='{{index}}' bindtap="changeType">
         <text class="text">{{item}}</text>
       </view>
     </view>

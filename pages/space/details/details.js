@@ -36,7 +36,7 @@ Page({
   },
   shequ() {
     wx.navigateTo({
-      url: "/pages/space/reservation/reservation?fieldId=" + this.data.item.id,
+      url: `/pages/space/reservation/reservation?fieldId=${this.data.item.id}&name=${this.data.item.name}`,
     });
   },
   timeinterval() {

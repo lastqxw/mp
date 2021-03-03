@@ -1,18 +1,57 @@
 <!-- pages/space/space.wxml -->
 <view class='container'>
-  <view class="item" wx:for="{{spaceList}}" wx:key="*this" bind:tap="goto" data-spacedata="{{item}}">
-    <image src='{{item.banner}}' />
-    <view class="item-des">
-      <view class="item-des-top">
-        <view class="item-des-top-left">
-          <text class="level">B2</text>
-          <text class="name">{{item.name}}</text>
-        </view>
-        <view class="item-des-top-right">
-          <text>{{item.capacity}}</text>
+  <van-tabs active="{{ active }}" class="tap" nav-class='tap-nav' tab-active-class='taps' color='#38C670'
+    title-active-color='#38C670'>
+    <van-tab title="活动信息">
+      <view class="item" wx:for="{{spaceList}}" wx:key="*this" bind:tap="goto" data-spacedata="{{item}}">
+        <image src='{{item.banners[0]}}' />
+        <view class="item-des">
+          <view class="item-des-top">
+            <view class="item-des-top-left">
+              <text class="level">B2</text>
+              <text class="name">{{item.name}}</text>
+            </view>
+            <view class="item-des-top-right">
+              <text>{{item.capacity}}</text>
+            </view>
+          </view>
+          <view class="item-des-bottom">{{item.fitActivity}}</view>
         </view>
       </view>
-      <view class="item-des-bottom">{{item.fitActivity}}</view>
-    </view>
-  </view>
+    </van-tab>
+    <van-tab title="华星">
+      <view class="item" wx:for="{{spaceList}}" wx:key="*this" bind:tap="goto" data-spacedata="{{item}}">
+        <image src='{{item.banners[0]}}' />
+        <view class="item-des">
+          <view class="item-des-top">
+            <view class="item-des-top-left">
+              <text class="level">B2</text>
+              <text class="name">{{item.name}}</text>
+            </view>
+            <view class="item-des-top-right">
+              <text>{{item.capacity}}</text>
+            </view>
+          </view>
+          <view class="item-des-bottom">{{item.fitActivity}}</view>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="富豪">
+      <view class="item" wx:for="{{spaceList}}" wx:key="*this" bind:tap="goto" data-spacedata="{{item}}">
+        <image src='{{item.banners[0]}}' />
+        <view class="item-des">
+          <view class="item-des-top">
+            <view class="item-des-top-left">
+              <text class="level">B2</text>
+              <text class="name">{{item.name}}</text>
+            </view>
+            <view class="item-des-top-right">
+              <text>{{item.capacity}}</text>
+            </view>
+          </view>
+          <view class="item-des-bottom">{{item.fitActivity}}</view>
+        </view>
+      </view>
+    </van-tab>
+  </van-tabs>
 </view>
