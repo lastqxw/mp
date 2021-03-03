@@ -7,7 +7,7 @@ Page({
   data: {
     list: [],
     page: 1,
-    rows: 10,
+    rows: 1000,
   },
   gotointegral() {
     wx.navigateTo({

@@ -8,7 +8,7 @@ Page({
    */
   data: {
     page: 1,
-    rows: 10,
+    rows: 1000,
     active: 0,
     teacherlist: null,
     item: {},

@@ -32,7 +32,7 @@
       </view>
       <view class="te">
         <view class="te_title">{{item.title}}</view>
-        <view class="te_con">{{item.content}}</view>
+        <!-- <view class="te_con">{{item.content}}</view> -->
       </view>
     </view>
   </view>

@@ -15,7 +15,7 @@ Page({
     chooseDate: "",
     typeList: [],
     page: 1,
-    rows: 10,
+    rows: 1000,
     activeList: [],
     activeValue: null,
     days:""
