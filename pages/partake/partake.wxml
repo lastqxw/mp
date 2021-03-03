@@ -1,16 +1,15 @@
 <view class="psl_top">
-  <image src="../../images/avar.jpg" />
+  <image src="{{userInfo.avatarUrl}}" />
   <view class="psl_con">
     <view>
-      <text>Hi,张磊</text>
+      <text>Hi,{{userInfo.nickname}}</text>
     </view>
-    <view class="post">技术部产品经理</view>
+    <view class="post">{{userInfo.isAdmin=="N"?'普通成员':'管理员'}}</view>
   </view>
 </view>
 <view class="psl_bot">
   <view class="psl_bot_title">
     <text>我的参与</text>
-    <text class="psl_more">更多</text>
   </view>
   <view class="partList">
     <view class="partItem {{item.state=='1'?'greenItem':''}}" wx:for="{{parTake}}" wx:key="index" bindtap="toDetails" data-id="{{item.id}}" data-state='{{item.state}}'>
@@ -20,14 +19,20 @@
           <text wx:elif="{{item.state == '2'}}">已报名</text>
           <text wx:else="{{item.state == '3'}}">已预约</text>
         </view>
-        <view class="partDate" wx:if="item.date">{{item.date}}</view>
-        <view class="partTime">{{item.time}}</view>
+        <view class="partDate" wx:if="item.activity.date">{{item.activity.date}}</view>
+        <view class="partTime">{{item.activity.time}}</view>
       </view>
       <view class="partMid"></view>
       <view class="partRight">
-        <view class="partTitle">{{item.title}}</view>
-        <view class="loc"><van-icon name="location" />{{item.loc}}</view>
-        <view class="des"><van-icon name="label" />{{item.des}}</view>
+        <view class="partTitle">{{item.activity.title || '无'}}</view>
+        <view class="loc">
+          <van-icon name="location" />
+          {{item.activity.loc || '无'}}
+        </view>
+        <view class="des">
+          <van-icon name="label" />
+          {{item.activity.des || '无'}}
+        </view>
       </view>
     </view>
     <van-button class="inActive" type="primary" block bindtap="intoActive">添加活动</van-button>

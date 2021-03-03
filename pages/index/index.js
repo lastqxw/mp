@@ -15,7 +15,7 @@ Page({
     interval: 2000,
     duration: 500,
     page: "1",
-   rows: "100",
+    rows: "100",
     activeList: [],
   },
   onLoad() {
@@ -50,8 +50,8 @@ Page({
         });
         break;
       case 6:
-        wx.navigateTo({
-          url: "/pages/sign/sign",
+        wx.switchTab({
+          url: "/pages/partake/partake",
         });
         break;
       case 7:
@@ -83,7 +83,8 @@ Page({
       success: (res) => {
         if (res.data.code == 200) {
           res.data.data.forEach((element) => {
-            element.banner = "http://8.141.48.40:81" + element.banner;
+            element.banner =
+              "http://8.141.48.40:81" + element.banner.split(",")[0];
           });
           this.setData({
             activeList: res.data.data,

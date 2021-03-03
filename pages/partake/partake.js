@@ -1,78 +1,70 @@
 // pages/partake/partake.js
+const { apiHost } = getApp().globalData;
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    parTake:[
-      {
-        id:'1',
-        title:'关于公司发展方向的讨论',
-        loc:'第三会议室',
-        des:'带着纸笔前往会议室',
-        date:'',
-        time:'16:00',
-        state:'1'
-      },
-      {
-        id:'2',
-        title:'关于公司发展方向的讨论',
-        loc:'第三会议室',
-        des:'带着纸笔前往会议室',
-        date:'',
-        time:'16:00',
-        state:'2'
-      },
-      {
-        id:'3',
-        title:'关于公司发展方向的讨论',
-        loc:'第三会议室',
-        des:'带着纸笔前往会议室',
-        date:'02-16',
-        time:'16:00',
-        state:'3'
-      }
-    ]
+    parTake: [],
+    page: 1,
+    rows: 100,
+    userInfo: wx.getStorageSync("userInfo"),
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getList();
   },
-
+  getList() {
+    let openId = wx.getStorageSync("userInfo").openid;
+    let { page, rows } = this.data;
+    wx.request({
+      url:
+        apiHost +
+        `/prod-api/api/enroll/activityEnroll?openId=${openId}&page=${page}&rows=${rows}`,
+      method: "POST",
+      success: (res) => {
+        console.log(res.data.data);
+        if (res.data.code == 200) {
+          this.setData({
+            parTake: res.data.data,
+          });
+        }
+      },
+    });
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-
-  },
+  onReady: function () {},
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
-  },
+  onShow: function () {},
   // 参加活动
-  intoActive(){
+  intoActive() {
     wx.navigateTo({
-      url: '../active/active'
+      url: "../active/active",
     });
   },
   // 跳转活动详情
-  toDetails(e){
+  toDetails(e) {
     console.log(e.currentTarget.dataset);
-    if(e.currentTarget.dataset.state!='3'){
+    if (e.currentTarget.dataset.state != "3") {
       wx.navigateTo({
-        url: '../activity/activity?id='+e.currentTarget.dataset.id+'&state='+e.currentTarget.dataset.state
+        url:
+          "../activity/activity?id=" +
+          e.currentTarget.dataset.id +
+          "&state=" +
+          e.currentTarget.dataset.state,
       });
-    }else{
+    } else {
       wx.navigateTo({
-        url: '../order/order?id='+e.currentTarget.dataset.id
+        url: "../order/order?id=" + e.currentTarget.dataset.id,
       });
     }
-  }
-})
+  },
+});

@@ -57,14 +57,14 @@
 }
 .typeList {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-items: center;
   flex-wrap: wrap;
   padding: 20rpx;
 }
 .scroll-view-item_H {
   display: inline-block;
-  width: 124rpx;
+  width: 144rpx;
   height: 46rpx;
   background: rgba(0, 0, 0, 0.05);
   border-radius: 16px;
@@ -72,6 +72,7 @@
   margin-bottom: 10px;
 }
 .text {
+  margin: 0 8rpx;
   font-size: 12px;
   font-family: Alibaba PuHuiTi;
   color: #000;
@@ -131,6 +132,7 @@
   opacity: 1;
   border-radius: 4px;
   display: flex;
+  justify-content: space-around;
 }
 .img image {
   width: 264rpx;

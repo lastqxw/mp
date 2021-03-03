@@ -9,12 +9,12 @@
         <text>{{userInfo.integral}}</text>
       </view>
     </view>
-    <!-- <view class="post">技术部产品经理</view> -->
+    <view class="post">{{userInfo.isAdmin=="N"?'普通成员':'管理员'}}</view>
   </view>
 </view>
 <view class="psl_bot">
   <view class="psl_list">
-    <view class="psl_item" wx:for="{{linkList}}" wx:key="index" bindtap="tolink" data-url="{{item.url}}">
+    <view class="psl_item" wx:for="{{linkList}}" wx:if="{{item.isShow}}" wx:key="index" bindtap="tolink" data-url="{{item.url}}">
       <text>{{item.title}}</text>
       <image src="../../images/tolink.png" />
     </view>

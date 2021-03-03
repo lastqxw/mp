@@ -1,0 +1,7 @@
+<!--pages/volunteer/sign/sign.wxml-->
+<view class="contailer">
+  <view class="body">
+    <image src="{{qrcode||'../../../images/code.png'}}"></image>
+    <view class="text">通过微信扫码进行{{signType}}</view>
+  </view>
+</view>

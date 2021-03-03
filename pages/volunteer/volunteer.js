@@ -46,7 +46,8 @@ Page({
         console.log(res, "res");
         if (res.data.code == 200) {
           res.data.data.forEach((element) => {
-            element.banner = "http://8.141.48.40:81" + element.banner;
+            element.banner =
+              "http://8.141.48.40:81" + element.banner.split(",")[0];
           });
           this.setData({
             success: res.data.data,

@@ -14,7 +14,7 @@
       placeholder="社区名称" error-message="{{communityNameError}}" data-select='0' />
     <van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect"
       data-select='0' />
-    <van-field model:value="{{ appointmentTime }}" disabled placeholder="时间预约" bind:tap="timeinterval" />
+    <van-field model:value="{{ yuyueTime }}" disabled placeholder="时间预约" bind:tap="timeinterval" />
     <van-field model:value="{{ name }}" error-message="{{nameError}}" placeholder="请输入姓名" />
     <van-field model:value="{{ company  }}" error-message="{{companyError}}" placeholder="请输入单位" />
     <van-field type='idcard' model:value="{{ idcard }}" placeholder="请输入身份证号" />

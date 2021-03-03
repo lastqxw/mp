@@ -107,6 +107,17 @@
           "pathName": "pages/volunteer/mine/mine",
           "query": "type=3",
           "scene": null
+        },
+        {
+          "name": "pages/partake/partake",
+          "pathName": "pages/partake/partake",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/personal/personal",
+          "pathName": "pages/personal/personal",
+          "scene": null
         }
       ]
     }

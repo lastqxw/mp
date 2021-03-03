@@ -28,7 +28,9 @@
     "pages/sign/sign",
     "pages/active/success/success",
     "pages/volunteer/success/success",
-    "pages/volunteer/mine/mine"
+    "pages/volunteer/mine/mine",
+    "pages/volunteer/sign/sign",
+    "pages/personal/manage/manange"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -73,6 +75,8 @@
     "van-dialog": "@vant/weapp/dialog/index",
     "van-checkbox": "@vant/weapp/checkbox/index",
     "van-checkbox-group": "@vant/weapp/checkbox-group/index",
-    "van-popup": "@vant/weapp/popup/index"
+    "van-popup": "@vant/weapp/popup/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index"
   }
 }

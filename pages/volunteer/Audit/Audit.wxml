@@ -21,6 +21,6 @@
   </view>
   <view class="btn-area">
     <button type="primary" bind:tap="signIn">签到</button>
-    <button type="primary">签退</button>
+    <button type="primary" bind:tap="signOut">签退</button>
   </view>
 </view>
