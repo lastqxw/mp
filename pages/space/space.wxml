@@ -2,7 +2,7 @@
 <view class='container'>
   <van-tabs active="{{ active }}" class="tap" nav-class='tap-nav' tab-active-class='taps' color='#38C670'
     title-active-color='#38C670'>
-    <van-tab title="活动信息">
+    <van-tab title="全部">
       <view class="item" wx:for="{{spaceList}}" wx:key="*this" bind:tap="goto" data-spacedata="{{item}}">
         <image src='{{item.banners[0]}}' />
         <view class="item-des">
