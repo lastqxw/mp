@@ -9,6 +9,7 @@ App({
         console.log(that, "1111111111111");
         that.globalData.code = res.code;
         that.getOpenId();
+        
       },
     });
   },
@@ -24,6 +25,7 @@ App({
           that.globalData.userInfo = e.data.data;
           console.log(that.globalData.userInfo);
           that.getInfo(e.data.data);
+          that.getSave();
         }
       },
     });
@@ -44,6 +46,18 @@ App({
         if (this.userInfoReadyCallback) {
           this.userInfoReadyCallback(res);
         }
+      },
+    });
+  },
+  getSave(){
+    let that = this;
+    let { apiHost, code,userInfo } = that.globalData;
+    console.log(userInfo)
+    wx.request({
+      url: apiHost + `/prod-api/api/weChat/updateWxUserInfo?avatarUrl=${userInfo.avatarUrl}&city=${userInfo.city}&code=${code}&country=${userInfo.country}&gender=${userInfo.gender}&nickName=${userInfo.nickname}&openId=${userInfo.openid}&province=${userInfo.province}&unionId=${userInfo.unionId}`,
+      method: "POST",
+      success: (e) => {
+        console.log(e,'e');
       },
     });
   },
