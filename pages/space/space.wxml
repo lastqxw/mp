@@ -4,7 +4,7 @@
     title-text="场地介绍" 
     back-icon=""
     color="#fff"
-    home-icon="/images/home_icon@3x.png"
+    home-icon=""
     background="linear-gradient(#00f88a,#00d1ae);"
     bindback="back"/>
   <view class="manage-top">
