@@ -6,7 +6,7 @@ App({
     const logs = wx.getStorageSync("logs") || [];
     wx.login({
       success: function (res) {
-        console.log(that, "1111111111111");
+        console.log(res, "1111111111111");
         that.globalData.code = res.code;
         that.getOpenId();
       },
@@ -24,7 +24,6 @@ App({
           that.globalData.userInfo = e.data.data;
           console.log(that.globalData.userInfo);
           that.getInfo(e.data.data);
-          that.getSave();
         }
       },
     });
