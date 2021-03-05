@@ -24,6 +24,7 @@ App({
           that.globalData.userInfo = e.data.data;
           console.log(that.globalData.userInfo);
           that.getInfo(e.data.data);
+          that.getSave();
         }
       },
     });
