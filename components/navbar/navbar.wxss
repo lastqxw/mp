@@ -39,4 +39,6 @@
   top: 50%;
   font-size: 0;
   font-weight: 500;
+  width: 60%;
+  text-align: center;
 }

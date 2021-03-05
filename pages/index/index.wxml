@@ -1,7 +1,7 @@
 <!-- index.wxml -->
 <view class="container">
   <navBar 
-    title-text="世民文化活动中心" 
+    title-text="广艺+广内市民文化中心" 
     back-icon=""
     color="#fff"
     home-icon=""
