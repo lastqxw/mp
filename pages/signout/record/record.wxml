@@ -12,7 +12,7 @@
   </view>
   <view class="main-center">
     <view class="main-top">
-      <view>1345</view>
+      <view>{{integral}}</view>
     </view>
     <view class="main-bot">
       <view class="main-con">

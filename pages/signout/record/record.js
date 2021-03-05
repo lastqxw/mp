@@ -8,6 +8,7 @@ Page({
     page: 1,
     rows: 1000,
     recordList: [],
+    integral:""
   },
 
   /**
@@ -15,10 +16,13 @@ Page({
    */
   onLoad: function (options) {
     this.getList();
+    this.setData({
+      integral:wx.getStorageSync("userInfo").integral
+    })
   },
   getList() {
     let params = {
-      openId: "123456",
+      openId: wx.getStorageSync("userInfo").openid,
       page: this.data.page,
       rows: this.data.rows,
     };

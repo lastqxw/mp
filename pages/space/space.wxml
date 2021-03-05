@@ -2,7 +2,7 @@
 <view class='container'>
   <navBar 
     title-text="场地介绍" 
-    back-icon=""
+    back-icon="/images/left.png"
     color="#fff"
     home-icon=""
     background="linear-gradient(#00f88a,#00d1ae);"
@@ -15,7 +15,39 @@
     <view class="space-top-list {{type==1?'space-top-choice':''}}" bindtap="choiceType" data-type='1'>华星</view>
     <view class="space-top-list {{type==2?'space-top-choice':''}}" bindtap="choiceType" data-type='2'>富豪</view>
   </view>
-  <view class="item" wx:for="{{spaceList}}" wx:key="*this" bind:tap="goto" data-spacedata="{{item}}">
+  <view class="item" wx:for="{{spaceList}}" wx:key="*this" bind:tap="goto" data-spacedata="{{item}}" wx:if="{{type==0}}">
+    <image src='{{item.banner}}' />
+    <view class="item-des">
+      <view class="item-des-top">
+        <view class="item-des-top-left">
+          <text class="level">B2</text>
+          <text class="name">{{item.name}}</text>
+        </view>
+        <view class="item-des-top-right">
+          <text>{{item.capacity}}</text>
+        </view>
+      </view>
+      <view class="item-des-bottom">{{item.fitActivity}}</view>
+    </view>
+    <view class="item-label">富豪</view>
+  </view>
+  <view class="item" wx:for="{{spaceList}}" wx:key="*this" bind:tap="goto" data-spacedata="{{item}}" wx:if="{{type==1}}">
+    <image src='{{item.banner}}' />
+    <view class="item-des">
+      <view class="item-des-top">
+        <view class="item-des-top-left">
+          <text class="level">B2</text>
+          <text class="name">{{item.name}}</text>
+        </view>
+        <view class="item-des-top-right">
+          <text>{{item.capacity}}</text>
+        </view>
+      </view>
+      <view class="item-des-bottom">{{item.fitActivity}}</view>
+    </view>
+    <view class="item-label">富豪</view>
+  </view>
+  <view class="item" wx:for="{{spaceList}}" wx:key="*this" bind:tap="goto" data-spacedata="{{item}}" wx:if="{{type==2}}">
     <image src='{{item.banner}}' />
     <view class="item-des">
       <view class="item-des-top">

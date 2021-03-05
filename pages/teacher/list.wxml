@@ -3,7 +3,7 @@
     title-text="讲师列表" 
     back-icon=""
     color="#fff"
-    home-icon=""
+    home-icon="/images/left.png"
     background="linear-gradient(#00f88a,#00d1ae);"
     bindback="back"/>
     

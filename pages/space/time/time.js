@@ -15,7 +15,8 @@ Page({
     timeRange:[],
     activeRange:[],
     activeRangeVal:[],
-    fullTime:''
+    fullTime:'',
+    days:""
   },
 
   /**
@@ -34,7 +35,7 @@ Page({
       });
     });
     this.setData({
-      chooseDay: dayjs().format("MM.DD"),
+      chooseDay: dayjs().format("DD"),
       fullTime: dayjs().format("YYYY-MM-DD"),
       dateList: datas,
     });
@@ -43,6 +44,19 @@ Page({
     setTimeout(function(){
       that.getTimeRange();
     },1000);
+    //获取当前时间
+    var timestamp = Date.parse(new Date());
+    var date = new Date(timestamp);
+    //获取年
+    var Y = date.getFullYear();
+    //获取月
+    var M =
+      date.getMonth() + 1 < 10
+        ? "0" + (date.getMonth() + 1)
+        : date.getMonth() + 1;
+    this.setData({
+      days: Y + "." + M,
+    });
   },
   //获取字典数据
   getTimeRange(){

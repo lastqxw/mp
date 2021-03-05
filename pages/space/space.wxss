@@ -1,6 +1,7 @@
 /* pages/space/space.wxss */
 .space-top{
   padding: 0 30rpx;
+  padding-top:180rpx;
   height: 100rpx;
   background: #fff;
   border-radius: 6px 6px 0 0;
@@ -76,10 +77,10 @@
   margin-right: 16rpx;
 }
 .name {
-  font-size: 15px;
+  font-size: 30rpx;
   font-family: Alibaba PuHuiTi;
   font-weight: bold;
-  line-height: 21px;
+  line-height: 42rpx;
   color: #000000;
   opacity: 0.9;
 }
@@ -87,18 +88,18 @@
   padding: 6rpx 36rpx;
   background: rgba(56, 198, 112, 0.2);
   border-radius: 16px;
-  font-size: 12px;
+  font-size: 24rpx;
   font-family: Alibaba PuHuiTi;
   font-weight: 400;
-  line-height: 17px;
+  line-height: 34rpx;
   color: #38c670;
   opacity: 1;
 }
 .item-des-bottom {
-  font-size: 14px;
+  font-size: 28rpx;
   font-family: Alibaba PuHuiTi;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 40rpx;
   color: #000000;
   opacity: 0.5;
 }

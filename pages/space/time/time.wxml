@@ -21,7 +21,7 @@
   <view class="top">
     <view class="top-center">
       <view class="dateList">
-        <view class="dateList-left">2020.02</view>
+        <view class="dateList-left">{{days}}</view>
         <view class="dateList-right">
           <view class="day" wx:for="{{dateList}}" wx:for-item="item" wx:key="*this">
             <text class="week {{index==5||index==6?'weekend':''}}">{{weekList[index]}}</text>
@@ -30,7 +30,7 @@
         </view>
         
       </view>
-      <view class="line1"></view>
+      <!-- <view class="line1"></view> -->
       <view class="typeList">
         <view wx:for="{{typeList}}" wx:key="*this" class="scroll-view-item_H {{index==active?'active':''}}" data-active="{{index}}" data-value='{{item.dictValue}}' bindtap="changeType">
           <text class="text">{{item.dictLabel}}</text>

@@ -24,6 +24,7 @@
   line-height: 74rpx;
   border-right: 1px solid #ddd;
   text-align: left;
+  font-size:30rpx;
 
 }
 .dateList-right{
@@ -37,13 +38,13 @@
 .week {
   display: block;
   margin-bottom: 13px;
-  font-size: 14px;
+  font-size: 28rpx;
   font-family: Alibaba PuHuiTi;
   color: #000000;
   font-weight: 500;
 }
 .date {
-  font-size: 17px;
+  font-size: 30rpx;
   font-family: Alibaba PuHuiTi;
   color: #000000;
   opacity: 1;
@@ -52,11 +53,11 @@
   color: #ff0101;
 }
 .today {
-  background: linear-gradient(136deg, #6ff1a2 0%, #0ac956 100%);
+  background: linear-gradient(136deg, #ff8104 0%, #ff8104 100%);
   font-family: Alibaba PuHuiTi;
   font-weight: bold;
   color: #ffffff;
-  border-radius: 4px;
+  border-radius: 50%;
   padding: 6rpx 12rpx;
 }
 .line1 {
