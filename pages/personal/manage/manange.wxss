@@ -1,1 +1,21 @@
-/* pages/personal/manage/manange.wxss */
+.manage-top{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.manage-top-img{
+  width: 100%;
+  height: auto;
+}
+.manage-center{
+  position: absolute;
+  top: 160rpx;
+  left: 0;
+  width: 100%;
+  padding-top: 30rpx;
+  border-radius: 30rpx 30rpx 0 0;
+  background-color: #fff;
+}

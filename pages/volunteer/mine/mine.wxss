@@ -1,4 +1,9 @@
 /* pages/volunteer/mine/mine.wxss */
+.contailer{
+  position: relative;
+  z-index: 99;
+  margin-top: 160rpx;
+}
 .bodystyle {
   padding: 0 32rpx 124rpx 32rpx;
 }
@@ -93,4 +98,27 @@
 .bottomstyle .active {
   color: #ffffff;
   background: #ff8104;
+}
+
+
+.manage-top{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.manage-top-img{
+  width: 100%;
+  height: auto;
+}
+.manage-center{
+  position: absolute;
+  top: 160rpx;
+  left: 0;
+  width: 100%;
+  padding-top: 30rpx;
+  border-radius: 30rpx 30rpx 0 0;
+  background-color: #fff;
 }

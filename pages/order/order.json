@@ -1,3 +1,10 @@
 {
-  "navigationBarTitleText": "预约"
+  "usingComponents": {
+    "navBar": "../../components/navbar/navbar"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "预约",
+  "navigationBarTextStyle": "black",
+  "navigationStyle": "custom"
 }

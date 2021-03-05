@@ -30,7 +30,7 @@ Page({
     dates.forEach((t) =>{
       datas.push({
         fullTime:dayjs(t).format('YYYY-MM-DD'),
-        time:dayjs(t).format('MM.DD')
+        time:dayjs(t).format('DD')
       });
     });
     this.setData({

@@ -1,10 +1,7 @@
 // index.js
 // 获取应用实例
 const app = getApp();
-const {
-  apiHost,
-  userInfo
-} = getApp().globalData;
+const { apiHost, userInfo } = getApp().globalData;
 Page({
   data: {
     background: [],
@@ -20,15 +17,14 @@ Page({
   onLoad() {
     this.getActiveList();
     wx.request({
-      url: apiHost +
-        `prod-api/api/banner/list`,
+      url: apiHost + `prod-api/api/banner/list`,
       method: "POST",
       success: (res) => {
         if (res.data.code == 200) {
           res.data.data.forEach((element) => {
-            element.banners = element.banner.split(',').map(x => {
-             return  "http://8.141.48.40:81" + x 
-             })
+            element.banners = element.banner.split(",").map((x) => {
+              return "http://8.141.48.40:81" + x;
+            });
           });
           this.setData({
             background: res.data.data[0].banners,
@@ -91,7 +87,8 @@ Page({
       rows: this.data.rows,
     };
     wx.request({
-      url: apiHost +
+      url:
+        apiHost +
         `prod-api/api/activity/list?page=${params.page}&rows=${params.rows}`,
       data: params,
       method: "POST",

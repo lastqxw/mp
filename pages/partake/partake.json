@@ -1,3 +1,10 @@
 {
-  "navigationBarTitleText": "我的参与"
+  "usingComponents": {
+    "navBar": "../../components/navbar/navbar"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "我的参与",
+  "navigationBarTextStyle": "black",
+  "navigationStyle": "custom"
 }

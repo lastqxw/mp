@@ -1,0 +1,77 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+.classPsge{
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4;
+  padding-bottom: 30rpx;
+}
+.manage-top{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.manage-top-img{
+  width: 100%;
+  height: auto;
+}
+.manage-center{
+  position: absolute;
+  top: 160rpx;
+  left: 0;
+  width: 100%;
+  padding-top: 30rpx;
+  border-radius: 30rpx 30rpx 0 0;
+  background-color: #fff;
+}
+
+.codeSign-center{
+  padding: 0 32rpx;
+  height: auto;
+  position: relative;
+  z-index: 99;
+  margin-top: 160rpx;
+}
+.codeSign-center-top{
+  width: 100%;
+  height: auto;
+  padding: 56rpx 0 32rpx;
+  background: #fff;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.center-top-img{
+  width: 180rpx;
+  height: auto;
+  margin-bottom: 20rpx;
+}
+.center-top-font{
+  font-size: 34rpx;
+  color: #000;
+  line-height: 2.4;
+}
+
+.codeSign-center-btn{
+  width: 100%;
+  height: auto;
+  margin-top: 26rpx;
+}
+.center-btn-view{
+  width: 100%;
+  height: 80rpx;
+  background: #FF8104;
+  border-radius: 4px;
+  font-size: 34rpx;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

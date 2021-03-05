@@ -1,4 +1,15 @@
 <view class="container">
+  <navBar 
+    title-text="活动报名" 
+    back-icon=""
+    color="#fff"
+    home-icon="/images/left.png"
+    background="linear-gradient(#00f88a,#00d1ae);"
+    bindback="back" />
+
+  <view class="manage-top">
+    <image src="../../../images/navbar.png" mode="widthFix" class="manage-top-img"></image>
+  </view> 
   <view class="top">
     <image src="{{item.picture}}"></image>
     <view class="top_con"> 
@@ -23,7 +34,7 @@
         </view>
       </view>
     </view>
-    <!-- <view class="one-top">
+    <view class="one-top">
       <view class="two-title">
         <image src="../../../images/zj.png" />
         <text>主讲活动</text>
@@ -32,7 +43,7 @@
         <image src="{{items.banner}}" />
         <view class="two-con-sub">{{items.content}}</view>
       </view>
-    </view> -->
+    </view>
     <view class="one-top">
       <view class="two-title">
         <image src="../../../images/zjactive.png" />

@@ -1,25 +1,38 @@
 <view class="main">
-  <view class="change-top">
-    <view class="title" bindtap="gotointegral">
-      <text class="con">我的积分</text>
-      <text class="content">1345</text>
-      <text class="right"></text>
+  <navBar 
+    title-text="积分兑换" 
+    back-icon=""
+    color="#fff"
+    home-icon="/images/left.png"
+    background="linear-gradient(#00f88a,#00d1ae);"
+    bindback="back"/>
+
+  <view class="manage-top">
+    <image src="../../../images/navbar.png" mode="widthFix" class="manage-top-img"></image>
+  </view>    
+  <view class="change-center">
+    <view class="change-top">
+      <view class="title" bindtap="gotointegral">
+        <text class="con">我的积分</text>
+        <text class="content">1345</text>
+        <text class="right"></text>
+      </view>
+      <view class="title" style="margin-top:10rpx;" bindtap="gotoexchange">
+        <text class="con">积分密钥兑换</text>
+        <text class="right"></text>
+      </view>
     </view>
-    <view class="title" style="margin-top:10rpx;" bindtap="gotoexchange">
-      <text class="con">积分密钥兑换</text>
-      <text class="right"></text>
+    <view class="title">
+      <text class="line"></text>
+      <text class="con">兑换列表</text>
     </view>
-  </view>
-  <view class="title">
-    <text class="line"></text>
-    <text class="con">兑换列表</text>
-  </view>
-  <view class="active">
-    <view class="active-item" wx:for="{{list}}" wx:for-item="item" wx:key="*this" bindtap="goto" data-id='{{item.id}}'>
-      <image src="{{item.photos[0]}}" />
-      <text class="active-title">{{item.title}}</text>
-      <view class="active-des">{{item.description}}</view>
-      <view class="active-integral">{{item.exchange_integral	}}积分</view>
+    <view class="active">
+      <view class="active-item" wx:for="{{list}}" wx:for-item="item" wx:key="*this" bindtap="goto" data-id='{{item.id}}'>
+        <image src="{{item.photos[0]}}" />
+        <text class="active-title">{{item.title}}</text>
+        <view class="active-des">{{item.description}}</view>
+        <view class="active-integral">{{item.exchange_integral	}}积分</view>
+      </view>
     </view>
   </view>
   <!-- <view class="title">

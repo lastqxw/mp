@@ -1,13 +1,15 @@
 .bottom {
   padding: 20rpx;
-  background-color: #f6f7f9;
+  position: relative;
+  margin-top: 160rpx;
+  z-index: 99;
 }
 .bottom-item {
   margin-bottom: 20rpx;
-  background: #ffffff;
   opacity: 1;
   border-radius: 4px;
   display: flex;
+  background-color: #fff;
   justify-content: flex-start;
 }
 .img image {
@@ -57,4 +59,26 @@
 }
 .te {
   width: calc(100% - 282rpx);
+}
+
+.manage-top{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.manage-top-img{
+  width: 100%;
+  height: auto;
+}
+.manage-center{
+  position: absolute;
+  top: 160rpx;
+  left: 0;
+  width: 100%;
+  padding-top: 30rpx;
+  border-radius: 30rpx 30rpx 0 0;
+  background-color: #fff;
 }

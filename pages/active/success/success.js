@@ -42,7 +42,11 @@ Page({
   onUnload: function () {
 
   },
-
+  goUpPage(){
+    wx.navigateBack({
+      delta: 1
+    })
+  },
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */

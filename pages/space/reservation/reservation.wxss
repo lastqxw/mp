@@ -1,3 +1,9 @@
+
+.top{
+  position: relative;
+  z-index: 99;
+  margin-top: 150rpx;
+}
 .top image {
   width: 100vw;
   height: 400rpx;
@@ -16,6 +22,12 @@
   line-height: 23px;
   color: #000000;
   opacity: 0.9;
+}
+.top-title{
+  font-size: 34rpx;
+  color: #000000;
+  font-weight: 500;
+  padding: 20rpx 32rpx;
 }
 .form {
   margin: 20rpx 32rpx;
@@ -65,6 +77,9 @@
   text-align: center;
   margin-bottom: 40rpx;
   margin-top: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .van-checkbox__icon--checked {
   background-color: #ff8104 !important;
@@ -89,4 +104,29 @@
   color: #000000;
   opacity: 0.9;
   padding:0px 32rpx
+}
+.btn-center{
+  padding: 0 32rpx;
+}
+
+.manage-top{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.manage-top-img{
+  width: 100%;
+  height: auto;
+}
+.manage-center{
+  position: absolute;
+  top: 160rpx;
+  left: 0;
+  width: 100%;
+  padding-top: 30rpx;
+  border-radius: 30rpx 30rpx 0 0;
+  background-color: #fff;
 }

@@ -1,0 +1,25 @@
+<view class="classPsge">
+  <navBar 
+    title-text="活动签到" 
+    back-icon=""
+    color="#fff"
+    home-icon="../../images/left.png"
+    background="linear-gradient(#00f88a,#00d1ae);"
+    bindback="back"/>
+  <view class="manage-top">
+    <image src="../../images/navbar.png" mode="widthFix" class="manage-top-img"></image>
+  </view>
+
+  <view class="codeSign-center">
+    <view class="codeSign-center-top">
+      <image wx:if="{{type==1}}" src="../../images/codeSignIn.png" alt="#" mode="widthFix" class="center-top-img"/>
+      <image wx:if="{{type==2}}" src="../../images/codeSignOut.png" alt="#" mode="widthFix" class="center-top-img"/>
+      <view class="center-top-font">{{type==1?'您已完成签到！':'恭喜您以完成志愿工作，'}}</view>
+      <view class="center-top-font"> {{type==1?'请开始志愿工作，祝您工作顺利！':' 后台审核中！'}}</view>
+    </view>
+
+    <view class="codeSign-center-btn">
+      <view class="center-btn-view">完成</view>
+    </view>
+  </view>
+</view>

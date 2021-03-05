@@ -1,6 +1,16 @@
 <view class="container">
+  <navBar 
+    title-text="场地介绍" 
+    back-icon=""
+    color="#fff"
+    home-icon="/images/left.png"
+    background="linear-gradient(#00f88a,#00d1ae);"
+    bindback="back" />
+  <view class="manage-top">
+    <image src="../../../images/navbar.png" mode="widthFix" class="manage-top-img"></image>
+  </view>  
   <view class="top">
-    <image src="{{item.banners[0]}}" />
+    <image src="{{item.banner}}" />
   </view>
   <view class="one">
     <view class="one-top">
@@ -44,7 +54,7 @@
     </view>
     <view class="one-top">
       <view class="two-title">
-        <image src="../../../images/address.png" />
+        <image src="../../../images/address.png" mode="widthFix"/>
         <text>地址</text>
       </view>
       <view class="two-con" bind:tap="goto">
@@ -59,6 +69,7 @@
         <image src="../../../images/imgList.png" />
         <text>照片集</text>
       </view>
+      <seeImg urlList="{{item.urlList}}"></seeImg>
     </view>
   </view>
   <view class="btn-group">

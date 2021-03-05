@@ -1,4 +1,7 @@
 /* pages/active/success/success.wxss */
+.container{
+  padding-bottom: 130rpx;
+}
 .top {
   background: url(https://s3.ax1x.com/2021/02/24/yOfoEq.png) no-repeat center
     center;
@@ -53,4 +56,16 @@
   font-weight: 400;
   line-height: 20px;
   color: #000000;
+}
+
+.success-bottom{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 30rpx;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

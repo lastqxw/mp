@@ -1,10 +1,25 @@
+<navBar 
+  title-text="关于我们" 
+  back-icon=""
+  color="#fff"
+  home-icon="/images/left.png"
+  background="linear-gradient(#00f88a,#00d1ae);"
+  bindback="back"/>
+  <view class="manage-top">
+    <image src="../../images/navbar.png" mode="widthFix" class="manage-top-img"></image>
+  </view>     
 <view class="top_banner">
   <image src="../../images/bg.png" mode="widthFix" />
 </view>
 <view class="about_box">
   <view class="about_mes">
     <view>
-      广艺+广内市民文化中心,承载地区文体活动、休闲娱乐、舞台演出、观影体验、手工制作、亲子教育、图书阅读、大型会议、组织培育、团队建设等十大功能，为居民百姓乐享城市美好生活提供优质的场地和服务，诚邀各位朋友闲暇之余，邀朋唤友，到我们共同的“文化桃源”品茗帙卷！
+      京东于2004年正式涉足电商领域。2014年5月，京东集团在美国纳斯达克证券交易所正式挂牌上市，是中国第一个成功赴美上市的综合型电商平台。2020年6月，京东集团在香港联交所二次上市，募集资金约 345.58
+      亿港元，用于投资 以 供 应链为基 础的关键技术创新，以进一步提升用户体验及提高运营效率。
+    </view>
+    <view>2019年全年，京东集团研发投入达179亿元，跃升为中国企业中对技术投入最多的公司之一。</view>
+    <view>
+      京东集团定位于“以供应链为基础的技术与服务企业”，目前业务已涉及零售、数字科技、物流、技术服务、健康、保险、产发、智联云和海外等领域，其中核心业务为零售、数字科技、物流、技术服务四大板块。
     </view>
   </view>
   <view class="about_info">
@@ -13,7 +28,7 @@
       <text>地址</text>
     </view>
     <view class="about_con">
-      <text>北京市西城区广义街4号华星大厦一楼</text>
+      <text>北京市东城区美术馆后街40号</text>
       <image src="../../images/lat.png" />
     </view>
   </view>
@@ -23,7 +38,7 @@
       <text>其他信息</text>
     </view>
     <view class="about_con">
-      <view>开放时间：上午9:00-晚上9:00（目前在疫情期间试运营期间，开馆时间根据活动预约参加）</view>
+      <view>开放时间：09:00-18:00</view>
       <view>
         联系电话：
         <text class="tel" bindtap="makeCall">{{phone}}</text>

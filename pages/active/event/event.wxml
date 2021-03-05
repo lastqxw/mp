@@ -1,44 +1,65 @@
 <view class="container">
-  <view class="top"></view>
-  <view class="card">
-    <view class="card-body">
-      <view class="card-body-title">{{item.title}}</view>
-      <view class="card-body-sub">
-        时间：
-        <text>{{item.date}}</text>
-        <text>{{item.timeStr}}</text>
-      </view>
-      <view class="card-body-sub">地址：{{item.address}}</view>
-      <view class="card-body-from">
-        <van-field model:value="{{ name }}" error-message="{{error[0]}}" input-class='input-class'
-          placeholder="请输入姓名" />
-        <!-- <van-field model:value="{{ sex }}" bind:tap="showAction" clickable readonly input-class='input-class' />
-        <van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect" /> -->
-        <van-field model:value="{{ phone }}" placeholder="请输入联系方式" error-message="{{error[1]}}" border="{{ false }}" />
-        <view class="person">
-          <text>参与人数：</text>
-          <view class="one">
-            <van-field model:value="{{ personnum}}" error-message="{{error[0]}}" input-class='input-class' />
-            <text>成人</text>
-          </view>
-          <view class="two">
-            <van-field model:value="{{ childrennum }}" error-message="{{error[0]}}" input-class='input-class' />
-            <text>儿童</text>
-          </view>
+  <navBar 
+    title-text="活动报名" 
+    back-icon=""
+    color="#fff"
+    home-icon="/images/left.png"
+    background="linear-gradient(#00f88a,#00d1ae);"
+    bindback="back"/>
+  <view class="manage-top">
+    <image src="../../../images/navbar.png" mode="widthFix" class="manage-top-img"></image>
+  </view>  
+  <view class="top">
+    <image src="https://s3.ax1x.com/2021/02/20/y4Hxp9.png" class="top-img"></image>
+  </view>
+  <view class="event-center">
+    <view class="card">
+      <view class="card-body">
+        <view class="card-body-title">{{item.title}}</view>
+        <view class="card-body-sub">
+          时间：
+          <text>{{item.date}}</text>
+          <text>{{item.timeStr}}</text>
         </view>
-        <van-field model:value="{{ value2 }}" readonly input-class='input-class' placeholder="请输入联系方式" />
+        <view class="card-body-sub">地址：{{item.address}}</view>
+        <view class="card-body-from">
+          <van-field model:value="{{ name }}" error-message="{{error[0]}}" input-class='input-class' placeholder="请输入姓名" />
+          <!-- <van-field model:value="{{ sex }}" bind:tap="showAction" clickable readonly input-class='input-class' /> -->
+          <!-- <van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect" /> -->
+          <van-field model:value="{{ phone }}" placeholder="请输入联系方式" error-message="{{error[1]}}" border="{{ false }}" />
 
-        <view class="btn-group">
-          <van-button color="#FF8104" bind:tap="score">积分兑换</van-button>
-          <van-button color="#FF8104" bind:tap="wxpay">微信支付</van-button>
+          <view class="body-from-input">
+            <view class="from-input-left">参与人数:</view>
+            <view class="from-input-right">
+              <view class="input-right-list">
+                <input type="number" class="right-list-input"/>
+                <view class="right-list-font">成人</view>
+              </view>
+
+              <view class="input-right-list">
+                <input type="number" class="right-list-input"/>
+                <view class="right-list-font">儿童</view>
+              </view>
+            </view>
+          </view>
+
+          <view class="body-from-input inputBorder">
+            <input type="text" value="费用：免费" disabled class="from-input-center"/>
+          </view>
+          <!-- <van-field model:value="{{ value2 }}" readonly input-class='input-class' placeholder="请输入联系方式" /> -->
+          <view class="btn-group">
+            <van-button wx:if="{{!isPay}}" color="#FF8104" bind:tap="score" block style="width:46%;">积分兑换</van-button>
+            <van-button wx:if="{{!isPay}}" color="#FF8104" bind:tap="wxpay" block style="width:46%;">微信支付</van-button>
+            <van-button wx:if="{{isPay}}" color="#FF8104" bind:tap="wxpay" block style="width:100%;">立即报名</van-button>
+          </view>
         </view>
       </view>
     </view>
-  </view>
-  <view class="bottom">
-    <view class="bottom-body">
-      <view class="bottom-title">温馨提示</view>
-      <view class="bottom-con">选择微信支付可获得500积分！</view>
+    <view class="bottom">
+      <view class="bottom-body">
+        <view class="bottom-title">温馨提示</view>
+        <view class="bottom-con">选择微信支付可获得500积分！</view>
+      </view>
     </view>
   </view>
   <van-dialog id="van-dialog" />

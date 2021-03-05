@@ -1,39 +1,50 @@
 /* pages/active/active.wxss */
 .top {
-  background: #ffffff;
-  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
-  opacity: 1;
   text-align: center;
+  padding: 0 30rpx;
+  margin-top: 160rpx;
+  position: relative;
+  z-index: 999;
+}
+.top-center{
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  background: #fff;
 }
 .dateList {
-  padding: 32rpx 52rpx;
+  padding: 32rpx 22rpx;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.titles{
-  font-size: 30rpx;
-  font-family: Alibaba PuHuiTi;
-  font-weight: 500;
-  line-height: 42rpx;
-  color: #000000;
-  opacity: 1;
+.dateList-left{
+  width: 130rpx;
+  height: 74rpx;
+  line-height: 74rpx;
+  border-right: 1px solid #ddd;
+  text-align: left;
+
 }
-.lines{
-  width: 2rpx;
-  height: 78rpx;
-  border: 2rpx solid #707070;
-  opacity: 0.2;
+.dateList-right{
+  flex: 2;
+  padding-left: 20rpx;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .week {
   display: block;
   margin-bottom: 13px;
-  font-size: 28rpx;
+  font-size: 14px;
   font-family: Alibaba PuHuiTi;
   color: #000000;
+  font-weight: 500;
 }
 .date {
-  font-size: 30rpx;
+  font-size: 17px;
   font-family: Alibaba PuHuiTi;
   color: #000000;
   opacity: 1;
@@ -42,15 +53,15 @@
   color: #ff0101;
 }
 .today {
-  background: linear-gradient(136deg, #FF8104 0%, #FF8104 100%);
+  background: linear-gradient(136deg, #6ff1a2 0%, #0ac956 100%);
   font-family: Alibaba PuHuiTi;
   font-weight: bold;
   color: #ffffff;
-  border-radius: 50%;
+  border-radius: 4px;
   padding: 6rpx 12rpx;
 }
 .line1 {
-  width: 100vw;
+  width: 100%;
   height: 1px;
   background-color: #000000;
   opacity: 0.05;
@@ -64,8 +75,8 @@
 }
 .scroll-view-item_H {
   display: inline-block;
-  width: 144rpx;
-  height: 46rpx;
+  width: 124rpx;
+  height: 40rpx;
   background: rgba(0, 0, 0, 0.05);
   border-radius: 16px;
   text-align: center;
@@ -89,7 +100,6 @@
 .title {
   width: 100%;
   height: 90rpx;
-  background-color: #fff;
   line-height: 90rpx;
   padding-left: 32rpx;
   padding-right: 32rpx;
@@ -132,20 +142,13 @@
   opacity: 1;
   border-radius: 4px;
   display: flex;
-  /* justify-content: space-around; */
-}
-.img{
-  width: 40%;
-  margin-right: 2%;
+  justify-content: space-around;
 }
 .img image {
-  width: 100%;
+  width: 264rpx;
   height: 174rpx;
   border-radius: 4px;
-
-}
-.te{
-  width: 58%;
+  margin-right: 20rpx;
 }
 .te_title {
   font-size: 15px;
@@ -157,7 +160,7 @@
   padding: 20rpx;
   padding-left: 0px;
 }
-/* .te_con {
+.te_con {
   font-size: 14px;
   font-family: Alibaba PuHuiTi;
   font-weight: 400;
@@ -165,4 +168,96 @@
   color: #000000;
   opacity: 0.5;
   padding-right: 20rpx;
-} */
+}
+
+.active-item {
+  width: 100%;
+  background: #ffffff;
+  opacity: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+  position: relative;
+  line-height: 0;
+}
+.active-item-center{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  line-height: 0;
+}
+.item-center-top{
+  font-size: 28rpx;
+  color: #fff;
+  border-radius: 60rpx;
+  padding: 18rpx 22rpx;
+  line-height: 1;
+  background: #ff8104;
+  display: inline-block;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.item-center-bottom{
+  position: absolute;
+  padding: 0 20rpx;
+  height: auto;
+  left: 0;
+  right: 0;
+  bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.center-bottom-left{
+  width: calc(100vw - 260rpx);
+}
+.active-item:nth-child(odd) {
+  margin-right: 20rpx;
+}
+.active-item image {
+  width: 100%;
+}
+.active-title {
+  font-size: 14px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 600;
+  line-height: 21px;
+  color: #fff;
+  margin-bottom: 14rpx;
+  display: inline-block;
+}
+.active-des {
+  font-size: 16px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 20px;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.manage-top{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.manage-top-img{
+  width: 100%;
+  height: auto;
+}
+.manage-center{
+  position: absolute;
+  top: 160rpx;
+  left: 0;
+  width: 100%;
+  padding-top: 30rpx;
+  border-radius: 30rpx 30rpx 0 0;
+  background-color: #fff;
+}

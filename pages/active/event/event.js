@@ -8,12 +8,21 @@ Page({
   data: {
     name: "",
     phone: "",
-    personnum:"12",
-    childrennum:'',
+    personnum: "12",
+    childrennum: "",
     value2: "",
+    sex: "男",
     error: ["", ""],
     show: false,
-  
+    actions: [
+      {
+        name: "男",
+      },
+      {
+        name: "女",
+      },
+    ],
+    isPay: false,
   },
   onClose() {
     this.setData({ show: false });

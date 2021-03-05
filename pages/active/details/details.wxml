@@ -1,9 +1,90 @@
 <!-- pages/active/details/details.wxml -->
 <view class="container">
+  <navBar 
+    title-text="活动报名" 
+    back-icon=""
+    color="#fff"
+    home-icon="/images/left.png"
+    background="linear-gradient(#00f88a,#00d1ae);"
+    bindback="back"/>
+  <view class="manage-top">
+    <image src="../../../images/navbar.png" mode="widthFix" class="manage-top-img"></image>
+  </view>     
   <view class="top">
     <image src="{{item.banner}}" />
   </view>
-  <van-tabs active="{{ active }}" class="tap" nav-class='tap-nav' tab-active-class='taps' color='#38C670' title-active-color='#38C670'>
+
+  <view class="one">
+    <view class="one-top">
+      <view class="one-top-con-title">{{item.title}}</view>
+      <view class="one-top-con-sub">
+        <view class="one-top-con-sub-left">
+          <image src="{{item.lecturerPicture}}" />
+          <view class="text">{{item.lecturerName||''}}</view>
+        </view>
+        <view class="one-top-con-sub-right">{{item.lecturerIntroduce || "" }}</view>
+      </view>
+    </view>
+    <view class="one-top">
+      <view class="two-title">
+        <image src="../../../images/details1.png" />
+        <text>活动信息</text>
+      </view>
+      <view class="two-con">
+        <view class="two-con-text">
+          <view class="two-con-text-left">时间：</view>
+          <view class="two-con-text-right">
+            <text>{{item.date}}</text>
+            <text>{{item.timeStr}}</text>
+          </view>
+        </view>
+        <view class="two-con-text">
+          <view class="two-con-text-left">地点：</view>
+          <view class="two-con-text-right">
+            <text>{{item.address}}</text>
+          </view>
+        </view>
+        <view class="two-con-text">
+          <view class="two-con-text-left">活动场地：</view>
+          <view class="two-con-text-right">
+            <text>{{item.fieldName || '无'}}</text>
+          </view>
+        </view>
+        <view class="two-con-text">
+          <view class="two-con-text-left">活动主题：</view>
+          <view class="two-con-text-right">
+            <text>{{item.activeTypeName || '无'}}</text>
+          </view>
+        </view>
+        <view class="two-con-text">
+          <view class="two-con-text-left">活动类型：</view>
+          <view class="two-con-text-right">
+            <text>{{item.tipicTypeName || '无'}}</text>
+          </view>
+        </view>
+        <view class="two-con-text">
+          <view class="two-con-text-left">费用：</view>
+          <view class="two-con-text-right">
+            <text>{{item.cost?item.cost+'元':'免费'}}</text>
+          </view>
+        </view>
+        <view class="two-con-text">
+          <view class="two-con-text-left">费用：</view>
+          <view class="two-con-text-right">
+            <text>{{item.quota || 0}}人</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="one-top">
+      <view class="two-title">
+        <image src="../../../images/details2.png" />
+        <text>活动详情</text>
+      </view>
+      <view class="three-con">{{item.content}}</view>
+    </view>
+  </view>
+  <!-- <van-tabs active="{{ active }}" class="tap" nav-class='tap-nav' tab-active-class='taps' color='#38C670' title-active-color='#38C670'>
     <van-tab title="活动信息">
       <view class="one">
         <view class="one-top">
@@ -96,6 +177,9 @@
         </view>
       </view>
     </van-tab>
-  </van-tabs>
-  <van-button type="primary" color="#FF8104" block bind:tap="goto">立即报名</van-button>
+  </van-tabs> -->
+  
+  <view class="details-btn">
+    <van-button type="primary" color="#FF8104" block bind:tap="goto">立即报名</van-button>
+  </view>
 </view>

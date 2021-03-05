@@ -30,7 +30,8 @@
     "pages/volunteer/success/success",
     "pages/volunteer/mine/mine",
     "pages/volunteer/sign/sign",
-    "pages/personal/manage/manange"
+    "pages/personal/manage/manange",
+    "pages/codeSign/codeSign"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -39,24 +40,26 @@
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#FF8104",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "./images/home.png",
-        "selectedIconPath": "./images/home.png"
+        "selectedIconPath": "./images/homeY.png"
       },
       {
         "pagePath": "pages/partake/partake",
         "text": "我的参与",
         "iconPath": "./images/canyu.png",
-        "selectedIconPath": "./images/canyu.png"
+        "selectedIconPath": "./images/canyuY.png"
       },
       {
         "pagePath": "pages/personal/personal",
         "text": "个人中心",
         "iconPath": "./images/mine.png",
-        "selectedIconPath": "./images/mine.png"
+        "selectedIconPath": "./images/mineY.png"
       }
     ]
   },

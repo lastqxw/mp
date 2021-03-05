@@ -1,4 +1,20 @@
 <view class="bodystyle">
+  <navBar 
+    title-text="志愿活动" 
+    back-icon=""
+    color="#fff"
+    home-icon="/images/left.png"
+    background="linear-gradient(#00f88a,#00d1ae);"
+    bindback="back"/>
+  <view class="manage-top">
+    <image src="../../images/navbar.png" mode="widthFix" class="manage-top-img"></image>
+  </view>      
+  <view class="volunteer-top">
+    <view class="volunteer-top-title">我的志愿时长</view>
+    <view class="volunteer-top-num">120小时</view>
+  </view>
+
+  <view class="font-list">审核通过</view>
   <view wx:for="{{success}}" wx:key="*this" class="main" data-item='{{item}}' bindtap='goto'>
     <image src="{{item.banner}}" class="imgstyle" mode="widthFix"></image>
     <view class="linestyle">
@@ -6,8 +22,8 @@
       <view class="integral">可获得{{item.getIntegral}}积分</view>
     </view>
   </view>
-  <view class="bottomstyle">
+  <!-- <view class="bottomstyle">
     <view class="{{!isShow?'active':''}}" bindtap="change" data-type="3">审核成功</view>
     <view class="{{isShow?'active':''}}" bindtap="change" data-type="9">已完成</view>
-  </view>
+  </view> -->
 </view>

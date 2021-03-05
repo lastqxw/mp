@@ -5,22 +5,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-    active: 0,
     page: "1",
-   rows: "1000",
+    rows: "1000",
     spaceList: [],
+    type: 0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getSpaceList()
+    this.getSpaceList();
+  },
+  choiceType(e) {
+    const vm = this;
+    vm.setData({
+      type: e.currentTarget.dataset.type,
+    });
   },
   goto(e) {
-   let spacedata= JSON.stringify(e.currentTarget.dataset.spacedata)
+    let spacedata = JSON.stringify(e.currentTarget.dataset.spacedata);
     wx.navigateTo({
-      url: `/pages/space/details/details?spacedata=`+spacedata,
+      url: `/pages/space/details/details?spacedata=` + spacedata,
     });
   },
   getSpaceList() {
@@ -37,11 +43,9 @@ Page({
       success: (res) => {
         if (res.data.code == 200) {
           res.data.data.forEach((element) => {
-            element.banners = element.banner.split(',').map(x => {
-             return x ?
-                 "http://8.141.48.40:81" + x :
-                 "../../../images/bg.png";
-             })
+            element.banner = element.banner.split(",").map((x) => {
+              return x ? "http://8.141.48.40:81" + x : "../../../images/bg.png";
+            });
           });
           this.setData({
             spaceList: res.data.data,

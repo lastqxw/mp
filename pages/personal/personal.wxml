@@ -1,4 +1,14 @@
 <!-- pages/personal/personal.wxml -->
+<navBar 
+  title-text="个人中心" 
+  back-icon=""
+  color="#fff"
+  home-icon="/images/home_icon@3x.png"
+  background="linear-gradient(#00f88a,#00d1ae);"
+  bindback="back"/>
+  <view class="manage-top">
+    <image src="../../images/navbar.png" mode="widthFix" class="manage-top-img"></image>
+  </view>      
 <view class="psl_top">
   <image src="{{userInfo.avatarUrl}}" />
   <view class="psl_con">

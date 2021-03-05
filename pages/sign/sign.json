@@ -1,3 +1,10 @@
 {
-  "navigationBarTitleText": "活动签到"
+  "usingComponents": {
+    "navBar": "../../components/navbar/navbar"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "活动签到",
+  "navigationBarTextStyle": "black",
+  "navigationStyle": "custom"
 }

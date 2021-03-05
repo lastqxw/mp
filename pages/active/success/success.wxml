@@ -1,5 +1,12 @@
 <!-- pages/active/success/success.wxml -->
 <view class="container">
+  <navBar 
+    title-text="报名成功" 
+    back-icon=""
+    color="#fff"
+    home-icon="/images/left.png"
+    background="linear-gradient(#00f88a,#00d1ae);"
+    bindback="back"/>
   <view class="top">
     <view class="title">报名成功</view>
     <view class="qcode">
@@ -9,5 +16,9 @@
   <view class="bottom">
     <view class="b-title">温馨提示</view>
     <view class="b-sec">获得500积分！积分将在15个工作日内到账，若取消报名，将无法获得积分。</view>
+  </view>
+
+  <view class="success-bottom">
+    <van-button color="#FF8104" bind:tap="goUpPage" block style="width:100%;">完成</van-button>
   </view>
 </view>
