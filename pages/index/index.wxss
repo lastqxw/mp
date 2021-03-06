@@ -1,7 +1,7 @@
 /**index.wxss**/
 .page-body {
   width: 100vw;
-  margin-top: 130rpx;
+  margin-top: 146rpx;
 }
 /* .banner-botto {
 } */

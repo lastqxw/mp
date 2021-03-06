@@ -19,7 +19,8 @@
           border="{{ false }}" />
         <van-field model:value="{{ Specialty }}" error-message="{{specialtyError}}" placeholder="请输入特长"
           border="{{ false }}" />
-        <view class="card-body-form-title">报名成功后可获得{{item.getIntegral}}积分报名积分。</view>
+        <!-- <view class="card-body-form-title">报名成功后可获得{{item.getIntegral}}积分报名积分。</view> -->
+        <view class="card-body-form-title">报名成功后可获得10积分报名积分。</view>
       </view>
     </view>
     <view class="btn-area">

@@ -48,17 +48,21 @@
   font-family: Alibaba PuHuiTi;
   color: #000000;
   opacity: 1;
+  
 }
 .weekend {
   color: #ff0101;
 }
 .today {
-  background: linear-gradient(136deg, #ff8104 0%, #ff8104 100%);
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  background: #ff8104;
   font-family: Alibaba PuHuiTi;
   font-weight: bold;
   color: #ffffff;
   border-radius: 50%;
-  padding: 6rpx 12rpx;
+  /* padding: 5rpx 12rpx; */
 }
 .line1 {
   width: 100%;
@@ -75,12 +79,16 @@
 }
 .scroll-view-item_H {
   display: inline-block;
-  width: 124rpx;
+  width: 24%;
   height: 40rpx;
+  line-height:34rpx;
   background: rgba(0, 0, 0, 0.05);
   border-radius: 16px;
   text-align: center;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
+}
+.scroll-view-item_H:nth-of-type(n+5){
+    margin-top: 10px;
 }
 .text {
   margin: 0 8rpx;

@@ -20,12 +20,12 @@
       </view>
       <view class="two-con">
         <view class="two-con-li">
-          <view class="two-con-li-left">面积：</view>
+          <view class="two-con-li-left">场地面积：</view>
           <view class="two-con-li-right">{{item.area}}</view>
         </view>
         <view class="two-con-li">
           <view class="two-con-li-left">容纳人数：</view>
-          <view class="two-con-li-right">{{item.capacity}}</view>
+          <view class="two-con-li-right">{{item.capacity}}人</view>
         </view>
         <view class="two-con-li">
           <view class="two-con-li-left">设备设施：</view>
@@ -37,7 +37,7 @@
         </view>
         <view class="two-con-li">
           <view class="two-con-li-left">服务时间：</view>
-          <view class="two-con-li-right">{{item.timeStr}}</view>
+          <view class="two-con-li-right">上午9:00-晚上9:00（目前在疫情期间试运营期间，开馆时间根据活动预约参加）</view>
         </view>
         <view class="two-con-li">
           <view class="two-con-li-left">客服微信：</view>
@@ -47,7 +47,7 @@
           </view>
         </view>
         <view class="two-con-li">
-          <view class="two-con-li-left">联系电话：</view>
+          <view class="two-con-li-left">客服电话：</view>
           <view class="two-con-li-right phone" bindtap="callphone">{{item.phone}}</view>
         </view>
       </view>
@@ -59,7 +59,7 @@
       </view>
       <view class="two-con" bind:tap="goto">
         <view class="two-con-sub">
-          <text>{{item.coordinate}}</text>
+          <text>{{item.address}}</text>
           <image src="../../../images/lat.png" />
         </view>
       </view>
@@ -74,7 +74,7 @@
   </view>
   <view class="btn-group">
     <!-- <van-button color='#FF8104' bindtap="callphone">整包预约</van-button> -->
-    <van-button color='#FF8104' bind:tap="shequ" class="buttonstyle">社区预约</van-button>
+    <van-button color='#FF8104' bind:tap="shequ" class="buttonstyle">场地预约</van-button>
     <!-- <van-button color='#FF8104' bind:tap="timeinterval">时段预约</van-button> -->
   </view>
   <view class="bottom">

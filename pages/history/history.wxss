@@ -17,10 +17,11 @@ page{
   overflow: hidden;
   position: relative;
   line-height: 0;
+  height: 296rpx;
 }
 .active-item-img{
   width: 100%;
-  height: auto;
+  height: 296rpx;
 }
 .active-item-center{
   position: absolute;
@@ -63,19 +64,19 @@ page{
   width: 100%;
 }
 .active-title {
-  font-size: 14px;
+  font-size: 30rpx;
   font-family: Alibaba PuHuiTi;
   font-weight: 600;
-  line-height: 21px;
+  line-height: 42rpx;
   color: #fff;
   margin-bottom: 14rpx;
   display: inline-block;
 }
 .active-des {
-  font-size: 16px;
+  font-size: 28rpx;
   font-family: Alibaba PuHuiTi;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 40rpx;
   color: #ffffff;
   overflow: hidden;
   text-overflow: ellipsis;

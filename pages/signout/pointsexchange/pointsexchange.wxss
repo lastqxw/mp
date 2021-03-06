@@ -2,8 +2,6 @@
 page{
   background: #F6F7F9;
 }
-.main{
-}
 .change-center{
   padding: 20rpx 32rpx;
   margin-top: 140rpx;
@@ -15,6 +13,7 @@ page{
   height: 90rpx;
   line-height: 90rpx;
   box-sizing: border-box;
+  border-radius: 12rpx;
 }
 .line {
   display: inline-block;
@@ -32,6 +31,7 @@ page{
   line-height: 42rpx;
   color: #000000;
   opacity: 0.9;
+
 }
 .right {
   float: right;

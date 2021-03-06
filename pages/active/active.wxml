@@ -10,7 +10,7 @@
         <view class="dateList-left">{{days}}</view>
         <view class="dateList-right">
           <view class="day" wx:for="{{dateList}}" wx:for-item="item" wx:key="*this">
-            <text class="week {{index==5||index==6?'weekend':''}}">{{weekList[index]}}</text>
+            <text class="week {{weekList[index]=='六'||weekList[index]=='日'?'weekend':''}}">{{weekList[index]}}</text>
             <text data-date='{{item}}' class="date {{item==today && !chooseDate?'today':''}} {{item == chooseDate ?'today':''}}" bind:tap="choose">
               <text>{{item}}</text>
             </text>
@@ -25,11 +25,11 @@
       </view>
     </view>
   </view>
-  <view class="title">
+  <!-- <view class="title">
     <text class="line"></text>
     <text class="con">热门活动</text>
     <text class="right"></text>
-  </view>
+  </view> -->
   <view class="bottom">
     <view class="active-item" wx:for="{{activeList}}" wx:key="*this" data-activeId='{{item.id}}' bind:tap="goto">
       <image src='{{item.banner}}' mode="widthFix" />
