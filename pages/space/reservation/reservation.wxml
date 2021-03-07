@@ -11,7 +11,7 @@
   <view class="top-title" bind:tap="goto">{{name}}</view>
   <view class="form">
     <view class="form-title">基本信息</view>
-    <van-field is-link arrow-direction='down' readonly model:value="{{ appointmentTypes }}" bind:tap="showAction" placeholder="社区类型" error-message="{{appointmentTypesError}}" data-select='3' />
+    <van-field is-link arrow-direction='down' readonly model:value="{{ appointmentTypes }}" bind:tap="showAction" placeholder="预约类型" error-message="{{appointmentTypesError}}" data-select='3' />
     <van-action-sheet show="{{ show3 }}" actions="{{ actions3 }}" bind:close="onClose" bind:select="onSelect" data-select='3' />
     <van-field is-link arrow-direction='down' readonly model:value="{{ communityName }}" bind:tap="showAction" placeholder="社区名称" error-message="{{communityNameError}}" data-select='0' 
     wx:if="{{appointmentTypes=='社区预约'}}"/>
