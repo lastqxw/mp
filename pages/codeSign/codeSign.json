@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "navBar": "../../components/navbar/navbar"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "扫码签到",
+  "navigationBarTextStyle": "black",
+  "navigationStyle": "custom"
+}

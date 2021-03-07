@@ -7,7 +7,7 @@ Page({
   data: {
     list: [],
     page: 1,
-    rows: 10,
+    rows: 1000,
   },
   gotointegral() {
     wx.navigateTo({
@@ -46,11 +46,9 @@ Page({
         console.log(res);
         if (res.data.code == 200) {
           res.data.data.forEach((element) => {
-            element.photos = element.photo.split(',').map(x => {
-             return x ?
-                 "http://8.141.48.40:81" + x :
-                 "../../../images/bg.png";
-             })
+            element.photos = element.photo.split(",").map((x) => {
+              return x ? "http://8.141.48.40:81" + x : "../../../images/bg.png";
+            });
           });
           this.setData({
             list: res.data.data,

@@ -1,0 +1,26 @@
+.detail-imgs{
+  width: 100%;
+  height: auto;
+  margin-top: 40rpx;
+}
+.detail-img{
+  width: 190rpx;
+  height: 190rpx;
+  background: #f4f4f4;
+  border-radius: 4px;
+  margin-bottom: 20rpx;
+}
+.spaceBetween{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap{
+  flex-wrap: wrap;
+}
+.wrap::after{
+  content: "";
+  display: block;
+  width: 180rpx;
+  height: 1rpx;
+}

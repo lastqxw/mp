@@ -1,4 +1,15 @@
 <view class="container">
+  <navBar 
+    title-text="讲师列表" 
+    back-icon=""
+    color="#fff"
+    home-icon="/images/left.png"
+    background="linear-gradient(#00f88a,#00d1ae);"
+    bindback="back"/>
+    
+  <view class="manage-top">
+    <image src="../../images/navbar.png" mode="widthFix" class="manage-top-img"></image>
+  </view>    
   <view class="bottom">
     <view class="bottom-item" wx:for="{{teacherList}}" wx:key="*this" bind:tap="goto" data-datalist="{{item}}">
       <view class="img">

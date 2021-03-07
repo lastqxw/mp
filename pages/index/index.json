@@ -1,3 +1,10 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "navBar": "../../components/navbar/navbar"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "广艺+广内市民文化中心",
+  "navigationBarTextStyle": "black",
+  "navigationStyle": "custom"
 }

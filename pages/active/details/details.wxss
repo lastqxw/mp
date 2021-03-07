@@ -1,3 +1,9 @@
+.top{
+  position: relative;
+  z-index: 999;
+  margin-top: 150rpx;
+  
+}
 .top image {
   width: 100vw;
   height: 400rpx;
@@ -22,6 +28,7 @@
 }
 .one {
   padding: 32rpx;
+  margin-bottom: 100rpx;
 }
 .one-top {
   background-color: #fff;
@@ -110,4 +117,62 @@
 }
 .four {
   margin-bottom: 40rpx;
+}
+.details-btn{
+  position: fixed;
+  bottom: 0rpx;
+  padding-bottom: 20rpx;
+  width: 100%;
+  background: #F6F7F9;
+  /* padding: 0 32rpx 20rpx; */
+}
+
+.manage-top{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.manage-top-img{
+  width: 100%;
+  height: auto;
+}
+.manage-center{
+  position: absolute;
+  top: 160rpx;
+  left: 0;
+  width: 100%;
+  padding-top: 30rpx;
+  border-radius: 30rpx 30rpx 0 0;
+  background-color: #fff;
+}
+.bottom {
+  margin-top: -30rpx;
+  padding: 32rpx 0;
+}
+.bottom-body {
+  background: #ffffff;
+  opacity: 1;
+  border-radius: 20px;
+  padding: 40rpx;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+}
+.bottom-title {
+  font-size: 17px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: blod;
+  line-height: 23px;
+  color: #000000;
+  opacity: 1;
+  margin-bottom: 40rpx;
+}
+.bottom-con {
+  font-size: 14px;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000000;
+  opacity: 0.9;
 }

@@ -1,12 +1,21 @@
 <!-- index.wxml -->
 <view class="container">
-  <!-- banner -->
+  <navBar 
+    title-text="广艺+广内市民文化中心" 
+    back-icon=""
+    color="#fff"
+    home-icon=""
+    background="linear-gradient(#00f88a,#00d1ae);"
+    bindback="back"/>
+  <view class="manage-top">
+    <image src="../../images/navbar.png" mode="widthFix" class="manage-top-img"></image>
+  </view>  
   <view class="page-body">
     <view class="page-section page-section-spacing swiper">
-      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style=" height: 400rpx;">
+      <swiper indicator-dots="{{indicatorDots}}" interval="{{interval}}" duration="{{duration}}" style=" height: 400rpx;">
         <block wx:for="{{background}}" wx:key="*this">
           <swiper-item>
-            <view class="swiper-item {{item}}">
+            <view class="swiper-item {{item}} middle">
               <image class="swiper-item-img" src="{{item}}"></image>
             </view>
           </swiper-item>
@@ -17,40 +26,40 @@
   <view class="banner-bottom">
     <view class="first">
       <view class="first-item" data-type='1' bind:tap="goto">
-        <image src="../../images/active.png" />
-        <text>活动报名</text>
+        <!-- <text>活动报名</text> -->
+        <image src="../../images/hdbm.png" />
       </view>
       <view class="first-item" data-type='2' bind:tap="goto">
-        <image src="../../images/lecturer.png" />
-        <text>讲师介绍</text>
+        <image src="../../images/jsjs.png" />
+        <!-- <text>讲师介绍</text> -->
       </view>
       <view class="first-item" data-type='3' bind:tap="goto">
-        <image src="../../images/site.png" />
-        <text>场地介绍</text>
+        <image src="../../images/cdxx.png" />
+        <!-- <text>场地介绍</text> -->
       </view>
       <view class="first-item" data-type='4' bind:tap="goto">
-        <image src="../../images/volunteer.png" />
-        <text>志愿活动</text>
+        <image src="../../images/zyhd.png" />
+        <!-- <text>志愿活动</text> -->
       </view>
-    </view>
-    <view class="first">
+
       <view class="first-item" data-type='5' bind:tap="goto">
-        <image src="../../images/history.png" />
-        <text>历史活动</text>
+        <image src="../../images/lshd.png" />
+        <!-- <text>历史活动</text> -->
       </view>
       <view class="first-item" data-type='6' bind:tap="goto">
-        <image src="../../images/checkin.png" />
-        <text>活动签到</text>
+        <image src="../../images/hdqd.png" />
+        <!-- <text>活动签到</text> -->
       </view>
       <view class="first-item" data-type='7' bind:tap="goto">
-        <image src="../../images/integral.png" />
-        <text>积分兑换</text>
+        <image src="../../images/jfdh.png" />
+        <!-- <text>积分兑换</text> -->
       </view>
       <view class="first-item">
-        <image src="../../images/signin.png" />
-        <text>每日签到</text>
+        <image src="../../images/mrqd.png" />
+        <!-- <text>每日签到</text> -->
       </view>
     </view>
+    
   </view>
   <view class="title">
     <text class="line"></text>
@@ -59,9 +68,17 @@
   </view>
   <view class="active">
     <view class="active-item" wx:for="{{activeList}}" wx:for-item="item" wx:key="*this" bindtap="gotoDetails" data-activeId='{{item.id}}'>
-      <image src='{{item.banner}}' />
-      <text class="active-title">{{item.title}}</text>
-      <view class="active-des">{{item.content}}</view>
+      <image src='{{item.banner}}' mode="widthFix" />
+      <view class="active-item-center">
+        <view class="item-center-top">富豪</view>
+        <view class="item-center-bottom">
+          <view class="center-bottom-left">
+            <text class="active-title">{{item.title}}</text>
+            <view class="active-des">{{item.content}}</view>
+          </view>
+          <view class="item-center-top">立即报名</view>
+        </view>
+      </view>
     </view>
   </view>
 </view>

@@ -4,11 +4,7 @@ const app = getApp();
 const { apiHost, userInfo } = getApp().globalData;
 Page({
   data: {
-    background: [
-      "https://s3.ax1x.com/2021/02/20/y4Hxp9.png",
-      "https://s3.ax1x.com/2021/02/20/y4LPiD.png",
-      "../../images/bg.png",
-    ],
+    background: [],
     indicatorDots: true,
     vertical: false,
     autoplay: true,
@@ -20,6 +16,22 @@ Page({
   },
   onLoad() {
     this.getActiveList();
+    wx.request({
+      url: apiHost + `prod-api/api/banner/list`,
+      method: "POST",
+      success: (res) => {
+        if (res.data.code == 200) {
+          res.data.data.forEach((element) => {
+            element.banners = element.banner.split(",").map((x) => {
+              return "http://8.141.48.40:81" + x;
+            });
+          });
+          this.setData({
+            background: res.data.data[0].banners,
+          });
+        }
+      },
+    });
   },
   goto(e) {
     let type = +e.currentTarget.dataset.type;

@@ -1,3 +1,13 @@
+<navBar 
+    title-text="商品详情" 
+    back-icon=""
+    color="#fff"
+    home-icon="../../images/left.png"
+    background="linear-gradient(#00f88a,#00d1ae);"
+    bindback="back"/>
+<view class="manage-top">
+  <image src="../../images/navbar.png" mode="widthFix" class="manage-top-img"></image>
+</view>
 <view class="top_banner">
   <image src="../../images/place.png" mode="widthFix" />
 </view>

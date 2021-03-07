@@ -17,6 +17,17 @@ Page({
    */
   onLoad: function (options) {
     let data = JSON.parse(options.spacedata);
+    console.log('data')
+    console.log(data)
+    if(data.photo){
+      let arr=data.photo.split(',')
+      data.urlList=[]
+      arr.forEach(da=>{
+        data.urlList.push(`http://8.141.48.40:81${da}`)
+      })
+      console.log('data')
+      console.log(data.urlList)
+    }
     let timeType = wx.getStorageSync("DICT_TIME_SLOT");
     if (data.serviceTime && timeType) {
       let time = data.serviceTime.split(",");
@@ -36,7 +47,7 @@ Page({
   },
   shequ() {
     wx.navigateTo({
-      url: "/pages/space/reservation/reservation?fieldId=" + this.data.item.id,
+      url: `/pages/space/reservation/reservation?fieldId=${this.data.item.id}&name=${this.data.item.name}`,
     });
   },
   timeinterval() {

@@ -1,4 +1,16 @@
 <!--pages/volunteer/sign/sign.wxml-->
+<navBar 
+    title-text="志愿工作报名" 
+    back-icon=""
+    color="#fff"
+    home-icon="/images/left.png"
+    background="linear-gradient(#00f88a,#00d1ae);"
+    bindback="back"/>
+
+  <view class="manage-top">
+    <image src="../../../images/navbar.png" mode="widthFix" class="manage-top-img"></image>
+  </view>
+
 <view class="contailer">
   <view class="body">
     <image src="{{qrcode||'../../../images/code.png'}}"></image>

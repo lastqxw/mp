@@ -7,7 +7,7 @@ Page({
   data: {
     active: 0,
     page:1,
-    rows: 10,
+    rows: 1000,
     active: 0,
     activeid:null,
   },

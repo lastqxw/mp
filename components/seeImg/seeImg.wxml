@@ -1,0 +1,15 @@
+<view class="detail-imgs spaceBetween wrap">
+  <image class="detail-img" 
+         wx:for="{{images}}" 
+         wx:key="{{index}}" 
+         src="{{item}}" 
+         data-img="{{item}}" 
+         wx:if="{{item}}" 
+         bindtap="seeImg"></image>
+         
+  <video  class="detail-img"
+          wx:for="{{videos}}" wx:key="{{i}}" wx:for-item="res"
+          src="{{res}}"
+          wx:if="{{res}}"
+          enable-danmu controls initial-time="1"></video>
+</view>

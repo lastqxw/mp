@@ -6,7 +6,7 @@ App({
     const logs = wx.getStorageSync("logs") || [];
     wx.login({
       success: function (res) {
-        console.log(that, "1111111111111");
+        console.log(res, "1111111111111");
         that.globalData.code = res.code;
         that.getOpenId();
       },
@@ -34,15 +34,34 @@ App({
       success: (res) => {
         console.log(res);
         // 可以将 res 发送给后台解码出 unionId
-        that.globalData.userInfo.nickname = res.userInfo.nickName;
-        that.globalData.userInfo.nickname = res.userInfo.nickName;
-        item.avatarUrl = res.userInfo.avatarUrl;
-        item.avatarUrl = res.userInfo.avatarUrl;
-        wx.setStorageSync("userInfo", item);
+
+        item = {
+          ...item,
+          ...res.userInfo,
+        };
+
+        that.setUserInfo(item);
         // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
         // 所以此处加入 callback 以防止这种情况
         if (this.userInfoReadyCallback) {
           this.userInfoReadyCallback(res);
+        }
+      },
+    });
+  },
+  setUserInfo(item) {
+    console.log(item);
+    let that = this;
+    wx.request({
+      url:
+        that.globalData.apiHost +
+        `/prod-api/api/weChat/updateWxUserInfo?avatarUrl=${item.avatarUrl}&city=${item.city}&code=${that.globalData.code}&country=${item.country}&gender=${item.gender}&nickName=${item.nickName}&openId=${item.openId}&province=${item.province}&unionId=${item.unionId}`,
+      method: "POST",
+      success: (res) => {
+        console.log(res);
+        if (res.data.code == 200) {
+          that.globalData.userInfo = res.data.data;
+          wx.setStorageSync("userInfo", res.data.data);
         }
       },
     });

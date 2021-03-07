@@ -24,7 +24,7 @@ Page({
       "分类",
     ],
     page: 1,
-    rows: 10,
+    rows: 1000,
     activeList: [],
   },
 

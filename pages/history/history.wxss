@@ -1,40 +1,106 @@
 page{
   background: #F6F7F9;
 }
-.hisList{
-  padding: 20rpx 32rpx;
+.history-top{
+  position: relative;
+  z-index: 99;
+  margin-top: 150rpx;
 }
-.hisItem {
-  margin-bottom: 20rpx;
-  width: 100%;
-  display: flex;
+.hisList{
+  padding: 20rpx 0;
+}
+.active-item {
+  margin: 20rpx 32rpx 0;
   background: #ffffff;
+  opacity: 1;
   border-radius: 4px;
   overflow: hidden;
+  position: relative;
+  line-height: 0;
+  height: 296rpx;
 }
-.hisItem>image {
-  width: 264rpx;
-  height: 174rpx;
-  border-radius: 8rpx;
+.active-item-img{
+  width: 100%;
+  height: 296rpx;
 }
-.hisRight{
-  flex: 1;
-  padding: 20rpx;
+.active-item-center{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  line-height: 0;
 }
-.hisTitle {
+.item-center-top{
+  font-size: 28rpx;
+  color: #fff;
+  border-radius: 60rpx;
+  padding: 18rpx 22rpx;
+  line-height: 1;
+  background: #ff8104;
+  display: inline-block;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.item-center-bottom{
+  position: absolute;
+  padding: 0 20rpx;
+  height: auto;
+  left: 0;
+  right: 0;
+  bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.active-item:nth-child(odd) {
+  margin-right: 20rpx;
+}
+.active-item image {
+  width: 100%;
+}
+.center-bottom-left{
+  width: 100%;
+}
+.active-title {
   font-size: 30rpx;
   font-family: Alibaba PuHuiTi;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 42rpx;
-  color: #000000;
-  opacity: 0.9;
+  color: #fff;
+  margin-bottom: 14rpx;
+  display: inline-block;
 }
-.hisDes {
-  margin-top: 12rpx;
+.active-des {
   font-size: 28rpx;
   font-family: Alibaba PuHuiTi;
   font-weight: 400;
   line-height: 40rpx;
-  color: #000000;
-  opacity: 0.5;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.manage-top{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.manage-top-img{
+  width: 100%;
+  height: auto;
+}
+.manage-center{
+  position: absolute;
+  top: 160rpx;
+  left: 0;
+  width: 100%;
+  padding-top: 30rpx;
+  border-radius: 30rpx 30rpx 0 0;
+  background-color: #fff;
 }

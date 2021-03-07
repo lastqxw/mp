@@ -2,15 +2,18 @@
 page{
   background: #F6F7F9;
 }
-.main{
-  padding:20rpx 32rpx 0 32rpx;
+.change-center{
+  padding: 20rpx 32rpx;
+  margin-top: 140rpx;
+  position: relative;
+  z-index: 99;
 }
-
 .title {
   width: 100%;
   height: 90rpx;
   line-height: 90rpx;
   box-sizing: border-box;
+  border-radius: 12rpx;
 }
 .line {
   display: inline-block;
@@ -28,6 +31,7 @@ page{
   line-height: 42rpx;
   color: #000000;
   opacity: 0.9;
+
 }
 .right {
   float: right;
@@ -64,10 +68,16 @@ page{
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+.active::after {
+  content: "";
+  display: block;
+  width: 48%;
+  height: 1rpx;
 }
 .active-item {
-  width: 49%;
+  width: 48%;
   background: #ffffff;
   opacity: 1;
   border-radius: 8rpx;
@@ -104,4 +114,26 @@ page{
   color: #0AC956;
   opacity: 1;
   padding: 0rpx 32rpx 22rpx 32rpx;
+}
+
+.manage-top{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.manage-top-img{
+  width: 100%;
+  height: auto;
+}
+.manage-center{
+  position: absolute;
+  top: 160rpx;
+  left: 0;
+  width: 100%;
+  padding-top: 30rpx;
+  border-radius: 30rpx 30rpx 0 0;
+  background-color: #fff;
 }

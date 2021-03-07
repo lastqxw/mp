@@ -1,4 +1,10 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "积分兑换"
+  "usingComponents": {
+    "navBar": "../../../components/navbar/navbar"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "积分兑换",
+  "navigationBarTextStyle": "black",
+  "navigationStyle": "custom"
 }

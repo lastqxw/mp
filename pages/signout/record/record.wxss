@@ -10,6 +10,14 @@ page{
   height: 224rpx;
   background-color: #38C670;
   border-radius: 0 0 30% 30%;
+  margin-top: 140rpx;
+}
+.main-center{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .main-top view{
   padding-top:20rpx;
@@ -31,7 +39,8 @@ page{
   background-color: #fff;
   padding:30rpx;
   max-height: 80vh;
-  overflow: auto;
+  overflow: auto;  
+  border-radius: 12rpx;
 }
 .main-title{
   padding-bottom: 12rpx;
@@ -86,4 +95,26 @@ page{
   line-height: 46rpx;
   color: #38C670;
   opacity: 1;
+}
+
+.manage-top{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.manage-top-img{
+  width: 100%;
+  height: auto;
+}
+.manage-center{
+  position: absolute;
+  top: 160rpx;
+  left: 0;
+  width: 100%;
+  padding-top: 30rpx;
+  border-radius: 30rpx 30rpx 0 0;
+  background-color: #fff;
 }

@@ -1,21 +1,34 @@
 <view class="main">
-  <view class="main-top">
-    <view>1345</view>
+  <navBar 
+    title-text="积分记录" 
+    back-icon=""
+    color="#fff"
+    home-icon="/images/left.png"
+    background="linear-gradient(#00f88a,#00d1ae);"
+    bindback="back"/>
+
+  <view class="manage-top">
+    <image src="../../../images/navbar.png" mode="widthFix" class="manage-top-img"></image>
   </view>
-  <view class="main-bot">
-    <view class="main-con">
-      <view class="main-title">
-        <text>本月以获取</text>
-        <text>300积分</text>
-        <text>本月使用-96积分</text>
-      </view>
-      <view class="main-list" wx:for="{{recordList}}" wx:key="*this">
-        <view class="main-list-left">
-          <view>{{item.description}}</view>
-          <view>{{item.createTime}}</view>
+  <view class="main-center">
+    <view class="main-top">
+      <view>{{integral}}</view>
+    </view>
+    <view class="main-bot">
+      <view class="main-con">
+        <view class="main-title">
+          <text>本月以获取</text>
+          <text>300积分</text>
+          <text>本月使用-96积分</text>
         </view>
-        <view class="main-list-right">{{item.sign}}{{item.surplusIntegral}}</view>
+        <view class="main-list" wx:for="{{recordList}}" wx:key="*this">
+          <view class="main-list-left">
+            <view>{{item.description}}</view>
+            <view>{{item.createTime}}</view>
+          </view>
+          <view class="main-list-right">{{item.sign}}{{item.surplusIntegral}}</view>
+        </view>
       </view>
     </view>
-  </view>
+  </view> 
 </view>

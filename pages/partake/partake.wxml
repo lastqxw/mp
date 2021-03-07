@@ -1,3 +1,13 @@
+<navBar 
+  title-text="我的参与" 
+  back-icon=""
+  color="#fff"
+  home-icon=""
+  background="linear-gradient(#00f88a,#00d1ae);"
+  bindback="back"/>
+  <view class="manage-top">
+    <image src="../../images/navbar.png" mode="widthFix" class="manage-top-img"></image>
+  </view>  
 <view class="psl_top">
   <image src="{{userInfo.avatarUrl}}" />
   <view class="psl_con">

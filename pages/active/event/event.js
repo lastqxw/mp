@@ -8,6 +8,8 @@ Page({
   data: {
     name: "",
     phone: "",
+    personnum: "12",
+    childrennum: "",
     value2: "",
     sex: "男",
     error: ["", ""],
@@ -20,6 +22,7 @@ Page({
         name: "女",
       },
     ],
+    isPay: false,
   },
   onClose() {
     this.setData({ show: false });

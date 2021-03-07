@@ -3,9 +3,10 @@ page{
   background: #F6F7F9;
 }
 .bodystyle{
-  padding:0 32rpx 124rpx 32rpx;
+  padding:0 0 124rpx 0;
 }
 .main{
+  margin: 0 32rpx;
   margin-top:20rpx; 
   background: #FFFFFF;
   border: 2rpx solid #EAEAEF;
@@ -66,4 +67,78 @@ page{
 .bottomstyle .active{
   color:#ffffff;
   background: #FF8104;
+}
+
+.volunteer-top{
+  position: relative;
+  z-index: 99;
+  margin: 150rpx 32rpx 0;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #fff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20rpx 30rpx 0;
+  border-radius: 12rpx;
+}
+.volunteer-top-title{
+  font-size: 30rpx;
+  color: #000000;
+  margin-right: 20rpx;
+}
+.volunteer-top-num{
+  font-size: 30rpx;
+  color: #0AC956;
+  font-weight: 600;
+}
+
+.font-list{
+  margin: 20rpx 32rpx;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  color: #FF8104;
+  font-weight: 500;
+  position: relative;
+  line-height: 1;
+}
+.font-list::before{
+  content: "";
+  display: block;
+  width: 4px;
+  height: 32rpx;
+  border-radius: 4px;
+  background-color: #FF8104;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.finish{
+  color: #0AC956;
+}
+.finish::before{
+  background-color: #0AC956;
+}
+.manage-top{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.manage-top-img{
+  width: 100%;
+  height: auto;
+}
+.manage-center{
+  position: absolute;
+  top: 160rpx;
+  left: 0;
+  width: 100%;
+  padding-top: 30rpx;
+  border-radius: 30rpx 30rpx 0 0;
+  background-color: #fff;
 }

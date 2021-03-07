@@ -1,3 +1,14 @@
+<navBar 
+    title-text="历史活动" 
+    back-icon=""
+    color="#fff"
+    home-icon="/images/left.png"
+    background="linear-gradient(#00f88a,#00d1ae);"
+    bindback="back"/>
+
+  <view class="manage-top">
+    <image src="../../images/navbar.png" mode="widthFix" class="manage-top-img"></image>
+  </view>  
 <view class="top_banner">
   <image src="https://s3.ax1x.com/2021/02/20/y4LPiD.png" mode="widthFix" />
 </view>

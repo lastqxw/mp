@@ -22,7 +22,7 @@ Page({
         isShow: true,
       },
       {
-        title: "志愿者工作报名",
+        title: "我的志愿活动",
         url: "/pages/volunteer/volunteer",
         isShow: true,
       },

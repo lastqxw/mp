@@ -1,4 +1,15 @@
 <!-- pages/active/details/details.wxml -->
+<navBar 
+  title-text="主讲活动" 
+  back-icon=""
+  color="#fff"
+  home-icon="/images/left.png"
+  background="linear-gradient(#00f88a,#00d1ae);"
+  bindback="back"/>
+
+<view class="manage-top">
+  <image src="../../../images/navbar.png" mode="widthFix" class="manage-top-img"></image>
+</view>   
 <view class="container">
   <view class="top">
     <image src="{{item.banner}}" />
@@ -79,5 +90,7 @@
       </view>
     </van-tab>
   </van-tabs>
-  <van-button type="primary" color="#FF8104" block bind:tap="goto" >立即报名</van-button>
+  <view class="bottom-btn">
+    <van-button type="primary" color="#FF8104" block bind:tap="goto" >立即报名</van-button>
+  </view>
 </view>

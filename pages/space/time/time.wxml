@@ -1,21 +1,50 @@
 <view class="container">
-  <view class="top">
+  <navBar 
+    title-text="场地时间预约" 
+    back-icon=""
+    color="#fff"
+    home-icon="/images/left.png"
+    background="linear-gradient(#00f88a,#00d1ae);"
+    bindback="back" />
+  <view class="manage-top">
+    <image src="../../../images/navbar.png" mode="widthFix" class="manage-top-img"></image>
+  </view>    
+  <!-- <view class="top">
     <view class="dateList">
       <view class="day" wx:for="{{dateList}}" wx:for-item="item" wx:key="*this">
         <text class="week {{index==5||index==6?'weekend':''}}">{{weekList[index]}}</text>
         <text class="date {{item.time==chooseDay?'today':''}}" bindtap="chooseDate" data-item="{{item}}">{{item.time}}</text>
       </view>
     </view>
+  </view> -->
+
+  <view class="top">
+    <view class="top-center">
+      <view class="dateList">
+        <view class="dateList-left">{{days}}</view>
+        <view class="dateList-right">
+          <view class="day" wx:for="{{dateList}}" wx:for-item="item" wx:key="*this">
+            <text class="week {{weekList[index]=='六'||weekList[index]=='日'?'weekend':''}}">{{weekList[index]}}</text>
+            <text class="date {{item.time==chooseDay?'today':''}}" bindtap="chooseDate" data-item="{{item}}">{{item.time}}</text>
+          </view>
+        </view>
+        
+      </view>
+      <!-- <view class="line1"></view> -->
+      <view class="typeList">
+        <view wx:for="{{typeList}}" wx:key="*this" class="scroll-view-item_H {{index==active?'active':''}}" data-active="{{index}}" data-value='{{item.dictValue}}' bindtap="changeType">
+          <text class="text">{{item.dictLabel}}</text>
+        </view>
+      </view>
+    </view>
   </view>
-  <!-- <view class="monning">
+  <view class="monning">
     <view class="title">
       <text class="line"></text>
       <text class="text">上午预约</text>
     </view>
     <view class="dateRange">
-      <text class="li">10:00</text>
-      <text class="li active">11:00</text>
-      <text class="li disable">12:00</text>
+      <text class="li {{item.isActive=='1'?'active':''}}" wx:for="{{timeRange1}}" wx:key="index" bindtap='chooseTime' data-label="{{item.dictLabel}}">{{item.dictLabel}}</text>
     </view>
   </view>
   <view class="afternoon">
@@ -24,12 +53,7 @@
       <text class="text">下午预约</text>
     </view>
     <view class="dateRange">
-      <text class="li">13:00</text>
-      <text class="li active">14:00</text>
-      <text class="li disable">15:00</text>
-      <text class="li">16:00</text>
-      <text class="li">17:00</text>
-      <text class="li">18:00</text>
+      <text class="li {{item.isActive=='1'?'active':''}}" wx:for="{{timeRange2}}" wx:key="index" bindtap='chooseTime' data-label="{{item.dictLabel}}">{{item.dictLabel}}</text>
     </view>
   </view>
   <view class="night">
@@ -38,23 +62,22 @@
       <text class="text">晚上预约</text>
     </view>
     <view class="dateRange">
-      <text class="li">19:00</text>
-      <text class="li">20:00</text>
+      <text class="li {{item.isActive=='1'?'active':''}}" wx:for="{{timeRange3}}" wx:key="index" bindtap='chooseTime' data-label="{{item.dictLabel}}">{{item.dictLabel}}</text>
     </view>
-  </view> -->
-  <view class="monning">
+  </view>
+  <!-- <view class="monning">
     <view class="title">
       <text class="line"></text>
       <text class="text">预约时间段</text>
     </view>
     <view class="dateRange">
-      <text class="li {{item.isActive=='1'?'active':''}}" wx:for="{{timeRange}}" wx:key="index" bindtap='chooseTime' data-label="{{item.dictLabel}}">{{item.dictLabel}}</text>
+      <text class="li {{item.isActive=='1'?'active':''}}" wx:for="{{timeRange1}}" wx:key="index" bindtap='chooseTime' data-label="{{item.dictLabel}}">{{item.dictLabel}}</text>
     </view>
-  </view>
+  </view> -->
   <view class="choose">
     <view class="choose-top">
       <text>已选择:</text>
-      <text>{{chooseDay}}</text>
+      <text>{{days}}.{{chooseDay}}</text>
     </view>
     <view class="dateRange">
       <text class="li active" wx:for="{{activeRange}}" wx:key="index">{{item}}</text>
