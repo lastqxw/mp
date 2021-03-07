@@ -6,7 +6,6 @@ page{
   padding: 46rpx 32rpx 36rpx 32rpx;
   display: flex;
   color: #ffffff;
-  background: #38C670;
   position: relative;
   z-index: 102;
   margin-top: 150rpx;

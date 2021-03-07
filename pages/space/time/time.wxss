@@ -171,6 +171,7 @@
   padding: 32rpx;
   width: 100%;
   box-sizing: border-box;
+  background-color: #fff;
 }
 .choose .dateRange{
   padding: 20rpx 0;
@@ -196,4 +197,7 @@
   padding-top: 30rpx;
   border-radius: 30rpx 30rpx 0 0;
   background-color: #fff;
+}
+.night{
+  margin-bottom: 300rpx;
 }

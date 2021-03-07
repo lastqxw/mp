@@ -1,7 +1,7 @@
 <!-- pages/active/details/details.wxml -->
 <view class="container">
   <navBar 
-    title-text="活动报名" 
+    title-text="{{item.title||'活动报名'}}" 
     back-icon=""
     color="#fff"
     home-icon="/images/left.png"
@@ -50,12 +50,12 @@
             <text>{{item.fieldName || '无'}}</text>
           </view>
         </view>
-        <view class="two-con-text">
+        <!-- <view class="two-con-text">
           <view class="two-con-text-left">活动主题：</view>
           <view class="two-con-text-right">
             <text>{{item.activeTypeName || '无'}}</text>
           </view>
-        </view>
+        </view> -->
         <view class="two-con-text">
           <view class="two-con-text-left">活动类型：</view>
           <view class="two-con-text-right">

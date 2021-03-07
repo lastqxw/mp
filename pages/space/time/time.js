@@ -60,7 +60,7 @@ Page({
       "0" + (date.getMonth() + 1) :
       date.getMonth() + 1;
     this.setData({
-      days: Y + "." + M,
+      days: M,
     });
   },
   //获取字典数据

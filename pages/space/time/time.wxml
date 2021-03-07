@@ -53,9 +53,7 @@
       <text class="text">下午预约</text>
     </view>
     <view class="dateRange">
-      <view class="dateRange">
       <text class="li {{item.isActive=='1'?'active':''}}" wx:for="{{timeRange2}}" wx:key="index" bindtap='chooseTime' data-label="{{item.dictLabel}}">{{item.dictLabel}}</text>
-    </view>
     </view>
   </view>
   <view class="night">
