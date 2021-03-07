@@ -11,12 +11,13 @@ page{
   background: #FFFFFF;
   border: 2rpx solid #EAEAEF;
   opacity: 1;
-  border-radius: 8rpx;
+  border-radius: 20rpx;
 }
 .main .imgstyle{
   width:100%;
   border-radius: 8rpx 8rpx 0 0;
   height: 260rpx;
+  border-radius: 20rpx 20rpx 0 0;
 }
 .main .linestyle{
   padding:32rpx 20rpx 28rpx 20rpx;
