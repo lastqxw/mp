@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/index/index",
     "pages/signout/signout",
     "pages/keyExchange/keyExchange",
@@ -32,6 +33,7 @@
     "pages/volunteer/sign/sign",
     "pages/personal/manage/manange",
     "pages/codeSign/codeSign"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
